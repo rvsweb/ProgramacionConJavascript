@@ -1,4 +1,4 @@
-<!--Created on 06-jun-2019, 22:34:26-->
+<!--Created on 08-jun-2019, 19:22:04-->
 <!-- Referencia :  -->
 <!DOCTYPE html>
 <html lang="es">
@@ -13,23 +13,57 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="shortcut icon" href="https://goo.gl/cais23">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
-    <!--<style></style>-->
+    <link rel="stylesheet" type="text/css" href="source/css/cssParaJson2.css">
   </head>
   <body>
+    <main>
+      <section>
+        <h2>
+          Objetos Literales
+        </h2>
+        <ul>
+          <li class="l1">
+            Almacenan informacion en pares
+            <br />nombre : valor
+          </li>
+          <li class="l1">
+            <span id="s1">color : "rojo";</span>
+          </li>
+        </ul>
 
-    <p id="p1"></p>
-    <p id="p2"></p>
-    <p id="p3"></p>
-    <p id="p4"></p>
-    <p id="p5"></p>
-    <p id="p6"></p>
-    <p id="p7"></p>
-    <p id="p8"></p>
-    <p id="p9"></p>
-    <p id="p10"></p>
-    <p id="p11"></p>
-    <p id="p12"></p>
-   
+        <ul>
+          <li class="l1">
+            Se puede acceder a estas propiedades
+          </li>
+          <li class="l1">
+            Mediante el nombre del objeto y la sintaxis del punto 
+          </li>
+          <li class="l1 liancho" >
+            <span id="s2"> alert(oCliente.activo);</span>
+          </li>
+        </ul>
+        <ul>
+          <li class="l1" id="li3">
+            Mediante corchetes y nombre de la propiedad  
+          </li>
+          <li class="l1 liancho">
+            <span id="s3"> alert(oCliente["activo"]);</span>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <section>
+      <h2>Usar Objeto Cliente</h2>
+      <div>
+        <p id="p1" class="elementos"></p>
+        <p id="p2" class="elementos"></p>
+        <p id="p3" class="elementos"></p>
+        <p id="p4" class="elementos"></p>
+        <p id="p5" class="elementos"></p>
+      </div>
+    </section>
+
     <footer style="
             position: fixed;
             padding-top: 10px;
@@ -53,6 +87,6 @@
            ">Powered by RVS</p>
       </aside>
     </footer>
-    <script src="../source/js/M31FuncionesPropiedades.js"></script>
+    <script src="source/js/M42.0 - Objetos Literales.js"></script>
   </body>
 </html>

@@ -1,3 +1,4 @@
+// 2.1 | Funciones útiles para cadenas de texto
 
 var men = "Hello Friend";
 var numLetras = men.length;
@@ -19,7 +20,7 @@ document.getElementById('p3').innerHTML = "".concat(men2);
 var var1 = "Hola ";
 var var2 = 3;
 var men3 = var1 + var2;
-
+  
 document.getElementById('p4').innerHTML = " ♥ ".concat(men3);
 
 men = "Funcion charAt(posicion)";

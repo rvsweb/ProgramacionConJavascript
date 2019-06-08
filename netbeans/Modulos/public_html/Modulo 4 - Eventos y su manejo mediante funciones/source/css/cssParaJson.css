@@ -1,0 +1,34 @@
+/* 
+    Created on : 08-jun-2019, 19:54:13
+    Author     : RVS
+*/
+
+h2{
+  background-color: #ccffff;
+  padding: 20px;
+  font-size: 20px;
+  margin: 12px;
+  width: 500px;
+}
+
+section , ul , li{
+  padding: 20px;
+
+}
+
+li{
+  padding: 10px;
+  font-size: 20px;
+}
+
+
+span#s1{
+  color: red;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+#s2{
+  font-weight: bold;
+  font-size: x-large;
+} 

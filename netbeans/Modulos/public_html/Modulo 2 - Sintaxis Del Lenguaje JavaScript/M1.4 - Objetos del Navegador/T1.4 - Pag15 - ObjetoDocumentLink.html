@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Ejemplo de Eventos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../../sources/img/60x60bb.jpg" sizes="32x32">
+  <body>
+    <script>
+      function linkSomePage_onClick() {
+        console.log('Este enlace no lleva a ninguna parte');
+        return false;
+      }
+    </script>
+
+    <a href="../../index.html">Pincha aqui</a>
+
+    <script>
+      window.document.links[0].onclick = linkSomePage_onClick();
+    </script>
+
+  </body>
+</html>

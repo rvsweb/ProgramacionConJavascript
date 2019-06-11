@@ -1,0 +1,151 @@
+<!--Created on 10-jun-2019, 13:21:08-->
+<!-- 
+Referencia : https://developer.mozilla.org/es/docs/Learn/JavaScript/Objects/JSON  
+Referencia : https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Estructura del JSON</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet"> 
+    <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" href="../sources/css/cssSuperHeroes.css">
+    <style>
+      section > h2#cabecera{
+        margin: 0 auto;
+        margin-top: 15px;
+        text-align: center;
+        padding-left: 15%;
+        padding-right: 15%;
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>
+
+    </header>
+
+    <section>
+
+    </section>
+
+    <footer style="
+            position: fixed;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(189, 195, 199);
+            color: #000;
+            text-align: center;">
+      <aside style="height: 55px;">
+        <img alt="Licencia de Creative Commons" src="https://licensebuttons.net/l/by/4.0/80x15.png" />
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        </a>Este obra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+        <p style="
+           margin-top: 5px;
+           font-size: 20px;
+           font-family: 'Lobster', cursive;
+           ">Powered by RVS</p>
+      </aside>
+    </footer>
+    <!--<script type="text/javascript" src="caso_practico/ejemplo.json"></script>-->
+
+    <script>
+      var header = document.querySelector('header');
+      var section = document.querySelector('section');
+
+//      var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+      var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+
+// Crear solicitud
+      var request = new XMLHttpRequest();
+
+      request.open("GET", requestURL);
+      request.responseType = "json"; // Obtenemos los datos como un JSON
+      request.send();
+
+// Recibir solicitud
+      request.onload = function () {
+//Se está almacenando la respuesta a la solicitud (propiedad response)
+//Variable 'superHeroes' ahora contendrá el objeto JavaScript basado en el JSON
+        var superHeroes = request.response; // obtenemos JSON como respuesta
+        populateHeader(superHeroes);
+        showHeroes(superHeroes);
+      };
+
+      // Funciones para utilizar los JSON
+      /**
+       * 
+       * @param {type} jsonObj - OBJETO 'JS' originado desde JSON
+       * @returns {undefined}
+       */
+      function populateHeader(jsonObj) {
+//        Creamos un elemento 'h1' y lo añadimos al arbol DOM
+        var myH1 = document.createElement('h1');
+//        Agregamos la propiedad 'textContent' al objeto 'myH1' la cual recibe el param 'jsonObj'
+        myH1.textContent = jsonObj['squadName'];
+//        Agregamos el elemento al encabezado mediante el metodo 'appendChild'
+        header.appendChild(myH1);
+
+//         Creamos un elemento 'p' y lo añadimos al arbol DOM
+        var myPara = document.createElement('p');
+//        Agregamos la propiedad 'textContent' al objeto 'myPara' la cual recibe 2 param 'jsonObj'
+        myPara.textContent = 'Hometown : ' + jsonObj['homeTown'] + ' // Formed : ' + jsonObj['formed'] + " - " + new Date().getFullYear();
+        header.appendChild(myPara);
+      }
+
+      /**
+       * 
+       * @param {type} jsonObj - Objeto Literal donde estan todos los datos del JSON
+       * @returns {undefined}
+       */
+      function showHeroes(jsonObj) {
+
+        var heroes = jsonObj['members'];
+
+        for (var i = 0; i < heroes.length; i++) {
+          var myArticle = document.createElement('article');
+          var myH2 = document.createElement('h2');
+          var myPara1 = document.createElement('p');
+          var myPara2 = document.createElement('p');
+          var myPara3 = document.createElement('p');
+          var myList = document.createElement('ul');
+
+          myH2.textContent = heroes[i].name;
+          myPara1.textContent = 'Secret identify : ' + heroes[i].secretIdentity;
+          myPara2.textContent = 'Age: ' + heroes[i].age;
+          myPara3.textContent = 'SuperPowers:';
+
+          var superPowers = heroes[i].powers;
+
+//          for (var j = 0; j < heroes[i].powers.length; j++) {
+          for (var j = 0; j < superPowers.length; j++) {
+            var listItem = document.createElement('li');
+            listItem.textContent = superPowers[j];
+            myList.appendChild(listItem);
+          }
+
+          myArticle.appendChild(myH2);
+          myArticle.appendChild(myPara1);
+          myArticle.appendChild(myPara2);
+          myArticle.appendChild(myPara3);
+          myArticle.appendChild(myList);
+
+          section.appendChild(myArticle);
+        }
+      }
+    </script>
+  </body>
+</html>

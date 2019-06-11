@@ -63,10 +63,10 @@ Referencia : https://github.com/mdn/learning-area/blob/master/javascript/oojs/js
     <!--<script type="text/javascript" src="caso_practico/ejemplo.json"></script>-->
 
     <script>
+//   Seleccionamos los elementos que queremos modificar mediante sus nodos
       var header = document.querySelector('header');
       var section = document.querySelector('section');
 
-//      var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
       var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
 
 // Crear solicitud
@@ -114,7 +114,6 @@ Referencia : https://github.com/mdn/learning-area/blob/master/javascript/oojs/js
        * @returns {undefined}
        */
       function showHeroes(jsonObj) {
-
         var heroes = jsonObj['members'];
 
         for (var i = 0; i < heroes.length; i++) {

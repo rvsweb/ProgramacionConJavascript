@@ -1,0 +1,83 @@
+<!--Created on 11-jun-2019, 20:34:38-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>titulo</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <style>
+
+      label[for="boton1"]{
+        background: #99ff99;
+        display: block;
+        margin: 10px;
+        width: 100px;
+      }
+
+      input#boton1{
+        background: #99ff99;
+        display: inline-block;
+        margin: 10px;
+        width: 80px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <label for="boton1">Boton</label>
+    <input id="boton1" type="button"  value="Boton">
+
+    <footer style="
+            position: fixed;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(189, 195, 199);
+            color: #000;
+            text-align: center;">
+      <aside style="height: 55px;">
+        <img alt="Licencia de Creative Commons" src="https://licensebuttons.net/l/by/4.0/80x15.png" />
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        </a>Este obra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+        <p style="
+           margin-top: 5px;
+           font-size: 20px;
+           font-family: 'Lobster', cursive;
+           ">Powered by RVS</p>
+      </aside>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+
+      var x;
+      x = $(document);
+      x.ready(iniciarEventos);
+
+      function iniciarEventos() {
+        var x;
+        x = $("#boton1");
+        x.click(presionB1);
+      }
+
+      function presionB1() {
+        document.getElementById('boton1').style.background = "#429bf4";
+      }
+
+      var a = $("div.redondeado").;
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!--Created on 11-jun-2019, 20:34:38-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>titulo</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <style>
+
+      label[for="boton1"]{
+        background: #99ff99;
+        display: block;
+        margin: 10px;
+        width: 100px;
+      }
+
+      input#boton1{
+        background: #99ff99;
+        display: inline-block;
+        margin: 10px;
+        width: 80px;
+      }
+
+      div.redondeado{
+        background-color: #ff9999;
+        padding: 10px;
+        height: 100px;
+        margin: 10px;
+        font-weight: bold;
+        font-family: Roboto,cursive, serif;
+        text-align: center;
+        width: 100px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <label for="boton1">Boton</label>
+    <input id="boton1" type="button"  value="Boton">
+
+    <p id="uno"></p>
+    <div></div>
+    <div class="redondeado">Pulsa el div</div> 
+
+    <footer style="
+            position: fixed;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(189, 195, 199);
+            color: #000;
+            text-align: center;">
+      <aside style="height: 55px;">
+        <img alt="Licencia de Creative Commons" src="https://licensebuttons.net/l/by/4.0/80x15.png" />
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        </a>Este obra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+        <p style="
+           margin-top: 5px;
+           font-size: 20px;
+           font-family: 'Lobster', cursive;
+           ">Powered by RVS</p>
+      </aside>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+
+      var x;
+      x = $(document);
+      x.ready(iniciarEventos);
+
+      /**
+       * Lanza evento onClick sobre el selector id #boton1 
+       * 
+       * @returns {undefined}
+       */
+      function iniciarEventos() {
+        var x;
+        x = $("#boton1");
+        x.click(presionB1); // Al evento le indicamos que acción realizar
+      }
+
+      /**
+       * Cambia el color de un elemento con el id 'boton1'
+       * 
+       * @returns {undefined}
+       */
+      function presionB1() {
+        document.getElementById('boton1').style.background = "#429bf4";
+      }
+
+// Etiqueta y selector
+      var a = $("div.redondeado").click(function () {
+        alert("Handler for .click() called.");
+      });
+
+// Etiquetas y varios selectores
+      var aa = $("#uno, div , div.redondeado");
+
+
+    </script>
+  </body>
+</html>

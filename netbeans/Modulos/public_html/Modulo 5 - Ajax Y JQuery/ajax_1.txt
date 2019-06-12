@@ -1,4 +1,4 @@
-
+<section>
 PROPIEDADES DEL OBJETO XMLHTTPREQUEST
 <hr />
 Propiedades - Descripción
@@ -72,3 +72,4 @@ setRequestHeader(“label”,”Value”)
 <br />
 - Configura un parámetro y valor label=value y lo asigna a la cabecera para ser enviado con la petición.
 <br />
+</section>

@@ -1,0 +1,143 @@
+<!--Created on 11-jun-2019, 20:34:38-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Ajax con JQuery</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <style>
+
+      input#boton1{
+        display: block;
+        background: #99ff99;
+        border-radius: 12px;
+        height: 50px;
+        font-family: Roboto, sans-serif , monospace;
+        font-weight: bold;
+        margin-left: 10px;
+        width: 100px;
+      }
+
+      input#boton2{
+        display: block;
+        background: #99ff99;
+        border-radius: 12px;
+        bottom: 100px;
+        height: 50px;
+        font-family: Roboto, sans-serif , monospace;
+        font-weight: bold;
+        margin-left: 10px;
+        width: 100px;
+        position: fixed;
+      }
+
+      label[for="boton1"]{
+        border-radius: 12px;
+        background-color: #ffcc99;
+        display: block;
+        font-family: Helvetica, Verdana, sans-serif;
+        padding: 10px;
+        margin: 20px;
+        font-weight: bold;
+        text-align: center;
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <span></span>
+
+    <label for="boton1">Pulsa el boton</label>
+    <input type="button" id="boton1" value="Pulsar">
+
+    <input type="button" id="boton2" value="Recargar">
+
+    <footer style="
+            position: fixed;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(189, 195, 199);
+            color: #000;
+            text-align: center;">
+      <aside style="height: 55px;">
+        <img alt="Licencia de Creative Commons" src="https://licensebuttons.net/l/by/4.0/80x15.png" />
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        </a>Este obra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+        <p style="
+           margin-top: 5px;
+           font-size: 20px;
+           font-family: 'Lobster', cursive;
+           ">Powered by RVS</p>
+      </aside>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+
+      /**
+       * Recarga la pagina al pulsar el boton
+       * 
+       * @type type
+       */
+      $(document).ready(function () {
+        $("#boton2").click(function () {
+          window.location.reload();
+          console.log("Recarga la pagina");
+        });
+      });
+
+
+      /**
+       * Evento click de un recurso de forma asincrona por AJAX 
+       * de un archivo de texto y cambiarle el estilo 
+       * en la misma funcion
+       * 
+       * @type type
+       */
+      $(document).ready(function () {
+        $("#boton1").click(function () {
+          $.ajax({
+            async: true,
+            type: 'GET',
+            url: 'ajax_1.txt',
+            success: function (result) {
+              $("span").html(result);
+              $("span").css("display", "inline-table");
+              $("span").css("position", "static");
+              $("span").css("font-family", "Roboto, Verdana, sans-serif");
+              $("span").css("padding", "12px");
+              $("span").css("margin", "20px");
+              $("span").css("border-radius", "12px");
+              $("span").css("background-color", "#ffff99");
+              respuestaProcesada();
+            },
+            error: muestraError
+          });
+        });
+      }
+      );
+      function respuestaProcesada() {
+        console.log("Respuesta correcta");
+      }
+
+      function muestraError() {
+        console.log("Muestra Error");
+      }
+
+
+    </script>
+  </body>
+</html>

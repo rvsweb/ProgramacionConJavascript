@@ -15,25 +15,44 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
     <style>
 
-      h2{
-        display: block;
-        background-color: #ffcc99;
-        height: 50px;
-        margin: 0 auto;
-        margin-top: 10px;
-        padding-left: 15%;
-        padding-right: 15%;
-        text-align: center;
-        width: 300px;
+      input{
+        border-radius: 12px;
+        padding: 10px;
+        background-color: #ccffff;
+        margin: 5px;
       }
 
-      input{
+      div#myDiv{
+        background-color: #ffcc99;
+        border-radius: 12px;
+        display: block;
+        padding: 10px;
         margin: 10px;
+        margin-left: 15%;
+        margin-right: 15%;
+        text-align: center;
+        width: 550px;
+      }
+
+      input#i2{
+        bottom: 75px;
+        position: fixed;
+        margin-left: 2px;
+        padding: 10px;
+        font-size: 20px;
       }
 
     </style>
   </head>
   <body>
+
+    <div id="myDiv">
+      <h2>Let Ajax change this text</h2>
+      <input type="button" onclick="loadXMLDoc()" value="Change Content">
+      <input id='i1' type="button" name="loadXMLHTML" value="Pulsar"/>
+    </div>   
+
+    <input id="i2" type="button" value="Actualizar" />
 
     <footer style="
             position: fixed;
@@ -60,9 +79,44 @@
     </footer>
     <script>
 
+      /**
+       * Peticion por Ajax
+       * 
+       * @returns {undefined}
+       */
       function loadXMLDoc() {
+//      Declaramos una variable para almacenar
         var xmlhttp;
+//      Si es un navegador distinto a Microsoft
+        if (window.XMLHttpRequest) {
+          xmlhttp = new XMLHttpRequest();
+        } else {
+//      Si el navegador es IE6 , IE5 'code for'
+          xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
 
+//      Funcion anonima para realizarla peticion
+        xmlhttp.onreadystatechange = function () {
+//        Si el recurso esta preparado && la petición al servidor es correcta
+          if (xmlhttp.readyState === 4 && xmlhttp.status === 200)
+          {
+//          Agregamos el elemento 'texto' al documento
+            document.getElementById('myDiv').innerHTML = xmlhttp.responseText;
+          }
+        };
+//      Enviamos el elemento mediante 'get' y un elemento 'ajax.txt' , peticion true  
+        xmlhttp.open("GET", "ajax.txt", true);
+//      Enviamos el elemento
+        xmlhttp.send();
+      }
+
+      /**
+       * Peticion por Ajax
+       * 
+       * @returns {undefined}
+       */
+      loadXMLHTML = function () {
+        var xmlhttp;
         if (window.XMLHttpRequest) {
           xmlhttp = new XMLHttpRequest();
         } else {
@@ -75,13 +129,22 @@
             document.getElementById('myDiv').innerHTML = xmlhttp.responseText;
           }
         };
-        xmlhttp.open("GET", "ajax.txt", true);
+        xmlhttp.open("GET", "../M52.3 - Maneras de desarrollar con JQuery/M5.0 - Ajax Y JQuery.html", true);
         xmlhttp.send();
+      };
+
+      document.getElementById('i1').addEventListener('click', loadXMLHTML);
+
+      document.getElementById('i2').addEventListener('click', actualizarPagina);
+
+      /**
+       * 
+       * @returns {recarga la pagina}
+       */
+      function actualizarPagina() {
+        location.reload(true);
       }
+
     </script>
-    <div id="myDiv">
-      <h2>Let Ajax change this text</h2>
-      <input type="button" onclick="loadXMLDoc()" value="Change Content" />
-    </div>
   </body>
 </html>

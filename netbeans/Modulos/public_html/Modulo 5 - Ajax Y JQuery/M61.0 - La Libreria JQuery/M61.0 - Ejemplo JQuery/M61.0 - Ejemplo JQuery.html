@@ -1,4 +1,4 @@
-<!--Created on 09-jun-2019, 20:30:22-->
+<!--Created on 11-jun-2019, 20:34:38-->
 <!-- Referencia :  -->
 <!DOCTYPE html>
 <html lang="es">
@@ -13,17 +13,28 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="shortcut icon" href="https://goo.gl/cais23">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
-    <!--<style></style>-->
-    <!--<script></script>-->
+    <style>
+
+      label[for="boton1"]{
+        background: #99ff99;
+        display: block;
+        margin: 10px;
+        width: 100px;
+      }
+
+      input#boton1{
+        background: #99ff99;
+        display: inline-block;
+        margin: 10px;
+        width: 80px;
+      }
+
+    </style>
   </head>
   <body>
 
-    <section>
-      <h2>M5.0 - Ajax Y JQuery.</h2>
-      <div>
-        <img src="../sources/img/ajax.gif" alt="foto como funciona ajax" />
-      </div>
-    </section>    
+    <label for="boton1">Boton</label>
+    <input id="boton1" type="button"  value="Boton">
 
     <footer style="
             position: fixed;
@@ -48,5 +59,25 @@
            ">Powered by RVS</p>
       </aside>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+
+      var x;
+      x = $(document);
+      x.ready(iniciarEventos);
+
+      function iniciarEventos() {
+        var x;
+        x = $("#boton1");
+        x.click(presionB1);
+      }
+
+      function presionB1() {
+        document.getElementById('boton1').style.background = "#429bf4";
+      }
+
+      var a = $("div.redondeado");
+
+    </script>
   </body>
 </html>

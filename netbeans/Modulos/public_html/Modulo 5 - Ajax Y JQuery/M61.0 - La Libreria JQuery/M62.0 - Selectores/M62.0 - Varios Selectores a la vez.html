@@ -29,12 +29,27 @@
         width: 80px;
       }
 
+      div.redondeado{
+        background-color: #ff9999;
+        padding: 10px;
+        height: 100px;
+        margin: 10px;
+        font-weight: bold;
+        font-family: Roboto,cursive, serif;
+        text-align: center;
+        width: 100px;
+      }
+
     </style>
   </head>
   <body>
 
     <label for="boton1">Boton</label>
     <input id="boton1" type="button"  value="Boton">
+
+    <p id="uno"></p>
+    <div></div>
+    <div class="redondeado">Pulsa el div</div> 
 
     <footer style="
             position: fixed;
@@ -66,17 +81,34 @@
       x = $(document);
       x.ready(iniciarEventos);
 
+      /**
+       * Lanza evento onClick sobre el selector id #boton1 
+       * 
+       * @returns {undefined}
+       */
       function iniciarEventos() {
         var x;
         x = $("#boton1");
-        x.click(presionB1);
+        x.click(presionB1); // Al evento le indicamos que acción realizar
       }
 
+      /**
+       * Cambia el color de un elemento con el id 'boton1'
+       * 
+       * @returns {undefined}
+       */
       function presionB1() {
         document.getElementById('boton1').style.background = "#429bf4";
       }
 
-      var a = $("div.redondeado").;
+// Etiqueta y selector
+      var a = $("div.redondeado").click(function () {
+        alert("Handler for .click() called.");
+      });
+
+// Etiquetas y varios selectores
+      var aa = $("#uno, div , div.redondeado");
+
 
     </script>
   </body>

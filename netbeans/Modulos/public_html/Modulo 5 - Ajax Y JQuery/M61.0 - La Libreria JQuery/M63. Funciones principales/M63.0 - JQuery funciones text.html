@@ -1,0 +1,157 @@
+<!--Created on 11-jun-2019, 20:34:38-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Funciones principales JQuery con Ajax</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <style>
+
+      input#boton1{
+        background: #99ff99;
+        border-radius: 12px;
+        display: block;
+        height: 50px;
+        font-family: Roboto, sans-serif , monospace;
+        font-weight: bold;
+        margin: 30px;
+        width: 100px;
+      }
+
+      div.redondeado{
+        background-color: #ff9999;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+      }
+
+      section{
+        display: inline-table;
+        position: static;
+        font-family: Roboto, Verdana, sans-serif;
+        padding: 12px;
+        margin: 20px;
+        border-radius: 12px;
+        background-color: #ffff99;
+      }
+
+      div#div1 , div.div2{
+        padding: 10px;
+        border-radius: 12px;
+        margin: 10px;
+        background-color: #ffcc99;
+        width: 200px;
+      }
+
+      div.div3{
+        background-color: #ffcc99;
+        border-radius: 12px;
+        padding: 1px;
+        margin: 10px;
+        text-align: center;
+        width: 200px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <section id="sec1">
+      <h2>Funciones principales JQuery con Ajax</h2>
+    </section>
+
+    <div id="div1">
+    </div>
+
+    <div class="div2">
+    </div>
+
+    <div class="div3">
+      <p>Agregar Contenido</p>
+    </div>
+
+    <p id="p1"></p>
+
+    <p id="p2"></p>
+
+    <input type="button" id="boton1" value="Pulsar">
+
+    <footer style="
+            position: fixed;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(189, 195, 199);
+            color: #000;
+            text-align: center;">
+      <aside style="height: 55px;">
+        <img alt="Licencia de Creative Commons" src="https://licensebuttons.net/l/by/4.0/80x15.png" />
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        </a>Este obra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+        <p style="
+           margin-top: 5px;
+           font-size: 20px;
+           font-family: 'Lobster', cursive;
+           ">Powered by RVS</p>
+      </aside>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+
+      $(document).ready(function () {
+        $("#boton1").click(function () {
+          $("title").text("Funciones principales JQuery con Ajax - text()");
+          $("h2").text("Funciones principales JQuery con Ajax - text()");
+          $("#div1").text("Funciones principales JQuery con Ajax - text()")
+                  .css("font-weight", "bold")
+                  .css("padding", "20px")
+                  .css("background-color", "#ccffff");
+          $(".div2").text("Funciones principales JQuery con Ajax - text()");
+        });
+      });
+
+// Seleccionamos el document
+      $(document).ready(function () {
+        var x = 0;
+// Seleccionamos el evento 'click'
+        $("#boton1").click(function () {
+// Seleccionamos el elemento y las functiones que queremos ejecutar
+          $("p#p1").html($(".div3").text().concat(++x));
+// Seleccionamos el elemento y la function que queremos ejecutar
+          $("p#p1").css("background-color", "#8075c2")
+                  .css("width", "200px")
+                  .css("padding", "20px")
+                  .css("margin", "20px");
+        });
+      });
+
+// Seleccionamos el document
+      $(function () {
+        var x = 0;
+// Seleccionamos el evento 'click'
+        $("#boton1").click(function () {
+// Seleccionamos el elemento y las functiones que queremos ejecutar
+          $("p#p2").html($(".div3").text().concat(++x));
+// Seleccionamos el elemento y la function que queremos ejecutar
+          $("p#p2").css("background-color", "rgb(72, 160, 78)")
+                  .css("width", "200px")
+                  .css("padding", "20px")
+                  .css("margin", "20px");
+        });
+      });
+
+    </script>
+  </body>
+</html>

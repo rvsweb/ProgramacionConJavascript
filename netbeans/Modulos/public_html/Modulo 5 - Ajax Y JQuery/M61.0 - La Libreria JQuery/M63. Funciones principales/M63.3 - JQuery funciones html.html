@@ -43,22 +43,29 @@
         background-color: #ffff99;
       }
 
-      p#p1{
-        padding: 10px;
+      p , #s1 , #s2 {
+        display: block;
+        background-color: #ccffff;
         border-radius: 12px;
+        font-size: 150%;
+        padding: 10px;
         margin: 10px;
-        background-color: #ffcc99;
-        width: 200px;
+        width: 100px;
       }
+
     </style>
   </head>
   <body>
 
     <section id="sec1">
-      <h2>Funciones principales JQuery con Ajax - attr()</h2>
+      <h2>Funciones principales JQuery con Ajax - </h2>
     </section>
 
-    <p id="p1" style="background-color: #ffff99">Parrafo 1</p>
+    <p id="p1">Parrafo 1</p>
+    <p id="p2">Parrafo 2</p>
+    <p id="p3">Parrafo 3</p>
+    <span id="s1">Linea 1</span>
+    <span id="s2">Linea 2</span>
 
     <input id="boton1" type="button" value="Pulsar">
     <input id="boton2" type="button" value="Pulsar">
@@ -79,38 +86,48 @@
         <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
           licencia de Creative Commons Reconocimiento 4.0 Internacional
         </a>
-        <p style="
-           margin-top: 5px;
-           font-size: 20px;
-           font-family: 'Lobster', cursive;
-           ">Powered by RVS</p>
+        <span style="
+              margin-top: 5px;
+              font-size: 20px;
+              font-family: 'Lobster', cursive;
+              "><br>Powered by RVS</span>
       </aside>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script>
 
-      /**
-       * Cambia el valor de los atributos de un elemento
-       * 
-       * @type type
-       */
       $(document).ready(function () {
         $("input#boton1").click(function () {
-          $("#p1").attr("style", "background-color: #ccccff");
+          $("p").html("Cambiar el parrafo").css("width", "200");
         });
       });
 
-      /**
-       * Elimina el valor de los atributos de un elemento
-       * 
-       * @type type
-       */
       $(document).ready(function () {
         $("input#boton2").click(function () {
-          $("#p1").removeAttr("style");
+          var x = $("#s1").html();
+          $("#p1").html(x);
         });
       });
 
+
+      $(document).ready(function () {
+// Creamos una variable local para añadir el texto al final
+        var x = $("h2").html();
+        $("input#boton2").click(function () {
+          $("h2").html(x.concat(".html()"));
+        });
+      });
+
+      $(document).ready(function () {
+// Creamos variables locales para añadir el texto al final
+        var x = 0;
+        var texto = $("#s2").html();
+        $("input#boton2").click(function () {
+          var pagina = $("#s2").html();
+          $("#s2").html(pagina).text(texto + " - " + x)
+                  .css("width", x += 5).css("background-color", "#ff9999");
+        });
+      });
     </script>
   </body>
 </html>

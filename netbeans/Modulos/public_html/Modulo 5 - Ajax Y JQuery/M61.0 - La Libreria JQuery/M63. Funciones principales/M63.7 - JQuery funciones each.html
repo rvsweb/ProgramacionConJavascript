@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
     <style>
 
-      input#boton1, input#boton2{
+      input{
         background: #99ff99;
         border-radius: 12px;
         display: block;
@@ -23,45 +23,54 @@
         font-family: Roboto, sans-serif , monospace;
         font-weight: bold;
         margin: 30px;
-        width: 100px;
+        width: 180px;
       }
 
-      div.redondeado{
+      #boton1 ,#boton2{
+        background: #ccffff;
+      }
+
+      div{
         background-color: #ff9999;
         width: 100px;
         height: 100px;
         margin: 10px;
+        align-items: center;
+        display: flex;
+        background: #cc99ff;
+        border-radius: 12px;
+        margin: 10px;
+        justify-content: center;
+        text-align: center;
       }
 
       section{
         display: inline-table;
         position: static;
-        font-family: Roboto, Verdana, sans-serif;
+        font-family: 'Roboto', Verdana, sans-serif;
         padding: 12px;
         margin: 20px;
         border-radius: 12px;
         background-color: #ffff99;
       }
 
-      p#p1{
-        padding: 10px;
-        border-radius: 12px;
-        margin: 10px;
-        background-color: #ffcc99;
-        width: 200px;
-      }
     </style>
   </head>
   <body>
 
     <section id="sec1">
-      <h2>Funciones principales JQuery con Ajax - attr()</h2>
+      <h2>Funciones principales JQuery con Ajax - each()</h2>
     </section>
 
-    <p id="p1" style="background-color: #ffff99">Parrafo 1</p>
+    <input id="boton1" type="button" value="Lanzar evento">
 
-    <input id="boton1" type="button" value="Pulsar">
-    <input id="boton2" type="button" value="Pulsar">
+    <ul id="div1">
+      <li>fadeIn()</li>
+      <li>fadeOut()</li>
+      <li>fadeTo()</li>
+      <li>toggle()</li>
+      <li>each()</li>
+    </ul>
 
     <footer style="
             position: fixed;
@@ -79,35 +88,32 @@
         <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
           licencia de Creative Commons Reconocimiento 4.0 Internacional
         </a>
-        <p style="
-           margin-top: 5px;
-           font-size: 20px;
-           font-family: 'Lobster', cursive;
-           ">Powered by RVS</p>
+        <span style="
+              margin-top: 5px;
+              font-size: 20px;
+              font-family: 'Lobster', cursive;
+              "><br>Powered by &Ropf;VS</span>
       </aside>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script>
 
-      /**
-       * Cambia el valor de los atributos de un elemento
-       * 
-       * @type type
-       */
-      $(document).ready(function () {
-        $("input#boton1").click(function () {
-          $("#p1").attr("style", "background-color: #ccccff");
-        });
-      });
+      var estilos1 = {
+        'align-items': 'center',
+        'display': 'flex',
+        'background': '#cc99ff',
+        'border-radius': '12px',
+        'margin': '10px',
+        'padding-left': '15px',
+        'justify-content': 'left',
+        'text-align': 'left',
+        'height': '50px',
+        'width': '180px'
+      };
 
-      /**
-       * Elimina el valor de los atributos de un elemento
-       * 
-       * @type type
-       */
-      $(document).ready(function () {
-        $("input#boton2").click(function () {
-          $("#p1").removeAttr("style");
+      $("input").click(function () {
+        $("li").each(function () {
+          $("li").css(estilos1).text();
         });
       });
 

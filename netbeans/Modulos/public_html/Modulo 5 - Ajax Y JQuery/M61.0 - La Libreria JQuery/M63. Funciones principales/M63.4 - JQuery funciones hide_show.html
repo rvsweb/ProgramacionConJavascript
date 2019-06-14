@@ -43,25 +43,31 @@
         background-color: #ffff99;
       }
 
-      p#p1{
-        padding: 10px;
+      p {
+        display: block;
+        background-color: #ccffff;
         border-radius: 12px;
-        margin: 10px;
-        background-color: #ffcc99;
-        width: 200px;
+        font-size: 150%;
+        padding: 10px;
+        margin: 15px;
+        width: 100px;
       }
+
     </style>
   </head>
   <body>
 
     <section id="sec1">
-      <h2>Funciones principales JQuery con Ajax - attr()</h2>
+      <h2>Funciones principales JQuery con Ajax - hide & show </h2>
     </section>
 
-    <p id="p1" style="background-color: #ffff99">Parrafo 1</p>
+    <p id="p1">Sin Esconder</p>
 
-    <input id="boton1" type="button" value="Pulsar">
-    <input id="boton2" type="button" value="Pulsar">
+    <p id="p2">Sin Esconder</p>
+
+    <p id="p3">Sin Esconder</p>
+
+    <p id="p4">Sin Esconder</p>
 
     <footer style="
             position: fixed;
@@ -79,35 +85,41 @@
         <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
           licencia de Creative Commons Reconocimiento 4.0 Internacional
         </a>
-        <p style="
-           margin-top: 5px;
-           font-size: 20px;
-           font-family: 'Lobster', cursive;
-           ">Powered by RVS</p>
+        <span style="
+              margin-top: 5px;
+              font-size: 20px;
+              font-family: 'Lobster', cursive;
+              "><br>Powered by RVS</span>
       </aside>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script>
 
-      /**
-       * Cambia el valor de los atributos de un elemento
-       * 
-       * @type type
-       */
       $(document).ready(function () {
-        $("input#boton1").click(function () {
-          $("#p1").attr("style", "background-color: #ccccff");
+        $("#p1").click(function () {
+          $("p#p1").hide();
         });
       });
 
-      /**
-       * Elimina el valor de los atributos de un elemento
-       * 
-       * @type type
-       */
       $(document).ready(function () {
-        $("input#boton2").click(function () {
-          $("#p1").removeAttr("style");
+        $("#p2").click(function () {
+          $("p#p1, p#p2").show().css("background-color", "#ff9999");
+          $("p#p2").show().text("Mostrado");
+        });
+      });
+
+      $(document).ready(function () {
+        $("#p3").click(function () {
+          $("p#p3").hide(2000);
+        });
+      });
+
+      $(document).ready(function () {
+        $("#p4").click(function () {
+          $("p#p3, p#p4").show()
+                  .css("background-color", "#cc99ff")
+                  .css("width", "200");
+          $("p#p4").show(2000).text("Mostrado");
         });
       });
 

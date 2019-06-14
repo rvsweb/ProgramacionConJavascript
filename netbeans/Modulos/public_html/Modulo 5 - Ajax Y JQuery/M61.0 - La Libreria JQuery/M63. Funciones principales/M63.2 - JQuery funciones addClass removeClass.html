@@ -43,13 +43,24 @@
         background-color: #ffff99;
       }
 
-      p#p1{
-        padding: 10px;
+      .intro {
+        background-color: #ccffff;
         border-radius: 12px;
+        font-size: 150%;
+        padding: 10px;
         margin: 10px;
-        background-color: #ffcc99;
-        width: 200px;
+        width: 100px;
       }
+
+      .intro2 {
+        background-color: hotpink;
+        border-radius: 12px;
+        font-size: 150%;
+        padding: 10px;
+        margin: 10px;
+        width: 100px;
+      }
+
     </style>
   </head>
   <body>
@@ -58,10 +69,11 @@
       <h2>Funciones principales JQuery con Ajax - attr()</h2>
     </section>
 
-    <p id="p1" style="background-color: #ffff99">Parrafo 1</p>
+    <p id="p1">Parrafo 1</p>
+    <p id="p2">Parrafo 2</p>
+    <p id="p3">Parrafo 3</p>
 
     <input id="boton1" type="button" value="Pulsar">
-    <input id="boton2" type="button" value="Pulsar">
 
     <footer style="
             position: fixed;
@@ -89,25 +101,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script>
 
-      /**
-       * Cambia el valor de los atributos de un elemento
-       * 
-       * @type type
-       */
       $(document).ready(function () {
-        $("input#boton1").click(function () {
-          $("#p1").attr("style", "background-color: #ccccff");
+        $("input").click(function () {
+          $("p#p2 , p#p3").addClass("intro");
         });
       });
 
-      /**
-       * Elimina el valor de los atributos de un elemento
-       * 
-       * @type type
-       */
       $(document).ready(function () {
-        $("input#boton2").click(function () {
-          $("#p1").removeAttr("style");
+        $("input").click(function () {
+          $("p:first").addClass("intro2");
         });
       });
 

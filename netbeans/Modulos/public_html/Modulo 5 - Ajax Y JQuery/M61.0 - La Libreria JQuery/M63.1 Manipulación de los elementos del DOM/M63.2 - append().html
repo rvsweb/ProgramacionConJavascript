@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>titulo</title>
+    <title>M63.2 - append()</title>
     <meta charset="UTF-8">
     <meta name="author" content="Raul Vela Salas">
     <meta name="description" content="...">
@@ -15,61 +15,59 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
     <style>
 
-      h2{
-        margin: 30px;
+      #s1 {
+        display: table;
+        margin: 0 auto;
       }
 
-      div {
+      h2{
+        background-color:#ffff99;
+        border-radius: 12px;
+        padding: 15px;
+        text-align: center;
+        width: 900px;
+        align-content: center;
+      }
+
+      div#ss1 {
         align-content: center;
         border-radius: 12px;
-        line-height: 100px;
         text-align: center;
         vertical-align: middle;
-        font-size: x-large;
         font-weight: bolder;
+      }
+
+      div#ss3 , input {
+        background-color: #99ff99;
+        width: 150px;
+        padding: 10px;
         margin: 10px;
-        padding: 20px;
-        height: 100px;
-        width: 170px;
-        padding: 20px;
       }
 
-      div#d1{
-        background-color:#99ff99;
-      }
-
-      div#d2{
-        background-color: #ff9999;
-        width: auto;
-      }
-
-      p.parrafo{
+      input {
         display: block;
-        width: 300px;
-        margin: 10px;
-        padding: 20px;
-        color: #ff3333;
-        font-weight: bolder;
-        font-size: 20px;
-        background-color: #ffcc99;
         border-radius: 12px;
       }
+
 
     </style>
   </head>
   <body>
 
     <section id="s1">
-      <h2>Ejecutar la funcion empty()</h2>
-      <div id="d1">Elmina el div 1</div>
-      <p class="parrafo">Quitar parrafo <span>incluyendo span</span></p>
+      <h2>Ejecutar la funcion append() y prepend()</h2>
     </section>
 
-    <section id="s2">
-      <h2>Ejecutar la funcion empty()</h2>
-      <div id="d2">Elimina todo el contenido del documento</div>
-      <p class="parrafo">Quitar parrafo <span>incluyendo span</span></p>
-    </section>
+    <div id="ss1"></div>
+    <div>
+      <ol id="ss2"></ol>
+    </div>
+
+    <div id="ss3">Pulsar</div>
+
+    <input type="button" value="Lanzar Function">
+
+    <p id="p1"></p>
 
 
     <footer style="
@@ -98,17 +96,71 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script>
 
-      $("div").click(function () {
-        setTimeout(function () {
-          $("section#s1").empty();
-        }, 1000);
-        $("p").empty();
+      var css1 = {
+        "display": "inline-block",
+        "background-color": '#99ff99',
+        "padding-left": '5px',
+        "padding-right": '5px',
+        "border": "1px solid #ff3333"
+      };
+
+      var css2 = {
+        "display": "inline-block",
+        "background-color": '#cc99ff',
+        "margin": '15px 15px 15px 125px',
+        "padding": '15px 5px 15px 5px',
+        "width": "auto",
+        "border": "1px solid #ff3333"
+      };
+
+      $("h2").click(function () {
+        $("#ss1").append("<p>Appended text</p>").css(css1);
       });
 
-      $("div#d2").click(function () {
-        setTimeout(function () {
-          $("body").empty();
-        }, 1000);
+      $("h2").click(function () {
+        $("ol").append("<li>Elemento lista</li>").css(css2);
+      });
+
+      var estilos = {
+        "background-color": "#ffcc99",
+        "width": "300px",
+        "height": "50px",
+        "align-content": "center",
+        "border-radius": "12px",
+        "text-align": "center",
+        "vertical-align": "middle",
+        "font-weight": "bolder"
+      };
+
+      /**
+       * 
+       * @returns {undefined}
+       */
+      function appendText() {
+        var txt1 = "<p>Variable Text</p>"; // Create text with HTML
+        var txt2 = $("<p></p>").text("Añadimos elemento parrafo entre 2 etiquetas").css(estilos); // Create text with JQuery
+        var txt3 = document.createElement('p');
+        txt3.innerHTML = "Parrafo añadido mediante innerHTML dentro del parrafo";
+        $('body').append(txt1, txt2, txt3).css("background-color", "#ccffff");
+      }
+
+      /**
+       * 
+       * @type type
+       */
+      $("#ss3").click(function () {
+        appendText();
+      });
+
+      /**
+       * Elemento devuelve un String
+       * 
+       * @type String
+       */
+      $("input").click(function () {
+        $("p#p1").append(function (n) {
+          return "<b> This p element has index " + (n) + " </b>";
+        });
       });
 
     </script>

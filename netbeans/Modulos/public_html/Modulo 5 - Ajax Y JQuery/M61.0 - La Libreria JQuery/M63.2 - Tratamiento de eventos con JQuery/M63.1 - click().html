@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>M63.1 - empty()</title>
+    <title>M63.1 - click()</title>
     <meta charset="UTF-8">
     <meta name="author" content="Raul Vela Salas">
     <meta name="description" content="...">
@@ -15,62 +15,80 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
     <style>
 
-      h2{
-        margin: 30px;
-      }
-
-      div {
-        align-content: center;
-        border-radius: 12px;
-        line-height: 100px;
+      table{
         text-align: center;
-        vertical-align: middle;
-        font-size: x-large;
-        font-weight: bolder;
-        margin: 10px;
-        padding: 20px;
-        height: 100px;
-        width: 170px;
-        padding: 20px;
-      }
-
-      div#d1{
-        background-color:#99ff99;
-      }
-
-      div#d2{
         background-color: #ff9999;
-        width: auto;
+        border-radius: 12px;
+        padding: 10px;
+        margin: 30px;
+        width: 500px;
+        height: 200px;
       }
 
-      p.parrafo{
-        display: block;
-        width: 300px;
-        margin: 10px;
-        padding: 20px;
-        color: #ff3333;
-        font-weight: bolder;
-        font-size: 20px;
-        background-color: #ffcc99;
-        border-radius: 12px;
+      thead{
+        background-color: #99ff99;
+        padding: 110px;
+        margin: 30px;
+        width: 500px;
+        height:200px;
+      }
+
+      tbody{
+        background-color: #ccffff;
+        padding: 110px;
+        margin: 30px;
+        width: 500px;
+        height: 200px;
+      }
+
+      tfoot{
+        background-color: #ffff99;
+        padding: 110px;
+        margin: 30px;
+        width: 500px;
+        height: 200px;
+      }
+
+      #td0{
+        background-color: #999999;
+      }
+
+      td{
+        width: 500px;
+        height: 100px;
       }
 
     </style>
   </head>
   <body>
 
-    <section id="s1">
-      <h2>Ejecutar la funcion empty()</h2>
-      <div id="d1">Elmina el div 1</div>
-      <p class="parrafo">Quitar parrafo <span>incluyendo span</span></p>
-    </section>
+    <table>
+      <thead>
+        <tr>
+          <td id="td0"></td>
+          <td>Columna 1</td>
+          <td>Columna 2</td>
+          <td>Columna 3</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>f1</td>
+          <td>f2</td> 
+          <td>f3</td> 
+          <td>f4</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>ff1</td>
+          <td>ff2</td> 
+          <td>ff3</td> 
+          <td>ff4</td>
+        </tr>
+      </tfoot>
 
-    <section id="s2">
-      <h2>Ejecutar la funcion empty()</h2>
-      <div id="d2">Elimina todo el contenido del documento</div>
-      <p class="parrafo">Quitar parrafo <span>incluyendo span</span></p>
-    </section>
-
+    </table>
 
     <footer style="
             position: fixed;
@@ -98,18 +116,18 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script>
 
-      $("div").click(function () {
-        setTimeout(function () {
-          $("section#s1").empty();
-        }, 1000);
-        $("p").empty();
+      $("thead").click(function () {
+        $("tr:eq(0)").fadeOut(2000);
       });
 
-      $("div#d2").click(function () {
-        setTimeout(function () {
-          $("body").empty();
-        }, 1000);
+      $("tbody").click(function () {
+        $("tr:eq(1)").fadeOut(2000);
       });
+
+      $("tfoot").click(function () {
+        $("tr:eq(2)").fadeOut(2000);
+      });
+
 
     </script>
   </body>

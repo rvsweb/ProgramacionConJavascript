@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>M63.2 - append()</title>
+    <title>M63.1 - click()</title>
     <meta charset="UTF-8">
     <meta name="author" content="Raul Vela Salas">
     <meta name="description" content="...">
@@ -116,28 +116,18 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script>
 
-      $("tbody").mouseenter(function () {
-        iluminarFila1();
-        iluminarFila2();
+      $("thead").click(function () {
+        $("tr:eq(0)").fadeOut(2000);
       });
 
-      function iluminarFila1() {
-        $("tbody").mouseenter(function () {
-          $("tr").eq(1).css("background-color", "#ffcccc");
-        });
-        $("tbody").mouseout(function () {
-          $("tr:eq(1)").css("background-color", "#ccffff");
-        });
-      }
+      $("tbody").click(function () {
+        $("tr:eq(1)").fadeOut(2000);
+      });
 
-      function iluminarFila2() {
-        $("tfoot").mouseenter(function () {
-          $("tr").eq(2).css("background-color", "#ffcccc");
-        });
-        $("tfoot").mouseout(function () {
-          $("tr:eq(2)").css("background-color", "#ffff99");
-        });
-      }
+      $("tfoot").click(function () {
+        $("tr:eq(2)").fadeOut(2000);
+      });
+
 
     </script>
   </body>

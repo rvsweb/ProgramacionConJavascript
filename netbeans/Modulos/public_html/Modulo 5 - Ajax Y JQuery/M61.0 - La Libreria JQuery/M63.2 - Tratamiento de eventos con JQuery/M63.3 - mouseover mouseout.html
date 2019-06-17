@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>M63.2 - append()</title>
+    <title>M63.2 - dblclick()</title>
     <meta charset="UTF-8">
     <meta name="author" content="Raul Vela Salas">
     <meta name="description" content="...">
@@ -18,15 +18,15 @@
       table{
         text-align: center;
         background-color: #ff9999;
+        border: 1px solid red;
         border-radius: 12px;
-        padding: 10px;
+        padding: 20px;
         margin: 30px;
-        width: 500px;
+        width: 600px;
         height: 200px;
       }
 
       thead{
-        background-color: #99ff99;
         padding: 110px;
         margin: 30px;
         width: 500px;
@@ -34,7 +34,6 @@
       }
 
       tbody{
-        background-color: #ccffff;
         padding: 110px;
         margin: 30px;
         width: 500px;
@@ -42,7 +41,6 @@
       }
 
       tfoot{
-        background-color: #ffff99;
         padding: 110px;
         margin: 30px;
         width: 500px;
@@ -54,8 +52,22 @@
       }
 
       td{
+        border: 1px solid black;
         width: 500px;
         height: 100px;
+      }
+
+      ul{
+        border-radius: 12px;
+        list-style: none;
+        margin: 10px ;
+        padding: 10px;
+        border: 1px solid red;
+        width: 200px;
+      }
+
+      li{
+        padding: 10px;
       }
 
     </style>
@@ -65,7 +77,7 @@
     <table>
       <thead>
         <tr>
-          <td id="td0"></td>
+          <td></td>
           <td>Columna 1</td>
           <td>Columna 2</td>
           <td>Columna 3</td>
@@ -87,8 +99,14 @@
           <td>ff4</td>
         </tr>
       </tfoot>
-
     </table>
+
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+    </ul>
 
     <footer style="
             position: fixed;
@@ -116,28 +134,26 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script>
 
-      $("tbody").mouseenter(function () {
-        iluminarFila1();
-        iluminarFila2();
+      $('table').mouseover(function () {
+        $('thead').each(function () {
+          $('td').css("background-color", "#ffff99");
+        });
       });
 
-      function iluminarFila1() {
-        $("tbody").mouseenter(function () {
-          $("tr").eq(1).css("background-color", "#ffcccc");
+      $('table').mouseleave(function () {
+        $('thead').each(function () {
+          $('td').css("background-color", "#cc99ff");
         });
-        $("tbody").mouseout(function () {
-          $("tr:eq(1)").css("background-color", "#ccffff");
-        });
-      }
+      });
+      
+      $('li').mouseover(function (){
+        $(this).css("background-color", "#cc99ff");
+      });
+      
+      $('li').mouseleave(function (){
+        $(this).css("background-color", "white");
+      });
 
-      function iluminarFila2() {
-        $("tfoot").mouseenter(function () {
-          $("tr").eq(2).css("background-color", "#ffcccc");
-        });
-        $("tfoot").mouseout(function () {
-          $("tr:eq(2)").css("background-color", "#ffff99");
-        });
-      }
 
     </script>
   </body>

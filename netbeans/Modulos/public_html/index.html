@@ -1,46 +1,325 @@
+<!--Created on 17-jun-2019, 12:24:16-->
+<!-- Referencia : https://azmind.com/bootstrap-4-tutorial-one-page-website/ -->
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>TODO supply a title</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagina principal del curso HTML5 CSS JQuery</title>
+
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , shrink-to-fit=no">
+    <meta name="description" content="...">
+
+    <!-- CSS -->
+    <!--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">-->
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+    <link rel="stylesheet" href="sources/assets/css/animate.css">
+    <link rel="stylesheet" href="sources/assets/css/style.css">
+    <link rel="stylesheet" href="sources/assets/css/media-queries.css">
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://goo.gl/cais23">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://goo.gl/cais23">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://goo.gl/cais23">
+    <link rel="apple-touch-icon-precomposed" href="https://goo.gl/cais23">
   </head>
   <body>
-    <main>
-      <h1>Listado de Temas de Curso</h1>
-      <p>Aqu&iacute; se muestran todos los temas y ejemplos tratados en el curso</p>
-      <h2>Modulos</h2>
-      <ul>
-        <li>Modulo 1 - Paginas Dinamicas
-          <ul>
-            <li>
-              <a href="Modulo 1 - Paginas Dinamicas/Definir JavaScript en un archivo externo a nuestro documento.html">Definir JavaScript en un archivo externo a nuestro documento 
-              </a>
-            </li>          
-            <li>
-              <a href="Modulo 1 - Paginas Dinamicas/Escribir JavaScript en el propio documento HTML.html">Escribir JavaScript en el propio documento HTML
-              </a>
-            </li>          
-            <li>
-              <a href="Modulo 1 - Paginas Dinamicas/Incluir JavaScript dentro de las propias etiquetas HTML.html">Incluir JavaScript dentro de las propias etiquetas HTML
-              </a>
-            </li>          
-            <li>
-              <a href="Modulo 1 - Paginas Dinamicas/P8p2y2IncluirScriptEnPaginaArchivojs.html">Incluir script en pagina y archivo js
-              </a>
-            </li>          
-            <li>
-              <a href="Modulo 1 - Paginas Dinamicas/P10JSArchivoExterno.html">JS archivo externo
-              </a>
-            </li>          
-            <li>
-              <a href="Modulo 1 - Paginas Dinamicas/P11IncluirJSDentroEtiquetasHTML.html">Incluir JS dentro de etiquetas HTML
-              </a>
-            </li>          
-          </ul>
-        </li>
-      </ul>
+    <!--Top menu-->
+    <nav class="navbar navbar-dark fixed-top navbar-expand-md navbar-no-bg">
+      <div class="container">
+        <!-- Icono MX enlace -->
+        <a class="navbar-brand" href="index.html">Bootstrap 4 One Page Website Tutorial</a>
+        <button class="navbar-toggler" 
+                type="button" 
+                data-toggle="collapse" 
+                data-target="#navbarNav" 
+                aria-controls="navbarNav" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    </main>
-  </body>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link scroll-link" href="#top-content">Top</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scroll-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scroll-link" href="#about-us">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scroll-link" href="#portfolio">Work</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scroll-link" href="#testimonials">Clients</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scroll-link" href="#blog">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--Top content-->
+    <div class="top-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2 text">
+            <h1 class="wow fadeInLeftBig">Bootstrap 4 Website Tutorial</h1>
+            <div class="desciption wow fadeInLeftBig">
+              <p>
+                This is a free responsive one page template made with the Bootstrap framework. 
+                Check it out now. Download it, customize and use it as you like!
+              </p>
+            </div>
+            <div class="top-big-link wow fadeInUp">
+              <a class="btn btn-primary btn-link-1" href="#">Enlace</a>
+              <a class="btn btn-primary btn-link-1" href="#services">Servicios</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services -->
+    <div class="services-container section-container">
+      <div class="container">
+        <div class="row">
+          <div class="col services section-description wow fadeIn">
+            <h2>Our Services</h2>
+            <div class="divider-1 wow fadeInUp"><span></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 services-box wow fadeInUp">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="services-box-icon">
+                    <i class="fas fa-magic"></i>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <h3>Web Design</h3>
+                  <p>Desarrollo web</p>
+                </div>
+              </div>
+              <div class="col-md-4 services-box wow fadeInDown">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="services-box-icon">
+                      <i class="fas fa-cog"></i>
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <h3>UI / UX</h3>
+                    <p>Interfaces de Usuario</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 services-box wow fadeInUp">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="services-box-icon">
+                      <i class="fab fa-google"></i>
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <h3>Marketing D&iacute;gital</h3>
+                    <p>Comercializaci&oacute;n del producto d&iacute;gital</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-us-container section-container section-container-gray-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-7 about-us-box wow fadeInLeft">
+            <div class="about-us-box-text">
+              <h3>About Us</h3>
+              <p class="medium-paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
+                Ut wisi enim ad minim veniam, quis nostrud. 
+                Exerci tation ullamcorper suscipit <a href="#">lobortis nisl</a> ut aliquip ex ea commodo consequat. 
+                Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+                Ut wisi enim ad minim veniam, quis nostrud.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5 about-us-box wow fadeInUp">
+            <div class="about-us-box-img">
+              <!-- data-at2x : Libreria Retina.js para dispositivos de alta resolucion  -->
+              <img src="sources/img/60x60bb.jpg" alt="Imagen de la empresa" data-at2x="sources/img/60x60bb.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio : Presentacion de los proyectos creados por la empresa -->
+    <div class="portfolio-container section-container">
+      <div class="container">
+        <div class="row">
+          <div class="col portfolio section-description wow fadeIn">
+            <h2>Our Portfolio</h2>
+            <div class="divider-1 wow fadeInUp"><span></span></div>
+            <p>We've completed 537 project since we started back in 2010</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 portfolio-box wow fadeInUp">
+            <div class="portfolio-box-imagen">
+              <img src="sources/img/background/grisaceo.jpg" 
+                   alt="Imagen marmol amarillo" 
+                   data-at2x="sources/img/background/grisaceo.jpg">
+            </div>
+            <h3><a href="#">Acme branding</a><i class="fas fa-angle-right"></i></h3>
+            <div class="portfolio-box-date"><i class="far fa-calendar"></i> March 2019</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+          </div>
+          <div class="col-md-4 portfolio-box wow fadeInDown">
+            <div class="portfolio-box-image">
+              <img src="sources/img/background/grisaceo.jpg"
+                   alt="Imagen marmol amarillo"
+                   data-at2x="sources/img/background/grisaceo.jpg">                   
+            </div>
+          </div>
+          <div class="col-md-4 portfolio-box wow fadeInUp">
+            <div class="portfolio-box-image">
+              <img src="sources/img/background/grisaceo.jpg"
+                   alt="Imagen marmol amarillo"
+                   data-at2x="sources/img/background/grisaceo.jpg">
+            </div>
+            <h3><a href="#">Created 150 flyper</a><i class="fas fa-angle-right"></i></h3>
+            <div class="portfolio-box-date"><i class="far fa-calendar"></i>January 2019</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col section-bottom-button wow fadeInUp">
+            <a class="btn btn-primary btn-link-3" href="#">Load more</a>
+          </div>
+        </div>
+      </div>
+    </div> <!-- End Portfolio -->
+
+    <!-- Testimonials -->
+    <div class="testimonials-container section-container section-container-image-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col testimonials section-description wow fadeIn"></div>
+          <div class="row">
+            <div class="col-md-10 offset-md-1 testimonial-list wow fadeInUp">
+              <div class="tab-content" id="myTabContent">
+                <div class="testimonial-image">
+                  <img src="sources/img/background/grisaceo.jpg" alt="testimonial-1" data-at2x="sources/img/background/grisaceo.jpg">
+                </div>
+                <div class="testimonial-text">
+                  <p>
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
+                    Lorem ipsum dolor sit amet."<br>
+                    <a href="#">Lorem Ipsum, dolor.co.uk</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                <div class="testimonial-image">
+                  <img src="sources/img/background/grisaceo.jpg" alt="testimonial-2" data-at2x="sources/img/background/grisaceo.jpg">
+                </div>
+                <div class="testimonial-text">
+                  <p>
+                    "Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip 
+                    ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit 
+                    lobortis nisl ut aliquip."<br>
+                    <a href="#">Minim Veniam, nostrud.com</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+                <div class="testimonial-image">
+                  <img src="sources/img/background/grisaceo.jpg" alt="testimonial-3" data-at2x="sources/img/background/grisaceo.jpg">
+                </div>
+                <div class="testimonial-text">
+                  <p>
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
+                    Lorem ipsum dolor sit amet."<br>
+                    <a href="#">Lorem Ipsum, dolor.co.uk</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
+                <div class="testimonial-image">
+                  <img src="sources/img/background/grisaceo.jpg" alt="" data-at2x="sources/img/background/grisaceo.jpg">
+                </div>
+                <div class="testimonial-text">
+                  <p>
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
+                    Lorem ipsum dolor sit amet."<br>
+                    <a href="#">Lorem Ipsum, dolor.co.uk</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="tab3-tab" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="tab4-tab" data-toggle="tab" href="#tab4" role="tab" aria-controls="tab4" aria-selected="false"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<!-- Javascript --> 
+<script src="sources/assets/js/jquery/jquery-3.4.1.min.js"></script>
+<script src="sources/assets/js/jquery/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="sources/assets/js/jquery/jquery.backstretch.min.js"></script>
+<script src="sources/assets/js/wow.min.js"></script>
+<script src="sources/assets/js/retina-1.1.0.min.js"></script>
+<script src="sources/assets/js/waypoints.min.js"></script>
+<script src="sources/assets/js/scripts.js"></script>
+</body>
 </html>

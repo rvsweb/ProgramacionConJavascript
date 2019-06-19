@@ -1,0 +1,61 @@
+/* 
+    Created on : 18-jun-2019, 17:24:12
+    Author     : RVS
+*/
+
+@media(min-width: 768px) and (max-width: 991px){
+
+  .navbar-expand-md .navbar-nav .nav-link {
+
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+  }
+
+};
+
+@media (max-width: 767px){
+
+  .navbar .navbar-no-bg { background: #444;}
+  .navbar-dark .navbar-toggler { border-color: #444;}
+  .navbar-dark .navbar-toggler:focus { background: #333; outline: 0;}
+  .navbar-expand-md .navbar-nav .nav-link { padding-top: 0.3rem; padding-bottom: 0.3rem;}
+
+}
+
+/* Retina-ize images/icons */
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (   -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (           min-resolution: 192dpi),
+only screen and (            min-resolution: 2dppx){
+
+  /* logo */
+  .navbar-brand{
+    background-image: url(ico/logo.png) !important;
+    background-repeat: no-repeat !important;
+    background-size: 105px 33px !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+  .services-box .services-box-icon
+  { width: 60px; 
+    height: 60px; 
+    font-size: 32px; 
+    line-height: 60px; 
+    border-radius: 22px; 
+  }
+  .about-us-box-text{ 
+    padding-right: 0;
+  }
+}
+
+@media(min-width: 768px) and(max-width: 991px){
+  .nav-bar-expand-md .navbar-nav .nav-link{
+    padding-left: 0.6rem;
+    
+  }
+}

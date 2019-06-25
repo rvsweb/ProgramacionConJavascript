@@ -3,6 +3,9 @@
   "attributes": {
     "integrity": {
       "context": "script"
+    },
+    "accept": {
+      "context": "input"
     }
   }
 }

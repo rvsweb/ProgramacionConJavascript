@@ -38,10 +38,8 @@
   <body>
 
     <div id="div1">
-      <h2>Obtener elemento y ver mensajes de respuesta</h2>
+      <h2>Let JQuery Ajax Change This Text</h2>
     </div>
-
-    <div id="div2"></div>
 
     <button>Get External Content</button>
 
@@ -72,37 +70,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script>
 
-      $("button").click(function () {
-        $.ajax({
-          url: "./src/demo_test.txt",
-          success: function (result, status, xhr) {
-            var estilo = {
-              'background': '#99ff99',
-              'margin': '10px',
-              'text-align': 'center',
-              'border-radius': '12px',
-              'font-weight': 'bolder',
-              'font-size': 'x-large',
-              'padding': '30px'
-            };
-            $("#div1").text(result).css(estilo);
-            $("#div2").html(" status: " + status + " <br> xhr: " + xhr.status).css(estilo);
-          },
-          error: function (result, status, xhr) {
-            var estilo = {
-              'background': '#ff3333',
-              'margin': '10px',
-              'text-align': 'center',
-              'border-radius': '12px',
-              'font-size': 'x-large',
-              'font-weight': 'bolder',
-              'padding': '30px'
-            };
-            $("#div1").text("Error al carga el documento ").css(estilo);
-            $("#div2").text(" status: " + status + " xhr: " + xhr.status).css(estilo);
-          }
+      $(document).ready(function () {
+        $("button").click(function () {
+          $.ajax({
+            url: "wrongfile.txt",
+            error: function (xhr) {
+              alert("An error occured: " + xhr.status + " " + xhr.statusText);
+            }});
         });
       });
+
     </script>
   </body>
 </html>

@@ -24,6 +24,7 @@
       }      
 
       label{
+        height: 40px;
         width: 180px;
         display: block;
         margin: 5px;
@@ -49,6 +50,12 @@
         text-align: center;
         vertical-align: middle;
         line-height: 50px;
+      }
+
+      .respuesta{
+        margin: 20px;-color: #ffff99;
+        padding: 20px;
+        background-color: #ffff99;
       }
 
 
@@ -97,8 +104,14 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script>
 
+      /**
+       * Evento que se lanza al lanzar el boton 'click'
+       * 
+       * @type type
+       */
       $(".enviar").click(function (e) {
-        e.preventDefault();
+        e.preventDefault(); // detenemos el evento para cargar los datos del form
+//        Cargamos los datos
         var nombre = $("#nombre").val(),
                 apellido = $("#apellido").val(),
                 edad = $("#edad").val(),
@@ -107,17 +120,20 @@
 
         $.ajax({
           url: "http://localhost/phpbasico/phpDatos.php",
+          async: true,
           type: "POST",
           data: datos
         }).done(function (respuesta) {
+
           if (respuesta.estado === "ok") {
+            
             console.log(JSON.stringify(respuesta));
 
             var nombre = respuesta.nombre,
                     apellido = respuesta.apellido,
                     edad = respuesta.edad;
 
-            $(".respuesta").html("Servidor:<br><pre>" + JSON.stringify(respuesta, null, 2) + "</pre>");
+            $(".respuesta").html("Servidor:<br><pre>" + JSON.stringify(nombre, null, 2) + "</pre>");
           }
         });
       });

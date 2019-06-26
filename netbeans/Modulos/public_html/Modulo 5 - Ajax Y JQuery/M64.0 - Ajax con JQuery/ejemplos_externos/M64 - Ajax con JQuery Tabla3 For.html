@@ -1,9 +1,9 @@
-<!--Created on 25-jun-2019, 11:40:44-->
-<!-- Referencia : https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_ajax_ajax_async -->
+<!--Created on 26-jun-2019, 17:07:02-->
+<!-- Referencia :  -->
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>jQuery AJAX POST Form</title>
+    <title>titulo</title>
     <meta charset="UTF-8">
     <meta name="author" content="Raul Vela Salas">
     <meta name="description" content="...">
@@ -15,35 +15,51 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
     <style>
 
-      div#div1 {
-        width: 500px;
+      section{
+        height: 200px;
+        width: 350px;
         margin: 10px;
-        text-align: center;
-        border-radius: 12px;
         padding: 10px;
+        text-align: center;
+        border-radius: 5px;
         background-color: #ffcccc;
       }
 
-      button{
-        font-weight: bolder;
-        background-color: #ccccff;
-        border: 1px solid #000;
-        border-radius: 7px;
+      table , thead , tbody , tr , th{
+        margin: 0 auto;
         padding: 10px;
-        margin: 10px;
+        text-align: center;
+        border-radius: 5px;
+        background-color: #ccffff;
+      }
+
+      button#s1  {
+        width: 50px;
+        height: 20px;
+        text-align: center;
+        border: 1px solid red;
       }
 
     </style>
   </head>
   <body>
 
-    <div id="div1">
-      <h2>Obtener elemento y ver mensajes de respuesta</h2>
-    </div>
+    <section>
+      <h2>Datos de los productos</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Productos</th>
+            <th>Color</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <div id='errores'></div>
+    </section>    
 
-    <div id="div2"></div>
-
-    <button>Get External Content</button>
 
     <footer style="
             position: fixed;
@@ -54,7 +70,6 @@
             background-color: rgb(189, 195, 199);
             color: #000;
             text-align: center;">
-
       <aside style="height: 55px;">
         <img alt="Licencia de Creative Commons" src="https://licensebuttons.net/l/by/4.0/80x15.png" />
         <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
@@ -72,35 +87,35 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script>
 
-      $("button").click(function () {
+      var estilo1 = {
+        'padding': '50px',
+        "background": "#ffff99",
+        'font-weight': 'bold'
+      };
+
+      var estilo2 = {
+        'padding': '5px',
+        'margin': '5px',
+        "background": "#ffff99",
+        'font-weight': 'bold'
+      };
+
+      $('h2').click(function () {
         $.ajax({
-          url: "./src/demo_test.txt",
-          success: function (result, status, xhr) {
-            var estilo = {
-              'background': '#99ff99',
-              'margin': '10px',
-              'text-align': 'center',
-              'border-radius': '12px',
-              'font-weight': 'bolder',
-              'font-size': 'x-large',
-              'padding': '30px'
-            };
-            $("#div1").text(result).css(estilo);
-            $("#div2").html(" status: " + status + " <br> xhr: " + xhr.status).css(estilo);
-          },
-          error: function (result, status, xhr) {
-            var estilo = {
-              'background': '#ff3333',
-              'margin': '10px',
-              'text-align': 'center',
-              'border-radius': '12px',
-              'font-size': 'x-large',
-              'font-weight': 'bolder',
-              'padding': '30px'
-            };
-            $("#div1").text("Error al carga el documento ").css(estilo);
-            $("#div2").text(" status: " + status + " xhr: " + xhr.status).css(estilo);
+          url: "array_json.json",
+          async: true,
+          dataType: 'json'
+        }).done(function (data) {
+          for (var i = 0; i < data.length; i++) {
+            $('tbody')
+                    .append(
+                            '<tr>' +
+                            '<td>' + data[i].Product + '</td>' +
+                            '<td>' + data[i].color + '</td>' +
+                            '<td>' + data[i].Price + '</td></tr>');
           }
+        }).fail(function () {
+          $('#errores').html('Error : Archivo no encontrado').css(estilo2);
         });
       });
     </script>

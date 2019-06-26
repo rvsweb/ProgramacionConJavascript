@@ -1,9 +1,9 @@
-<!--Created on 09-jun-2019, 20:30:22-->
-<!-- Referencia :  -->
+<!--Created on 25-jun-2019, 11:40:44-->
+<!-- Referencia : https://mimentevuela.wordpress.com/2016/08/29/devolver-json-en-php-y-obtener-datos-con-ajax/ -->
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>titulo</title>
+    <title>jQuery AJAX POST Form</title>
     <meta charset="UTF-8">
     <meta name="author" content="Raul Vela Salas">
     <meta name="description" content="...">
@@ -13,17 +13,14 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="shortcut icon" href="https://goo.gl/cais23">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
-    <!--<style></style>-->
-    <!--<script></script>-->
+    <style>
+
+
+    </style>
   </head>
   <body>
 
-    <section>
-      <h2>M5.0 - Ajax Y JQuery.</h2>
-      <div>
-        <img src="../../sources/assets/img/backgrounds/arcoiris.jpg" width="300" alt="foto como funciona ajax" />
-      </div>
-    </section>    
+
 
     <footer style="
             position: fixed;
@@ -34,6 +31,7 @@
             background-color: rgb(189, 195, 199);
             color: #000;
             text-align: center;">
+
       <aside style="height: 55px;">
         <img alt="Licencia de Creative Commons" src="https://licensebuttons.net/l/by/4.0/80x15.png" />
         <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
@@ -48,5 +46,35 @@
            ">Powered by RVS</p>
       </aside>
     </footer>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+
+      $(document).ready(function () {
+        $('#loginform').submit(function (e) {
+          e.preventDefault();
+          $.ajax({
+            type: "POST",
+            url: 'login.php',
+            data: $(this).serialize(),
+            success: function (response)
+            {
+              var jsonData = JSON.parse(response);
+
+              // user is logged in successfully in the back-end
+              // let's redirect
+              if (jsonData.success == "1")
+              {
+                location.href = 'my_profile.php';
+              } else
+              {
+                alert('Invalid Credentials!');
+              }
+            }
+          });
+        });
+      });
+
+
+    </script>
   </body>
 </html>

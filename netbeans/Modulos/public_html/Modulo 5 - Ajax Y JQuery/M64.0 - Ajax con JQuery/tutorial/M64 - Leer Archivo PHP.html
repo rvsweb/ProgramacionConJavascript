@@ -1,0 +1,128 @@
+<!--Created on 27-jun-2019, 21:47:45-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>titulo</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <link rel="stylesheet" type="text/css" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <style>
+      input{
+        display: block;
+        position: static;
+        padding: 5px;
+        margin: 10px;
+        background-color: #ffcccc;
+      }
+      button{
+        display: block;
+        position: static;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 7px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id='message'></div>
+    <button id='submit'>Submit</button>
+    <p>correo@gmail.com</p>
+    <input id="email" type="email" placeholder="Subscribe to this blog with your email address">
+
+    <footer style="
+            position: fixed;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(189, 195, 199);
+            color: #000;
+            text-align: center;">
+
+      <aside style="height: 55px;">
+        <img alt="Licencia de Creative Commons" src="https://licensebuttons.net/l/by/4.0/80x15.png" />
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        </a>Este obra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+        <p style="
+           margin-top: 5px;
+           font-size: 20px;
+           font-family: 'Lobster', cursive;
+           ">Powered by RVS</p>
+      </aside>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+
+      /**
+       * 
+       * @type type
+       */
+      $(document).ready(function () {
+        $("#submit").click(function (e) {
+          var result = Validate();
+          if (result == true) {
+            $.ajax({
+              type: "POST",
+              url: "http://192.168.114.128/jquery-ajax-subscribe.php",
+              data: {
+                email: $("#email").val()
+              },
+              success: function (msg) {
+                $("#message").html(msg);
+              },
+              error: function (req, status, error) {
+                alert(req + " " + status + " " + error);
+              }
+            });
+          }
+          return false;
+        });
+
+        /**
+         * 
+         * @returns {Boolean}
+         */
+        function EmailValidate() {
+          var email = $("#email").val();
+          var re = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/igm;
+          if (re.test(email)) {
+            return true;
+          } else {
+            return true;
+          }
+        }
+
+        /**
+         * 
+         * @returns {Boolean}
+         */
+        function Validate() {
+          var errorMessage = "";
+          //Email
+          if ($("#email").val() == '')
+            errorMessage += " Enter your email address<br/>";
+          else if (!(EmailValidate()))
+            errorMessage += " Invalid email address<br/>";
+          //End
+          $("#message").html(errorMessage);
+          if (errorMessage.length == 0)
+            return true;
+          else
+            return false;
+        }
+      });
+    </script>
+  </body>
+</html>

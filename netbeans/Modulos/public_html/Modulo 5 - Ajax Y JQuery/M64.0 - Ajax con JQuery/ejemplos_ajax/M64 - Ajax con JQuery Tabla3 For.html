@@ -1,4 +1,4 @@
-  <!--Created on 26-jun-2019, 17:07:02-->
+<!--Created on 26-jun-2019, 17:07:02-->
 <!-- Referencia :  -->
 <!DOCTYPE html>
 <html lang="es">
@@ -12,7 +12,8 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="shortcut icon" href="https://goo.gl/cais23">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" type="text/css" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
     <style>
 
       section{
@@ -33,9 +34,12 @@
         background-color: #ccffff;
       }
 
-      button#s1  {
+      input#s1  {
+        position: absolute;
+        left: 20px;
+        top: 100px;
         width: 50px;
-        height: 20px;
+        height: 30px;
         text-align: center;
         border: 1px solid red;
       }
@@ -46,6 +50,7 @@
 
     <section>
       <h2>Datos de los productos</h2>
+      <input id="s1" type="button" value="Ver">
       <table>
         <thead>
           <tr>
@@ -55,11 +60,6 @@
           </tr>
         </thead>
         <tbody>
-          <tr id='tr1'>
-            <td><button id='s1'>Ver</button></td>
-            <td></td>
-            <td></td>
-          </tr>
         </tbody>
       </table>
       <div id='errores'></div>
@@ -92,34 +92,37 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script>
 
-      var estilo = {
+      var estilo1 = {
         'padding': '50px',
         "background": "#ffff99",
         'font-weight': 'bold'
       };
 
-      var estilo = {
+      var estilo2 = {
         'padding': '5px',
         'margin': '5px',
         "background": "#ffff99",
         'font-weight': 'bold'
       };
 
-      $('#tr1').click(function () {
+      $('#s1').click(function () {
         $.ajax({
-          url: "awrray_json.json",
+          url: "array_json.json",
           async: true,
           dataType: 'json'
-
         }).done(function (data) {
-          $('#tr1').html(
-                  '<td>' + data[0].Product + '</td>' +
-                  '<td>' + data[0].color + '</td>' +
-                  '<td>' + data[0].Price + '</td>'
-                  ).css(estilo);
+          for (var i = 0; i < data.length; i++) {
+            $('tbody')
+                    .append(
+                            '<tr>' +
+                            '<td>' + data[i].Product + '</td>' +
+                            '<td>' + data[i].color + '</td>' +
+                            '<td>' + data[i].Price + '</td></tr>');
+          }
         }).fail(function () {
-          $('#errores').html('Error : Archivo no encontrado').css(estilo);
+          $('#errores').html('Error : Archivo no encontrado').css(estilo2);
         });
+        $(this).fadeOut("slow");
       });
     </script>
   </body>

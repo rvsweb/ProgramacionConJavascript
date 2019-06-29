@@ -1,0 +1,76 @@
+<!--Created on 27-jun-2019, 13:04:20-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>titulo</title>
+    <meta charset="UTF-8">
+    <!-- Metadatos basicos  -->
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <!-- Fondo navegador -->
+    <!--<meta name="theme-Color" content="#121010">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="https://goo.gl/cais23">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <!--Usar para CSS internos-->
+    <style></style>
+  </head>
+  <body>
+
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+//      Llamada a JQuery Ajax 
+      var jqxhr =
+//            Ajax devuelve un objeto del tipo jqXHR
+              $.ajax({
+//Dirección del servidor donde enviar datos                
+                url: "M64_xDevolverDatosDePeticion.html",
+//Datos que se envian al servidor para ser tratados
+                data: {
+                  name: "The name",
+                  desc: "The description"
+                }
+              })
+//            Interface(funcion para manejar el evento)
+              .done(function (data, textStatus, jqXHR) {
+//            data = datos vueltos a la peticion hecha al servidor
+                $('#d1').html(data);
+                $('#d2').html("Estado : " + textStatus
+                        + " <br> Status : " + jqXHR.status
+                        + " <br> textStatus : " + textStatus
+                        + " <br> Lo que responde la peticion " + jqXHR.responseText
+                        + " <br><b>getResponseHeader(): </b>" + jqXHR.getResponseHeader("Content-Type")
+                        + " <br><b>getAllResponseHeaders(): </b>" + jqXHR.getAllResponseHeaders()
+                        );
+                console.log(jqXHR.responseText);
+              })
+//            Interface(funcion para manejar el evento)
+              .fail(function (jqXHR, textStatus, errorThrown) {
+                $('#d1').html("Error : " + textStatus + " : " + errorThrown
+                        + " <br> Status : " + jqXHR.status
+                        + " <br> textStatus : " + textStatus
+                        + " <br> Lo que responde la peticion " + jqXHR.responseText
+                        + " <br><b>getResponseHeader(): </b>" + jqXHR.getResponseHeader("Content-Type")
+                        + " <br><b>getAllResponseHeaders(): </b>" + jqXHR.getAllResponseHeaders()
+                        );
+              })
+//            Interface(funcion para manejar el evento)
+              .always(function (jqXHROrData, textStatus, jqXHROrErrorThrown) {
+                $('#d4').html("<br>Complete - \n\
+                jqXHROrData devuelve : " + jqXHROrData
+                        + "<br> textStatus : " + jqXHROrData.textStatus
+                        + "<br> jqXHROrErrorThrown " + jqXHROrErrorThrown.status + ' sin error'
+                        + "<br> Status : " + jqXHROrData.status
+                        + "<br> textStatus : " + textStatus
+                        );
+              });
+    </script>
+  </body>
+</html>

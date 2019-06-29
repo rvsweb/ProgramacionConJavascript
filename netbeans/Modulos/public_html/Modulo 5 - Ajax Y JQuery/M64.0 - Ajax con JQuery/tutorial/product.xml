@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<products>
+  <product>
+    <name>Mini Skirt</name>
+    <size>38</size>
+    <color>Brown</color>
+    <price>$40.77</price>
+  </product>
+  <product>
+    <name>Women Pant</name>
+    <size>39</size>
+    <color>Black</color>
+    <price>$21.45</price>
+  </product>
+  <product>
+    <name>Men Coat</name>
+    <size>47</size>
+    <color>Pink</color>
+    <price>$101.50</price>
+  </product>
+  <product>
+    <name>Woman Hat</name>
+    <size>39</size>
+    <color>Pink</color>
+    <price>$101.50</price>
+  </product>
+  <product>
+    <name>Men Shoes</name>
+    <size>45</size>
+    <color>Red</color>
+    <price>$41.50</price>
+  </product>
+</products>

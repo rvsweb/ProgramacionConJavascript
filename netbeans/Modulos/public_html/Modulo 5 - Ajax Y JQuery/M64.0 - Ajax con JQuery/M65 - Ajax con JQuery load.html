@@ -1,0 +1,132 @@
+<!--Created on 29-jun-2019, 21:33:20-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>JQuery.load()</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <link rel="stylesheet" 
+          type="text/css" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <style>
+
+
+      table{
+        margin: 10px;
+        border-radius: 7px;
+      }
+
+      thead{
+        padding: 30px;
+      }
+
+      tbody{
+        padding: 30px;
+      }
+
+      table , tr  , td{
+        border: 1px solid red;
+        background: #ffff99;
+      }
+
+      tr , td{
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 7px;
+      }
+
+      button{
+        margin: 10px;
+        padding: 10px;
+        border-radius: 6px;
+        background: #ccffcc;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Usuario</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Ana</td>
+        </tr>
+        <tr id='nuevos'>
+        </tr>
+      </tbody>
+    </table>
+
+    <button>Lanzar evento</button>
+
+
+    <footer style="
+            position: fixed;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(189, 195, 199);
+            color: #000;
+            text-align: center;">
+      <aside style="height: 55px;">
+        <img alt="Licencia de Creative Commons" 
+             src="https://licensebuttons.net/l/by/4.0/80x15.png" />
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        </a>Este obra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+        <p style="
+           margin-top: 5px;
+           font-size: 20px;
+           font-family: 'Lobster', cursive;
+           ">Powered by RVS</p>
+      </aside>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+    </script>
+    <script>
+
+      $('button').click(function () {
+        $('tr#nuevos').load('http://192.168.114.128/cargarDatos.html #projects td.t1');
+      });
+
+
+    </script>
+  </body>
+</html>
+
+<!--    
+<table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Usuario</th>  
+        </tr>
+      </thead>
+      <tbody>
+        <tr id='projects'>  
+          <td class='t1' style="background-color: #ff6666">1</td>
+          <td class='t1' style="background-color: #ff6666">Pepe</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jose</td>
+        </tr>
+      </tbody>
+</table>
+-->

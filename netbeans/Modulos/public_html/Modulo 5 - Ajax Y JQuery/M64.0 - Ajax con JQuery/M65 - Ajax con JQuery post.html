@@ -1,0 +1,109 @@
+<!--Created on 29-jun-2019, 21:33:20-->
+<!-- Referencia : serialize() - Proceso de codificación de un objeto en un medio
+de almacenamiento (como puede ser un archivo, o un buffer de memoria) con el fin
+de transmitirlo a través de una conexión en red como una serie de bytes o en un 
+formato humanamente más legible como XML o JSON, entre otros 
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>titulo</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <link rel="stylesheet" 
+          type="text/css" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <style>
+      form#f1{
+        width: 500px;
+        display: block;
+        margin: 10px;
+        padding: 15px;
+        background-color: #ff6666;
+        border-radius: 7px;
+      }
+
+      form#f1 > label , form#f1 > input {
+        position: static;
+        display: block;
+        margin: 10px;
+        padding: 15px;
+        background: #ffffcc;
+        border-radius: 7px;
+      }
+
+      textarea{
+        height: 100px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <form id='f1' action="http://192.168.114.128/jquery_post.php">
+      <label>Name:
+        <input type="text" name="name">
+      </label>
+      <label>Comment:<br />
+        <textarea rows="5" cols="30" name="comment"></textarea>
+      </label>
+      <input type="submit" value="Send">
+    </form>
+
+    <div id='result'></div>
+
+    <footer style="
+            position: fixed;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(189, 195, 199);
+            color: #000;
+            text-align: center;">
+      <aside style="height: 55px;">
+        <img alt="Licencia de Creative Commons" src="https://licensebuttons.net/l/by/4.0/80x15.png" />
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        </a>Este obra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+        <p style="
+           margin-top: 5px;
+           font-size: 20px;
+           font-family: 'Lobster', cursive;
+           ">Powered by RVS</p>
+      </aside>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+    </script>
+    <script>
+      $("#f1").submit(function (event) {
+// Stop form from submitting normally
+        event.preventDefault();
+// Get action URL
+        var actionFile = $(this).attr("action");
+//Serialize the submitted form control values to be sent to the web server with the request
+        var formValues = $(this).serialize(); // Se usa para enviar datos al servidor de forma serializada
+// Send the form data using post
+        $.post(actionFile, formValues, function (data) {
+// Display the returned data in browser
+          var estilo = {
+            'display': 'block',
+            'margin': '10px',
+            'width': '520px',
+            'background': '#ccffcc',
+            'padding': '10px'
+          };
+          $('#result').html(data).css(estilo);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+<!--Created on 29-jun-2019, 17:16:08-->
+<!-- Referencia : 
+https://www.tutorialrepublic.com/jquery-tutorial/jquery-ajax-get-and-post-requests.php -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>jQuery get() Demo</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <style>
+      section{
+        width: 200px;
+        height: 500px;
+        margin: 10px;
+        padding: 10px;
+        background: #ffff99;
+        border-radius: 12px;
+      }
+
+      input#num{
+        display: block;
+        background-color: #ccffcc;
+        width: 100px;
+      }
+
+      input#b1{
+        margin: 10px;
+        padding: 5px;
+        border-radius: 7px;
+        font-family: Roboto,sans-serif;
+      }
+
+      input#box1{
+        position: absolute;
+        left: 130px;
+        display: block;
+        width:25px;
+        height:25px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <section>
+      <h3>Content of the result DIV box</h3>
+      <label for="num">Enter a Number: </label>
+      <input type="checkbox" id='box1' value="false" />
+      <input type='number' id='num' autofocus>
+      <input id='b1' type="button" value="Show Multiplication Table" />
+      <div id='result'></div>
+    </section>
+
+    <footer style="
+            position: fixed;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(189, 195, 199);
+            color: #000;
+            text-align: center;">
+      
+      <aside style="height: 55px;">
+        <img alt="Licencia de Creative Commons" src="https://licensebuttons.net/l/by/4.0/80x15.png" />
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        </a>Este obra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+        <p style="
+           margin-top: 5px;
+           font-size: 20px;
+           font-family: 'Lobster', cursive;
+           ">Powered by RVS</p>
+      </aside>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+    </script>
+    <script>
+
+      $('#box1').on('change', function () {
+        if ($(this).is(':checked')) {
+          $(this).attr('value', 'true');
+        } else {
+          $(this).attr('value', 'false');
+        }
+      });
+
+      $('input#b1').click(function () {
+        var valorPorTeclado = $('#num').val();
+        var valor = $('#box1').val();
+        $.get('http://192.168.114.128/create-table.php', {
+          //        clave : valor --> Datos para enviar al servidor
+          activar: valor,
+          number: valorPorTeclado
+        }
+        , function (data) {
+          var estilo = {
+            "margin": "10px",
+            "padding": "10px",
+            "background": "#ff6666",
+            "border-radius": "12px"
+          };
+          $('#result').html(data).css(estilo);
+        });
+      });
+
+    </script>
+  </body>
+</html>
+
+
+<!-- <?php
+
+// Dentro del Servidor WAMPP
+
+// Datos enviados desde el formulario mediante 'number : valorPorTeclado'
+$ok = htmlspecialchars($_GET['activar']);
+$number = htmlspecialchars($_GET['number']);
+
+if ((is_numeric($number)) && ($number > 0)) {
+  if ($ok == "true") {
+    echo '<table>';
+    for ($i = 0; $i <= 10; $i++) {
+      echo '<tr>';
+      echo '<td></td>';
+      echo "<td> $number x $i = " . $number * $i . "</td>";
+      echo '</tr>';
+    }
+    echo '</table>';
+  }
+}
+-->

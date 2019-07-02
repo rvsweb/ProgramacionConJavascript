@@ -43,6 +43,7 @@
       <h3>Enviar array al servidor para procesar los datos</h3>
       <button id='b1'>Enviar</button>
       <div></div>
+      <p id='p1'></p>
     </section>
 
     <footer style="
@@ -73,25 +74,40 @@
     </script>
     <script>
 
+// Objeto en JS
       var array = {
         id: 32,
         name: 'Juan',
-        id1: 132,
-        name1: 'Juan 1',
-        id2: 232,
-        name2: 'Juan 2',
+        address: 'Street papel',
+        telephone: '+34 666 123456',
+        birth: '15/3/2010',
+        sex: 'man'
       };
 
+      var estilo = {
+        'font-weight': 'bolder',
+        'font-size': 'x-large'
+      };
+
+      var estilo1 = {
+        'padding': '15px'
+      };
+
+      /**
+       * 
+       * @type type
+       */
       $('button#b1').click(function () {
         $('div').load('http://192.168.114.128/procesarArray.php', array, function (responseTxt, statusTxt, xhr) {
           if (statusTxt == 'success') {
-            console.log(statusTxt);
+            $('p#p1').text(statusTxt).css(estilo);
           }
           if (statusTxt == 'error') {
-            console.log(statusTxt);
+            $('p#p1').text(statusTxt).css(estilo);
           }
         });
-        $('div').css('padding', '15px');
+
+        $('div').css(estilo1);
       });
 
     </script>

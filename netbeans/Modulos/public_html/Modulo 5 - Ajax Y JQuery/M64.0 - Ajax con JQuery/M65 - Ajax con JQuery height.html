@@ -46,17 +46,7 @@ formato humanamente más legible como XML o JSON, entre otros
   </head>
   <body>
 
-    <form id='f1' action="http://192.168.114.128/jquery_post.php">
-      <label>Name:
-        <input type="text" name="name">
-      </label>
-      <label>Comment:<br />
-        <textarea rows="5" cols="30" name="comment"></textarea>
-      </label>
-      <input type="submit" value="Send">
-    </form>
-
-    <div id='result'></div>
+    <div></div>
 
     <footer style="
             position: fixed;
@@ -84,26 +74,16 @@ formato humanamente más legible como XML o JSON, entre otros
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
     </script>
     <script>
-      $("#f1").submit(function (event) {
-// Stop form from submitting normally
-        event.preventDefault();
-// Get action URL
-        var actionFile = $(this).attr("action");
-//Serialize the submitted form control values to be sent to the web server with the request
-        var formValues = $(this).serialize(); // Se usa para enviar datos al servidor de forma serializada
-// Send the form data using post
-        $.post(actionFile, formValues, function (data) {
-// Display the returned data in browser
-          var estilo = {
-            'display': 'block',
-            'margin': '10px',
-            'width': '520px',
-            'background': '#ccffcc',
-            'padding': '10px'
-          };
-          $('#result').html(data).css(estilo);
-        });
-      });
+
+      $('div').css('background');
+      $('div').css('background-color', '#000000');
+      $('div').css({padding: '3px', margin: '15px', background: '#CC0000'}); // Establece varias propiedades CSS
+      $('div').height(); // Obtiene la altura en pixel del primer 'div' de la pagina
+      $('div').height('25px'); // Establece la altura en pixel de todos los 'div' de la pagina
+      $('div').width(); // Obtiene la anchura en pixel del primer 'div' de la pagina
+      $('div').width('200px'); // Establece la anchura en pixel de todos los 'div' de la pagina
+
+
     </script>
-  </body>
+  </body><
 </html>

@@ -12,9 +12,7 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="shortcut icon" href="https://goo.gl/cais23">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
     <style></style>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
   </head>
   <body>
 
@@ -57,19 +55,20 @@
            ">Powered by RVS</p>
       </aside>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
     <script>
-      /**
-       * Constructor
-       * 
-       * @param {type} $scope
-       * @returns {undefined}
-       */
-      function cochesController($scope) {
-        $scope.coche = {
-          marca: "Audi",
-          modelo: "A5"
-        };
-      }
+        /**
+         * Constructor
+         * 
+         * @param {type} $scope
+         * @returns {undefined}
+         */
+        function cochesController($scope) {
+          $scope.coche = {
+            marca: "Audi",
+            modelo: "A5"
+          };
+        }
     </script>
   </body>
 </html>

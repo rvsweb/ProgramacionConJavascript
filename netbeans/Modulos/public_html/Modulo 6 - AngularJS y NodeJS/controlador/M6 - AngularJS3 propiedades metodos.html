@@ -13,7 +13,6 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="shortcut icon" href="https://goo.gl/cais23">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <style></style>
   </head>
   <body>
@@ -55,24 +54,26 @@
            ">Powered by RVS</p>
       </aside>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script>
 
-      /**
-       * 
-       * @param {type} $scope
-       * @returns {undefined}
-       */
-      function personController($scope) {
-        $scope.coche = {
-          marca: "Audi",
-          modelo: "A3"
-        };
-        $scope.nombreCompletoDelCoche = function () {
-          var x;
-          x = $scope.coche;
-          return x.marca + " " + x.modelo;
-        };
-      }
+        /**
+         * 
+         * @param {type} $scope
+         * @returns {undefined}
+         */
+        function personController($scope) {
+          $scope.coche = {
+            marca: "Audi",
+            modelo: "A3"
+          };
+          
+          $scope.nombreCompletoDelCoche = function () {
+            var x;
+            x = $scope.coche;
+            return x.marca + " " + x.modelo;
+          };
+        }
     </script>
   </body>
 </html>

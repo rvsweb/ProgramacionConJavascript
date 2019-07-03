@@ -1,0 +1,75 @@
+<!--Created on 02-jul-2019, 14:07:46-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>titulo</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <style></style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+  </head>
+  <body>
+
+    <p>
+      Las aplicaciones AngularJS son controladas por los controladores.
+      Un controlador no es más que un objeto JavaScript, que se crea con
+      el constructor de objetos de JavaScript. El ámbito de la aplicación
+      está definido por $scope y se corresponde con el elemento HTML
+      asociado a la aplicación.
+    </p>
+
+    <div ng-app="myApp" ng-controller="cochesController">
+      Marca: <input type="text" ng-model="coche.marca"><br />
+      Modelo: <input type="text" ng-model="coche.modelo"><br />
+      El Coche es : {{coche.marca + " " + coche.modelo}}
+    </div>
+
+
+
+    <footer style="
+            position: fixed;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(189, 195, 199);
+            color: #000;
+            text-align: center;">
+      <aside style="height: 55px;">
+        <img alt="Licencia de Creative Commons" src="https://licensebuttons.net/l/by/4.0/80x15.png" />
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        </a>Este obra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+        <p style="
+           margin-top: 5px;
+           font-size: 20px;
+           font-family: 'Lobster', cursive;
+           ">Powered by RVS</p>
+      </aside>
+    </footer>
+    <script>
+      /**
+       * Constructor
+       * 
+       * @param {type} $scope
+       * @returns {undefined}
+       */
+      function cochesController($scope) {
+        $scope.coche = {
+          marca: "Audi",
+          modelo: "A5"
+        };
+      }
+    </script>
+  </body>
+</html>

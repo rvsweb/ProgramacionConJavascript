@@ -1,0 +1,36 @@
+<!--Created on 02-jul-2019, 18:27:49-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Modulo</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" href="https://goo.gl/cais23">
+  </head>
+  <body>
+
+    <p>Todas las aplicaciones deben de tener un modulo y un controlador</p>
+
+    <div ng-app="myApp" ng-controller="miControlador">
+      {{ nombre + " " + apellidos}}
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+        //    Modulo
+        var app = angular.module("myApp", []);
+
+        //    Controladores
+        app.controller("miControlador", function ($scope) {
+          $scope.nombre = "Mario";
+          $scope.apellidos = "Flores";
+        });
+    </script>
+
+  </body>
+</html>

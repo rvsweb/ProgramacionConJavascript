@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../sources/css/cssObjetoWindow.css" type="text/css">
-    <link rel="icon" type="image/png" href="../../sources/img/60x60bb.jpg" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../sources/assets/img/ico/iconos/60x60bb.jpg" sizes="32x32">
     <script>
       window.defaultStatus = "Objeto window - este mensaje aparece en la barra de estado";
 
@@ -15,7 +15,7 @@
       }
 
       function myFunctionLocaltion() {
-        (window.frames[0].window.location = "http://localhost:8383/Modulos/index.html/");
+        (window.frames[0].window.location = "http://localhost:8383/Modulos/index.html");
         console.log("Cuantos iframe hay : " + window.frames.length);
         myFunctionName();
       }
@@ -34,7 +34,7 @@
     <p>Objeto Window</p>
     <p>Atributo defaultStatus - No soportado por los navegadores excepto a priori de Opera 15</p>
     <iframe id="cssIframe" 
-            src="http://localhost:8383/Modulos/Modulo%202%20-%20Sintaxis%20Del%20Lenguaje%20JavaScript/M1.4%20-%20Objetos%20del%20Navegador/T1.4%20-%20Pag13%20-%20ObjetoWindow.html">
+            src="http://localhost:8383/Modulos/Modulo%202%20-%20Sintaxis%20Del%20Lenguaje%20JavaScript/M1.4%20-%20Objetos%20del%20Navegador/T1.4%20-%20Pag13%20-%20Window.html">
     </iframe><br />
     <button onclick="myFunctionLocaltion()">Lanzar Evento</button>
     <button onclick="myFunctionSelf()">Prueba self</button>

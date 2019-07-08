@@ -54,7 +54,7 @@ var cochePagado = function () {
 
 document.getElementById('p1').innerHTML = oCocheInfo.coloresDisponibles[0];
 document.getElementById('p2').innerHTML = oCocheInfo.coloresDisponibles[1];
-document.getElementById('p3').innerHTML = oCocheInfo.coloresDisponibles[2];y
+document.getElementById('p3').innerHTML = oCocheInfo.coloresDisponibles[2];
 
 document.getElementById('s1').innerHTML = oCocheInfo.puertasDisponibles[0];
 document.getElementById('s2').innerHTML = oCocheInfo.puertasDisponibles[1];

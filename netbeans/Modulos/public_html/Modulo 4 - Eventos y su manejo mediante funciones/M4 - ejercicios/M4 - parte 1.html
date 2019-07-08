@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="shortcut icon" href="https://goo.gl/cais23">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link href="../sources/css/cssPrincipal.css" type="text/css" rel="stylesheet">
     <style>
       p.fondo{
         font-weight: bold;
@@ -37,7 +38,6 @@
     <p class="fondo">y</p>
     <p class="fondo">que sea hijo del body.</p>
 
-
     <footer style="
             position: fixed;
             padding-top: 10px;
@@ -62,12 +62,13 @@
       </aside>
     </footer>
     <script>
+//    Crear un array de elementos 'parrafos'
       var parrafos = document.getElementsByTagName("p");
 
+//    Mostrar los elementos en la consola del navegador
       for (var i = 0; i < parrafos.length; i++) {
         console.log(parrafos[i]);
       }
-
     </script>
   </body>
 </html>

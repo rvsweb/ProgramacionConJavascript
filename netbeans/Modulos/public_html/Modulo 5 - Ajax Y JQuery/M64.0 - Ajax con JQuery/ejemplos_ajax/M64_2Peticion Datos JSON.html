@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>titulo</title>
+    <title>Peticion Datos JSON</title>
     <meta charset="UTF-8">
     <!-- Metadatos basicos  -->
     <meta name="author" content="Raul Vela Salas">
@@ -14,8 +14,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" type="image/x-icon" href="https://goo.gl/cais23">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="../../sources/css/cssPrincipal3.css" type="text/css" rel="stylesheet">
     <!--Usar para CSS internos-->
-    <style></style>
+    <style>
+
+      div#d1{
+        width: 200px;
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+        background-color: #ccffff;
+        border-radius: 6px;
+      }
+
+    </style>
     <link rel="stylesheet" 
           type="text/css" 
           href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
@@ -31,7 +43,7 @@
 //            Ajax devuelve un objeto del tipo jqXHR
               $.ajax({
 //Dirección del servidor donde enviar datos                
-                url: "M64_2DevolverDatosDePeticion.html",
+                url: "M64_xDevolverDatosDePeticion.html",
                 dataType: 'json',
 //Datos que se envian al servidor para ser tratados en PHP para acceder a los elemento
                 data: {
@@ -44,14 +56,20 @@
 //            data = datos vueltos a la peticion hecha al servidor
                 $('#d1').html(data);
                 console.log("Estado : " + textStatus);
+                var x = ("Estado : " + textStatus);
+                document.getElementById('d1').innerHTML = x;
               })
 //            Interface(funcion para manejar el evento)
               .fail(function (jqXHR, textStatus, errorThrown) {
                 console.log("Error : " + textStatus);
+                var x = ("Error : " + textStatus);
+                document.getElementById('d1').innerHTML = x;
               })
 //            Interface(funcion para manejar el evento)
               .always(function (jqXHROrData, textStatus, jqXHROrErrorThrown) {
                 console.log("Complete : " + textStatus);
+                var x = ("Complete : " + textStatus);
+                document.getElementById('d1').innerHTML = x;
               })
               ;
 

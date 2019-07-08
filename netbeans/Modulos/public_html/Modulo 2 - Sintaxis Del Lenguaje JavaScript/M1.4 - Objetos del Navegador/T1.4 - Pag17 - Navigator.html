@@ -5,15 +5,16 @@
     <!-- Se detecta el navegador con el que se ha abierto la pagina -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="../../sources/img/60x60bb.jpg" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/60x60bb.jpg" sizes="32x32">
+    <link href="../sources/css/cssPrincipal.css" type="text/css" rel="stylesheet">
     <style>
       p{
         border-radius: 15px;
       }
+      
       p#demo2{
         background-color: #ff9999;
-        width: 250px;
-        height: 10px;
+        width: 150px;
         font-weight: bold;
         margin-left: auto;
         margin-right: auto;
@@ -23,7 +24,6 @@
       p#demo1{
         background-color: #ff9999;
         width: 200px;
-        height: 470px;
         margin-left: auto;
         margin-right: auto;
         padding: 10px;
@@ -34,10 +34,15 @@
 
 
     <p id="demo2" onclick="myFunctionBrowser()">
-      <span>Cual es el idioma del navegador</span>
+      <span>Pulsa en la imagen</span>
+      <span style="color: #ffffff;"><br />Cual es el idioma del navegador</span>
     </p>
 
-    <p id="demo1" onclick="getBrowserName()"></p>
+    <div>
+      <p id="demo1" onclick="getBrowserName()">
+        <span>Pulsa en la imagen</span>
+      </p>
+    </div>
 
     <script>
       function getBrowserName() {

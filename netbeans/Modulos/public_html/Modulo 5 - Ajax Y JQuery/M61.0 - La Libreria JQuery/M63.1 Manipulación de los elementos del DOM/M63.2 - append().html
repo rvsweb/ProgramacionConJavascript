@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="shortcut icon" href="https://goo.gl/cais23">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link href="../../sources/css/cssPrincipal3.css" type="text/css" rel="stylesheet">
     <style>
 
       #s1 {
@@ -38,10 +39,11 @@
       }
 
       div#ss3 , input {
-        background-color: #99ff99;
         width: 150px;
         padding: 10px;
         margin: 10px;
+        border-radius: 7px;
+        background-color: #99ff99;
       }
 
       input {
@@ -124,7 +126,7 @@
       var estilos = {
         "background-color": "#ffcc99",
         "width": "300px",
-        "height": "50px",
+        "height": "60px",
         "align-content": "center",
         "border-radius": "12px",
         "text-align": "center",
@@ -138,7 +140,8 @@
        */
       function appendText() {
         var txt1 = "<p>Variable Text</p>"; // Create text with HTML
-        var txt2 = $("<p></p>").text("Añadimos elemento parrafo entre 2 etiquetas").css(estilos); // Create text with JQuery
+        // Create text with JQuery
+        var txt2 = $("<p></p>").text("Añadimos elemento parrafo entre 2 etiquetas").css(estilos);
         var txt3 = document.createElement('p');
         txt3.innerHTML = "Parrafo añadido mediante innerHTML dentro del parrafo";
         $('body').append(txt1, txt2, txt3).css("background-color", "#ccffff");

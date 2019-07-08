@@ -13,22 +13,32 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="shortcut icon" href="https://goo.gl/cais23">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link href="../sources/css/cssPrincipal.css" type="text/css" rel="stylesheet">
     <style>
 
       h2{
         display: block;
-        background-color: #ffcc99;
-        height: 50px;
         margin: 0 auto;
         margin-top: 10px;
-        padding-left: 15%;
-        padding-right: 15%;
-        text-align: center;
+        padding: 40px;
         width: 300px;
+        border-radius: 10px;
+        text-align: center;
+        background-color: #ffcc99;
       }
 
       input{
+        display: block;
+        padding: 10px;
         margin: 10px;
+        border-radius: 10px;
+        background-color: #ffcc99;
+      }
+
+      div#myDiv2{
+        display: block;
+        margin: 10px;
+        background-color: #ffcc99;
       }
 
     </style>
@@ -77,7 +87,7 @@
         xmlhttp.onreadystatechange = function () {
           if (xmlhttp.readyState === 4 && xmlhttp.status === 200)
           {
-            document.getElementById('myDiv').innerHTML = xmlhttp.responseText;
+            document.getElementById('myDiv2').innerHTML = xmlhttp.responseText;
           }
         };
         xmlhttp.open("GET", "ajax.txt", true);
@@ -87,6 +97,8 @@
     <div id="myDiv">
       <h2>Let Ajax change this text</h2>
       <input type="button" onclick="loadXMLDoc()" value="Change Content" />
+    </div>
+    <div id="myDiv2">
     </div>
   </body>
 </html>

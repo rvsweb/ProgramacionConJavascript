@@ -5,8 +5,26 @@
     <!-- Se detecta el navegador con el que se ha abierto la pagina -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="../../sources/img/60x60bb.jpg" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/60x60bb.jpg" sizes="32x32">
+    <link href="../sources/css/cssPrincipal.css" type="text/css" rel="stylesheet">
+    <style>
+      div > p {
+        display: block;
+        font-weight: bolder;
+        width: 300px;
+        margin: 20px;
+        padding: 15px;
+        border-radius: 6px;
+        background-color: #ffffff;
+      }
+    </style>
   <body>
+
+    <div>
+      <p>¿ Qué navegador estas usando ?</p>
+      <p id="p1"></p>
+    </div>
+
     <script>
 
       /**
@@ -41,6 +59,8 @@
         }
         return M.join(' ');
       };
+
+      document.getElementById('p1').innerHTML = getBrowserInfo();
 
       console.log(getBrowserInfo());
 

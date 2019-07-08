@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="shortcut icon" href="https://goo.gl/cais23">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link href="../sources/css/cssPrincipal.css" type="text/css" rel="stylesheet">
     <style>
 
       body{
@@ -105,7 +106,11 @@
       <p class="pc1">Forma Aconsejada de lanzar un evento</p>
       <input id="inputi2" type="button" value="Pinchame">
 
-      <div id="div1" onclick="document.getElementById('p3').innerHTML = ('Evento OnClick')" onmouseover="document.getElementById('p4').innerHTML = ('Evento onMouseOver')"> Evento Onclick &Star; Evento OnMouseOver</div>
+      <div id="div1" 
+           onclick="document.getElementById('p3').innerHTML = ('Evento OnClick')" 
+           onmouseover="document.getElementById('p4').innerHTML = ('Evento onMouseOver')">
+        Evento Onclick &amp; Evento OnMouseOver
+      </div>
 
 
       <p id="p1"></p>
@@ -140,6 +145,6 @@
            ">Powered by RVS</p>
       </aside>
     </footer>
-    <script src="source/js/M41.1 - Manejadores de eventos como atributos HTML.js"></script>
+    <script src="sources/js/M41.1 - Manejadores de eventos como atributos HTML.js"></script>
   </body>
 </html>

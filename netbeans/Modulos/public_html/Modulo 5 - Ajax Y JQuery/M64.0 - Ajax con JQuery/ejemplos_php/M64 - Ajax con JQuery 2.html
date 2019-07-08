@@ -13,13 +13,45 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="shortcut icon" href="https://goo.gl/cais23">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link href="../../sources/css/cssPrincipal3.css" type="text/css" rel="stylesheet">
     <style>
+
+      form , label , input
+      {
+        display: block;
+        margin: 10px;
+      }
+
+      label{
+        width: 100px;
+        padding: 5px;
+        text-align: center;
+        border-radius: 6px;
+        background-color: #888;
+      }
+
+      input{
+        border-radius: 6px;
+        padding: 6px;
+        width: 150px;
+        height: 20px;
+        background-color: #ffffff;
+      }
+
 
 
     </style>
   </head>
   <body>
 
+    <form id='loginform'>
+      <label>Nombre</label>
+      <input type="text" id="nombre" placeholder="Nombre" accept="text/plain"> 
+      <label>Apellido</label>
+      <input type="text" id="apellido" placeholder="Apellido" accept="text/plain"> 
+      <label>Edad</label>
+      <input type="number" id="edad" placeholder="Edad" accept="text/plain">
+    </form>
 
 
     <footer style="
@@ -51,26 +83,27 @@
 
       $(document).ready(function () {
         $('#loginform').submit(function (e) {
-          e.preventDefault();
-          $.ajax({
-            type: "POST",
-            url: 'login.php',
-            data: $(this).serialize(),
-            success: function (response)
-            {
-              var jsonData = JSON.parse(response);
+          e.preventDefault(); // para la ejecucion del evento
+          $.ajax(
+                  {
+                    type: "POST",
+                    url: 'index.php',
+                    data: $(this).serialize(),
+                    success: function (response)
+                    {
+                      var jsonData = JSON.parse(response);
 
-              // user is logged in successfully in the back-end
-              // let's redirect
-              if (jsonData.success == "1")
-              {
-                location.href = 'my_profile.php';
-              } else
-              {
-                alert('Invalid Credentials!');
-              }
-            }
-          });
+                      // user is logged in successfully in the back-end
+                      // let's redirect
+                      if (jsonData.success == "1")
+                      {
+                        location.href = 'my_profile.php';
+                      } else
+                      {
+                        alert('Invalid Credentials!');
+                      }
+                    }
+                  });
         });
       });
 

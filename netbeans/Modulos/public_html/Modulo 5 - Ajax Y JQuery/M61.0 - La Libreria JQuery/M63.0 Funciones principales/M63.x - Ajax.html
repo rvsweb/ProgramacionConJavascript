@@ -27,10 +27,13 @@
       }
 
       div.redondeado{
-        background-color: #ff9999;
+        font-weight: bolder;
         width: 100px;
         height: 100px;
         margin: 10px;
+        text-align: center;
+        border-radius: 6px;
+        background-color: #ff9999;
       }
 
       section{
@@ -49,9 +52,8 @@
 
     <section id="sec1">
       <h2>Funciones principales JQuery con Ajax</h2>
-      <div>
-      </div>
     </section>
+    <div class="redondeado" id='d1'></div>
 
     <input type="button" id="boton1" value="Pulsar">
 
@@ -83,22 +85,25 @@
 
       $(document).ready(function () {
         $("#boton1").click(function () {
-          $.ajax({
-            async: true,
-            type: 'GET',
-            url: '../../archivo_json.json',
-            success: procesaRespuesta,
-            error: muestraError
-          });
+          $.ajax(
+                  {
+                    async: true,
+                    type: 'GET',
+                    url: 'array_json.json',
+                    success: procesaRespuesta,
+                    error: muestraError
+                  });
         });
       });
 
       function procesaRespuesta() {
-        console.log("Respuesta correcta");
+        var x = ("Solicitud realizada");
+        document.getElementById('d1').innerHTML = x;
       }
 
       function muestraError() {
-        console.log("Muestra Error");
+        var x = ("Muestra Error");
+        document.getElementById('d1').innerHTML = x;
       }
 
     </script>

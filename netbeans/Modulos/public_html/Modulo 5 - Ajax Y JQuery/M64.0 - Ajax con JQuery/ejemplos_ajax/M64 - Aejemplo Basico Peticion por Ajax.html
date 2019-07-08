@@ -15,10 +15,23 @@
     <link rel="shortcut icon" type="image/x-icon" href="https://goo.gl/cais23">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <!--Usar para CSS internos-->
-    <style></style>
+    <link href="../../sources/css/cssPrincipal3.css" type="text/css" rel="stylesheet">
+    <style>
+      #d1{
+        width: 200px;
+        height:20px;
+        margin: 20px;
+        padding: 10px;
+        text-align: center;
+        border-radius: 6px;
+        background-color: #ffff99;
+      }
+
+    </style>
     <link rel="stylesheet" 
           type="text/css" 
           href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link href="../../sources/css/cssPrincipal3.css" type="text/css" rel="stylesheet">
   </head>
   <body>
 
@@ -63,15 +76,18 @@
               })
 //            Interface(funcion para manejar el evento)
               .done(function (data, textStatus, jqXHR) {
-                console.log("Success : " + textStatus);
+                var x = ("Success : " + textStatus);
+                document.getElementById('d1').innerHTML = x;
               })
 //            Interface(funcion para manejar el evento)
               .fail(function (jqXHR, textStatus, errorThrown) {
-                console.log("Error : " + textStatus);
+                var x = ("Error : " + textStatus);
+                document.getElementById('d1').innerHTML = x;
               })
 //            Interface(funcion para manejar el evento)
               .always(function (jqXHROrData, textStatus, jqXHROrErrorThrown) {
-                console.log("Complete : " + textStatus);
+                var x = ("Complete : " + textStatus);
+                document.getElementById('d1').innerHTML = x;
               })
               ;
 

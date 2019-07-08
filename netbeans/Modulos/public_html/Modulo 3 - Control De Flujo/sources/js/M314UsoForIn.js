@@ -10,4 +10,5 @@ for (var i in numbers) {
 document.getElementById('p2').innerHTML = a + " - Variable 'var' tiene ambito 'scope' en todo el script";
 
 //Uncaught ReferenceError: b is not defined
-//document.getElementById('p3').innerHTML = b + " - Variable 'let' fuera del ambito del bloque del bucle";
+
+document.getElementById('p3').innerHTML = "variable <b>let</b> b : Variable 'b' del tipo let fuera del ambito del bloque del bucle";

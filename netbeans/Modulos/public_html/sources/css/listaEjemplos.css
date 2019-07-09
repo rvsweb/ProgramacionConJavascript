@@ -1,0 +1,184 @@
+/* 
+    Created on : 09-jul-2019, 16:09:57
+    Author     : RVS
+    link: https://jsfiddle.net/cRsZE/984/
+*/
+
+h1{
+  background: #ff9999;
+  text-align: center;
+}
+
+ul , li {
+  display: block;
+  margin: 0 auto;  
+  border-radius: 7px;
+}
+
+ul#menu-desplegable{
+  text-align: center;
+  width: 500px;
+  padding: 30px;
+}
+
+span.titulo{
+  font-size: 30px;
+}
+
+ul#header-nav{
+  background: #ff9999;  
+  width: 1000px;
+}
+
+li{
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+li:hover, a:active  {
+  background-color: #99ff99;
+}
+
+/* my code */
+ul#menu-desplegable:before {
+  display: inline-block;
+  width: 50px;
+}
+
+ul#menu-desplegable:after {
+  display: inline-block;
+  width: 50px;
+}
+
+.nav-desplegable ul {
+  display: none;   
+}
+
+.nav-desplegable ul.visible {
+  display: block;   
+}
+
+.header-nav{
+  padding: 10px;
+  border-radius: 7px;
+  background-color: #ccccff;
+}
+
+a{
+  font-size: 20px;
+  text-decoration: none;
+}
+
+a.salto{
+  display: block;
+  padding-bottom: 10px;
+}
+
+/*-------------*/
+ul#menu-desplegable1{
+  text-align: center;
+  width: 500px;
+  padding: 30px;
+}
+
+ul#header-nav1{
+  background: #ff9999;  
+  width: 1000px;
+}
+
+ul#menu-desplegable1:before {
+  display: inline-block;
+  width: 50px;
+}
+
+ul#menu-desplegable1:after {
+  display: inline-block;
+  width: 50px;
+}
+
+.nav-desplegable1 ul {
+  display: none;   
+}
+
+.nav-desplegable1 ul.visible {
+  display: block;   
+}
+
+.header-nav1{
+  padding: 10px;
+  border-radius: 7px;
+  background-color: #ccccff;
+}
+
+/*-------------*/
+ul#menu-desplegable2{
+  text-align: center;
+  width: 500px;
+  padding: 30px;
+}
+
+ul#header-nav2{
+  background: #ff9999;  
+  width: 1000px;
+}
+
+ul#menu-desplegable2:before {
+  display: inline-block;
+  width: 50px;
+}
+
+ul#menu-desplegable2:after {
+  display: inline-block;
+  width: 50px;
+}
+
+.nav-desplegable2 ul {
+  display: none;   
+}
+
+.nav-desplegable2 ul.visible {
+  display: block;   
+}
+
+.header-nav2{
+  padding: 10px;
+  border-radius: 7px;
+  background-color: #ccccff;
+}
+
+/*-------------*/
+ul#menu-desplegable3{
+  text-align: center;
+  width: 500px;
+  padding: 30px;
+}
+
+ul#header-nav3{
+  background: #ff9999;  
+  width: 1000px;
+}
+
+ul#menu-desplegable3:before {
+  display: inline-block;
+  width: 50px;
+}
+
+ul#menu-desplegable3:after {
+  display: inline-block;
+  width: 50px;
+}
+
+.nav-desplegable3 ul {
+  display: none;   
+}
+
+.nav-desplegable3 ul.visible {
+  display: block;   
+}
+
+.header-nav3{
+  padding: 10px;
+  border-radius: 7px;
+  background-color: #ccccff;
+}

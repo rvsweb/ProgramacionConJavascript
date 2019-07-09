@@ -38,8 +38,6 @@
         background-color: #ffffff;
       }
 
-
-
     </style>
   </head>
   <body>
@@ -83,11 +81,11 @@
 
       $(document).ready(function () {
         $('#loginform').submit(function (e) {
-          e.preventDefault(); // para la ejecucion del evento
+          e.preventDefault();  
           $.ajax(
                   {
                     type: "POST",
-                    url: 'index.php',
+                    url: 'http://localhost/example/phpDatos.php',
                     data: $(this).serialize(),
                     success: function (response)
                     {
@@ -106,8 +104,32 @@
                   });
         });
       });
-
-
     </script>
   </body>
 </html>
+
+<!--<?php
+
+//Obtenemos los datos de los input
+
+$nombre = trim($_POST["nombre"]);
+$apellido = trim($_POST["apellido"]);
+$edad = trim($_POST["edad"]);
+
+$nom = strip_tags($nombre);
+$ape = strip_tags($apellido);
+$eda = strip_tags($edad);
+
+//Seteamos el header de "content-type" como "JSON" para que jQuery lo reconozca como tal
+header('Content-Type: application/json');
+
+//Guardamos los datos en un array
+$datos = array(
+    'estado' => 'ok',
+    'nombre' => $nombre,
+    'apellido' => $apellido,
+    'edad' => $edad
+);
+
+//Devolvemos el array pasado a JSON como objeto
+echo json_encode($datos, JSON_FORCE_OBJECT);-->

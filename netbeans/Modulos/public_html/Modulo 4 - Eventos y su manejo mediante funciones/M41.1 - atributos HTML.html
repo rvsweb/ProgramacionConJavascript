@@ -13,84 +13,59 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="shortcut icon" href="https://goo.gl/cais23">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
-    <link href="../sources/css/cssPrincipal.css" type="text/css" rel="stylesheet">
+    <link href="sources/css/cssPrincipal.css" type="text/css" rel="stylesheet">
     <style>
 
-      body{
-        background-color: #ffcc99;
-      }
-
       main{
+        display: block;
         background-color: #ffff99;
-        padding: 10px;
+        margin: 40px auto;
+        padding: 45px;
+        border-radius: 7px;
+        width: 400px;
       }
 
-      label[for=inputi1]{
-        background-color: #ccffff;
-        border: 1px solid #000;
+      label{
         display: block;
-        height: auto;
-        font-family: Arial Black, Helvetica, sans-serif;
-        padding: 20px;
-        margin: 30px 50px;
-        text-align: center;
-        width: 200px;
+        width: 100px;
+        margin: 5px auto;
+        padding: 10px;
+        background-color: #ffcccc;
       }
 
       input#inputi1 , input#inputi2 {
-        border-radius: 12px;
-        background-color: #ccffff;
-        color: #000 ;
+        margin: 5px auto;
         display: block;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        padding: 10px;
-        margin-left: 15%;
-        margin-right:  15%;
-        margin-top: 10px;
         width: 100px;
       }
 
+      p.pc1{
+        text-align: center;
+        width: 400px;
+        padding: 10px;
+        margin: 5px auto;
+        background-color: #ccccff;
+        border-radius: 7px;
+      }
+
       hr#hr1{
-        background-color: #000;
-        display: inline-block;
-        height: 2px;
-        padding-left: 5%;
-        padding-right: 5%;
-        margin-top: 10px;
-        margin-left: 15%;
-        margin-right: 15%;
-        width: 20px;
+        margin: 5px auto;
+        border-radius: 7px;
       }
 
       p#p2 , p#p3 , p#p4{
         padding: 10px;
-        background-color: #99ff99;
-        border: 1px solid ;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        border-radius: 15px;
-        text-align: center;
-        width: 300px;
-      }
-
-      p.pc1{
-        border: 2px solid black;
-        padding: 10px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        padding-right: 15%;
-        padding-left: 15%;
-        text-align: center;
-        width: 100px;
+        margin: 5px auto;
+        background-color: #ffcccc;
+        border-radius: 7px;
       }
 
       div#div1{
-        background-color: activecaption;
-        margin: 10px;
-        width: 350px;
-        border:1px solid #000;
         padding: 10px;
+        text-align: center;
+        margin: 5px auto;
+        background-color: #ccccff;
+        border-radius: 7px;
       }
 
     </style>
@@ -98,11 +73,9 @@
   <body>
 
     <main>
-      <label for="inputi1">Evento onclick</label>
+      <label>Evento onclick</label>
       <p class="pc1">Forma Desaconsejada de lanzar un evento</p>
       <input id="inputi1" type="button" value="Pinchame" onclick="console.log('Evento lanzado')">
-      <hr id="hr1" />
-      <!-- -->
       <p class="pc1">Forma Aconsejada de lanzar un evento</p>
       <input id="inputi2" type="button" value="Pinchame">
 
@@ -112,7 +85,6 @@
         Evento Onclick &amp; Evento OnMouseOver
       </div>
 
-
       <p id="p1"></p>
       <p id="p2"></p>
       <p id="p3"></p>
@@ -120,6 +92,7 @@
       <p id="p5"></p>
       <p id="p6"></p>
       <p id="p7"></p>
+
     </main>
 
     <footer style="
@@ -146,5 +119,8 @@
       </aside>
     </footer>
     <script src="sources/js/M41.1 - Manejadores de eventos como atributos HTML.js"></script>
+    <script>
+      document.getElementById('inputi1').innerHTML = ('Evento lanzado');
+    </script>
   </body>
 </html>

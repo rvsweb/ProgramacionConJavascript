@@ -16,6 +16,7 @@ http.createServer(app).listen(app.get("port"), function() {
 });
 
 
+
 // Antes de correr codigo , agregar bodyParser fuera del metodo
 // Express no parsea el cuerpo de 'request' por defecto
 app.use(bodyParser.urlencoded({ extended: false }));

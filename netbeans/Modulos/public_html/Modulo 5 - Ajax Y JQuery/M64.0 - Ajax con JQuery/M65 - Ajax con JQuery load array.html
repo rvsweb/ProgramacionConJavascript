@@ -98,7 +98,7 @@
        * @type type
        */
       $('button#b1').click(function () {
-        $('div').load('http://192.168.114.128/procesarArray.php', array, function (responseTxt, statusTxt, xhr) {
+        $('div').load('http://localhost/procesarArray.php', array, function (responseTxt, statusTxt, xhr) {
           if (statusTxt == 'success') {
             $('p#p1').text(statusTxt).css(estilo);
           }

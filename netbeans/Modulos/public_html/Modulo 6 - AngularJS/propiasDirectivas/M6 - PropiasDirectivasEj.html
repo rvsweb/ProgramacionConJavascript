@@ -12,6 +12,41 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <link rel="shortcut icon" href="https://goo.gl/cais23">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+// Creacion del modulo
+      var moduloArcoiris = angular.module('moduloArcoiris', []);
+
+      moduloArcoiris.controller('miControlador', function ($scope) {
+        $scope.coloresArcoiris = ['#9400D3', '#4B0082', '#0000FF', '#00FF00', '#FFFF00', '#FF7F00', '#FF0000'];
+      }
+      );
+//Configurar el modulo con un controlador
+      moduloArcoiris.directive('arcoiris', function () {
+        return {
+          restrict: 'AE',
+          template:
+                  "<button ng-click='mostarArcoiris()' type='button'>"
+                  + "{{oculto ? 'Dejar de llover' : 'Que llueva'}}"
+                  + "</button><div ng-hide='oculto' id='colorContainer'>"
+                  + "</div>",
+          link: function ($scope, $element) {
+            //Ocultamos los colores por defecto
+            $scope.oculto = true;
+            //Creamos una funcion dentro del objeto scope y será invocado cuando cliquemos el boton
+            //La funcion lo que hacer es invertir el valor de la variable oculto
+            $scope.mostarArcoiris = function () {
+              $scope.oculto = !$scope.oculto;
+            };
+            // DOM manipulation
+            var colorContainer = $element.find('div');
+            angular.forEach($scope.coloresArcoiris, function (color) {
+              var appendString = "<div class='arco' style='background-color:" + color + "'>" + color + "</div>";
+              colorContainer.append(appendString);
+            });
+          }
+        };
+      });
+    </script>
     <style>
 
       div{
@@ -56,40 +91,5 @@
            ">Powered by RVS</p>
       </aside>
     </footer>
-    <script>
-// Creacion del modulo
-          var moduloArcoiris = angular.module('moduloArcoiris', []);
-
-          moduloArcoiris.controller('miControlador', function ($scope) {
-            $scope.coloresArcoiris = ['#9400D3', '#4B0082', '#0000FF', '#00FF00', '#FFFF00', '#FF7F00', '#FF0000'];
-          }
-          );
-//Configurar el modulo con un controlador
-          moduloArcoiris.directive('arcoiris', function () {
-            return {
-              restrict: 'AE',
-              template:
-                      "<button ng-click='mostarArcoiris()' type='button'>"
-                      + "{{oculto ? 'Dejar de llover' : 'Que llueva'}}"
-                      + "</button><div ng-hide='oculto' id='colorContainer'>"
-                      + "</div>",
-              link: function ($scope, $element) {
-                //Ocultamos los colores por defecto
-                $scope.oculto = true;
-                //Creamos una funcion dentro del objeto scope y será invocado cuando cliquemos el boton
-                //La funcion lo que hacer es invertir el valor de la variable oculto
-                $scope.mostarArcoiris = function () {
-                  $scope.oculto = !$scope.oculto;
-                };
-                // DOM manipulation
-                var colorContainer = $element.find('div');
-                angular.forEach($scope.coloresArcoiris, function (color) {
-                  var appendString = "<div class='arco' style='background-color:" + color + "'>" + color + "</div>";
-                  colorContainer.append(appendString);
-                });
-              }
-            };
-          });
-    </script>
   </body>
 </html>

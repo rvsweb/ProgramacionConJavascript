@@ -5,8 +5,44 @@
 */
 
 h1{
-  background: #ff9999;
+  display: block;
+  width: 500px;
+  margin: 30px auto;
+  padding: 15px;
   text-align: center;
+  font-size: 3.2em;
+  border-radius: 12px;
+  background: #ff9999;
+}
+
+h2{
+  display: block;
+  width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  font-size: 3em;
+  background: #ccccff;
+}
+
+p{
+  display: block;
+  width: 500px;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 2em;
+  background: #ff9999;
+}
+
+main{
+  display: block;
+  background-image: url("../..//paginaPrincipal/assets/img/backgrounds/b1.jpg");
+  height: 1200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 ul , li {
@@ -178,6 +214,114 @@ ul#menu-desplegable3:after {
 }
 
 .header-nav3{
+  padding: 10px;
+  border-radius: 7px;
+  background-color: #ccccff;
+}
+
+/*-------------*/
+ul#menu-desplegable4{
+  text-align: center;
+  width: 500px;
+  padding: 30px;
+}
+
+ul#header-nav4{
+  background: #ff9999;  
+  width: 1000px;
+}
+
+ul#menu-desplegable4:before {
+  display: inline-block;
+  width: 50px;
+}
+
+ul#menu-desplegable4:after {
+  display: inline-block;
+  width: 50px;
+}
+
+.nav-desplegable4 ul {
+  display: none;   
+}
+
+.nav-desplegable4 ul.visible {
+  display: block;   
+}
+
+.header-nav4{
+  padding: 10px;
+  border-radius: 7px;
+  background-color: #ccccff;
+}
+/*-------------*/
+
+ul#menu-desplegable5{
+  text-align: center;
+  width: 500px;
+  padding: 30px;
+}
+
+ul#header-nav5{
+  background: #ff9999;  
+  width: 1000px;
+}
+
+ul#menu-desplegable5:before {
+  display: inline-block;
+  width: 50px;
+}
+
+ul#menu-desplegable5:after {
+  display: inline-block;
+  width: 50px;
+}
+
+.nav-desplegable5 ul {
+  display: none;   
+}
+
+.nav-desplegable5 ul.visible {
+  display: block;   
+}
+
+.header-nav5{
+  padding: 10px;
+  border-radius: 7px;
+  background-color: #ccccff;
+}
+/*-------------*/
+
+ul#menu-desplegable6{
+  text-align: center;
+  width: 500px;
+  padding: 30px;
+}
+
+ul#header-nav6{
+  background: #ff9999;  
+  width: 1000px;
+}
+
+ul#menu-desplegable6:before {
+  display: inline-block;
+  width: 50px;
+}
+
+ul#menu-desplegable6:after {
+  display: inline-block;
+  width: 50px;
+}
+
+.nav-desplegable6 ul {
+  display: none;   
+}
+
+.nav-desplegable6 ul.visible {
+  display: block;   
+}
+
+.header-nav6{
   padding: 10px;
   border-radius: 7px;
   background-color: #ccccff;

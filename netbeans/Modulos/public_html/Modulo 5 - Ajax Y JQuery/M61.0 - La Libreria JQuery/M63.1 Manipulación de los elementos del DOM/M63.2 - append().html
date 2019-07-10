@@ -51,6 +51,14 @@
         border-radius: 12px;
       }
 
+      b{
+        display: block;
+        width: 250px;
+        margin: 10px;
+        padding: 10px;
+        background: #99ffff;
+
+      }
 
     </style>
   </head>
@@ -141,7 +149,8 @@
       function appendText() {
         var txt1 = "<p>Variable Text</p>"; // Create text with HTML
         // Create text with JQuery
-        var txt2 = $("<p></p>").text("Añadimos elemento parrafo entre 2 etiquetas").css(estilos);
+        var txt2 = $("<p></p>")
+                .text("Añadimos elemento parrafo entre 2 etiquetas").css(estilos);
         var txt3 = document.createElement('p');
         txt3.innerHTML = "Parrafo añadido mediante innerHTML dentro del parrafo";
         $('body').append(txt1, txt2, txt3).css("background-color", "#ccffff");
@@ -162,7 +171,7 @@
        */
       $("input").click(function () {
         $("p#p1").append(function (n) {
-          return "<b> This p element has index " + (n) + " </b>";
+          return "<b> Create element p </b>";
         });
       });
 

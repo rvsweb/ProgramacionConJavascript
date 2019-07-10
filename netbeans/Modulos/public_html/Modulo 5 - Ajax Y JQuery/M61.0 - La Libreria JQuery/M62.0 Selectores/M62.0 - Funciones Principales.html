@@ -17,6 +17,7 @@
     <style>
 
       label[for="boton1"]{
+        display: block;
         text-align: center;
         display: block;
         padding: 5px;
@@ -26,6 +27,7 @@
       }
 
       input#boton1{
+        display: block;
         margin: 10px;
         width: 80px;
         display: block;
@@ -35,13 +37,14 @@
       }
 
       div.redondeado{
-        display: inline-block;
-        margin: 10px;
         position: relative;
-        width: 100px;
-        height: 100px;
+        display: inline-block;
         left: 150px;
         bottom: 100px;
+        width: 100px;
+        height: 50px;
+        margin: 10px;
+        text-align: center;
         border-radius: 12px;
         background-color: #ff9999;
         border: 2px solid red;
@@ -56,9 +59,12 @@
         border-radius: 12px;
         background-color: #ffff99;
       }
- 
+
       section#sec2{
-        height: 350px;
+        display: block;
+        padding: 30px;
+        width: 500px;
+        height: 150px;
       }
 
     </style>
@@ -90,7 +96,7 @@
 
     <section id="sec2">
       <h2>Manipulacion de elementos del DOM</h2>
-      <div>
+      <div id="d1">
         <ul>
           <li>empty();</li>
           <li>append(valor);</li>
@@ -123,7 +129,7 @@
     <input id="boton1" type="button"  value="Boton">
 
     <p id="uno"></p>
-    <div class="redondeado"></div> 
+    <div class="redondeado"> Lanzar evento onclick </div> 
 
 
     <footer style="

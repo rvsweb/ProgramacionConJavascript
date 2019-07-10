@@ -19,8 +19,7 @@
       h2{
         display: block;
         margin: 0 auto;
-        margin-top: 10px;
-        padding: 40px;
+        padding: 10px;
         width: 300px;
         border-radius: 10px;
         text-align: center;
@@ -35,10 +34,22 @@
         background-color: #ffcc99;
       }
 
+      div{
+        display: block;
+        padding: 10px;
+        margin: 10px;
+      }
+
       div#myDiv2{
+        position: relative;
+        bottom: 70px;
+        left: 200px;
         display: block;
         margin: 10px;
+        padding: 20px;
         background-color: #ffcc99;
+        border-radius: 12px;
+        width: 400px;
       }
 
     </style>
@@ -68,6 +79,11 @@
            ">Powered by RVS</p>
       </aside>
     </footer>
+    <div id="myDiv">
+      <h2>Let Ajax change this text</h2>
+      <input type="button" onclick="loadXMLDoc()" value="Change Content" />
+    </div>
+    <div id="myDiv2"></div>
     <script>
 
       /**
@@ -94,11 +110,5 @@
         xmlhttp.send();
       }
     </script>
-    <div id="myDiv">
-      <h2>Let Ajax change this text</h2>
-      <input type="button" onclick="loadXMLDoc()" value="Change Content" />
-    </div>
-    <div id="myDiv2">
-    </div>
   </body>
 </html>

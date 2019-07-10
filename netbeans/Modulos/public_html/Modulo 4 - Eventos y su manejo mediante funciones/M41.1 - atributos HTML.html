@@ -34,9 +34,12 @@
       }
 
       input#inputi1 , input#inputi2 {
+        padding: 10px;
+        text-align: center;
         margin: 5px auto;
         display: block;
-        width: 100px;
+        border-radius: 7px;
+        border: 3px solid #9999ff;
       }
 
       p.pc1{
@@ -63,9 +66,10 @@
       div#div1{
         padding: 10px;
         text-align: center;
-        margin: 5px auto;
-        background-color: #ccccff;
+        margin: 15px auto;
         border-radius: 7px;
+        background-color: #ff99ff;
+        border: 3px solid #ff3333;
       }
 
     </style>
@@ -73,13 +77,14 @@
   <body>
 
     <main>
-      <label>Evento onclick</label>
       <p class="pc1">Forma Desaconsejada de lanzar un evento</p>
-      <input id="inputi1" type="button" value="Pinchame" onclick="console.log('Evento lanzado')">
-      <p class="pc1">Forma Aconsejada de lanzar un evento</p>
-      <input id="inputi2" type="button" value="Pinchame">
+      <p id="p5"></p>
+      <input id="inputi1" type="button" value="Evento" onclick="console.log('Evento lanzado')">
 
-      <div id="div1" 
+      <p class="pc1">Forma Aconsejada de lanzar un evento</p>
+      <input id="inputi2" type="button" value="Evento Fecha">
+
+      <div id="div1"
            onclick="document.getElementById('p3').innerHTML = ('Evento OnClick')" 
            onmouseover="document.getElementById('p4').innerHTML = ('Evento onMouseOver')">
         Evento Onclick &amp; Evento OnMouseOver
@@ -89,7 +94,6 @@
       <p id="p2"></p>
       <p id="p3"></p>
       <p id="p4"></p>
-      <p id="p5"></p>
       <p id="p6"></p>
       <p id="p7"></p>
 
@@ -120,7 +124,7 @@
     </footer>
     <script src="sources/js/M41.1 - Manejadores de eventos como atributos HTML.js"></script>
     <script>
-      document.getElementById('inputi1').innerHTML = ('Evento lanzado');
+             document.getElementById('p5').innerHTML = ('input id="inputi1" type="button" value="Evento" onclick="console.log(Evento lanzado)');
     </script>
   </body>
 </html>

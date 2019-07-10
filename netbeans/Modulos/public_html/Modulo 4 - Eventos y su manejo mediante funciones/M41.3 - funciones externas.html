@@ -35,14 +35,25 @@
         padding: 10px;
         border-radius: 10px;
       }
+
+      div{
+        text-align: center;
+        padding: 10px;
+        margin: 15px;
+      }
     </style>
   </head>
   <body>
 
     <label for="p1">1.3 | Manejadores de eventos como funciones externas</label>
-    <input type="button" id="p1" value="Pinchame" onclick="muestra()" />
+    <input type="button" id="p1" value="Cambiar el color" onclick="muestra()" />
 
-    <div id="div1" style="width: 150px;height: 60px;border: thin solid silver" onmouseover="resaltar(this)" onmouseout="resaltar(this)">Seccion de contenidos...</div>
+    <div id="div1" 
+         style="width: 150px;
+         height: 60px;
+         border: thin solid silver" 
+         onmouseover="resaltar(this)" 
+         onmouseout="resaltar(this)">Seccion de contenidos</div>
 
     <p id="p2"></p>
     <p id="p3"></p>

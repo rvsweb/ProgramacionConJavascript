@@ -15,8 +15,23 @@
   </head>
   <body>
 
+    <pre>
+    //    Modulo
+    var app = angular.module("miAplicacion", []);
+    app.controller("miControlador", function ($scope) {
+    $scope.nombre = "Mario";
+    $scope.apellidos = "Flores";
+    });
+    </pre>
+
+    <pre>
+    < div ng-app="miAplicacion" ng-controller="miControlador">
+      {{ nombre + " " + apellidos}}
+    < /div>
+    </pre>
+
     <script>
-//    Modulo
+  //    Modulo
       var app = angular.module("miAplicacion", []);
       app.controller("miControlador", function ($scope) {
         $scope.nombre = "Mario";

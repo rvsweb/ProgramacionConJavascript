@@ -6,20 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="../../sources/img/60x60bb.jpg" sizes="32x32">
     <link href="../sources/css/cssPrincipal.css" type="text/css" rel="stylesheet">
+    <style>
+      div , a{
+        display: block;
+        background: #ffcccc;
+        width: 200px;
+        padding: 10px;
+      }
+      
+      div {
+        margin: 10px;
+      }
+
+      a{
+        width: 80px;
+        margin-top: 10px;
+      }
+    </style>
 
   <body>
     <script>
       function linkSomePage_onClick() {
-        console.log('Este enlace no lleva a ninguna parte');
+        document.getElementById('d1').innerHTML = ('Este enlace no lleva a ninguna parte');
         return false;
       }
     </script>
 
-    <a href="../../listaEjemplos.html">Pincha aqui</a>
+    <div id="d1"></div>
 
+    <a href="">Pincha aqui</a>
+    <a class="action" href="../../listaEjemplos.html">Volver al menu principal</a>
     <script>
       window.document.links[0].onclick = linkSomePage_onClick();
     </script>
-
   </body>
 </html>

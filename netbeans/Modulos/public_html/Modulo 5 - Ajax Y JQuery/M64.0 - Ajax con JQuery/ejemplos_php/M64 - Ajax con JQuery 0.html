@@ -3,9 +3,27 @@
   <head>
     <title>Ejemplo</title>    
     <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <link href="../../sources/css/cssPrincipal3.css" type="text/css" rel="stylesheet">
+    <style>
+
+      div#loginform{
+        display: block;
+        padding: 15px;
+        background: #ffffff;
+        width: 300px;
+      }
+
+      input{
+        position: static;
+        display: table;
+        margin: 10px;
+      }
+
+    </style>
   </head>
   <body>
-    <form id="loginform" method="post">
+
+    <div id="loginform">
       <div>
         Username:
         <input type="text" name="username" id="username" />
@@ -13,8 +31,10 @@
         <input type="password" name="password" id="password" />    
         <input type="submit" name="loginBtn" id="loginBtn" value="Login" />
       </div>
-    </form>
+    </div>
+
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
     <script type="text/javascript">
       $(document).ready(function () {
         $('#loginform').submit(function (e) {
@@ -31,7 +51,8 @@
               // let's redirect
               if (jsonData.success == "1") {
                 location.href = 'index.php';
-              } else {
+              } else
+              {
                 console.log('Invalid Credentials!');
               }
             }
@@ -41,3 +62,14 @@
     </script>
   </body>
 </html>
+
+<!--<?php
+if (isset($_POST['username']) && $_POST['username'] && isset($_POST['password']) && $_POST['password']) {
+  // do user authentication as per your requirements
+  // ...
+  // ...
+  // based on successful authentication
+  echo json_encode(array('success' => 1));
+} else {
+  echo json_encode(array('success' => 0));
+}-->

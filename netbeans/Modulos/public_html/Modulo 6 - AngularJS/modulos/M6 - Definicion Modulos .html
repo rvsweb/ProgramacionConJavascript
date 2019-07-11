@@ -11,22 +11,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   </head>
   <body>
 
-    <div ng-app="miAplicacion" ng-controller="miControlador">
+    <pre>
+    < div ng-app="miAplicacion" ng-controller="miControlador">
       {{ nombre + " " + apellidos}}
-    </div>
+    < /div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-
-    <script>
-//      Ejemplo de modulo basico
+  //      Ejemplo de modulo basico
         var app = angular.module("miAplicacion", []);
         app.controller("miControlador", function ($scope) {
           $scope.nombre = "Mario";
           $scope.apellidos = "Flores";
         });
+    </pre>
+
+    <div ng-app="miAplicacion" ng-controller="miControlador">
+      {{ nombre + " " + apellidos}}
+    </div>
+
+    <script>
+//      Ejemplo de modulo basico
+      var app = angular.module("miAplicacion", []);
+      app.controller("miControlador", function ($scope) {
+        $scope.nombre = "Mario";
+        $scope.apellidos = "Flores";
+      });
     </script>
   </body>
 </html>

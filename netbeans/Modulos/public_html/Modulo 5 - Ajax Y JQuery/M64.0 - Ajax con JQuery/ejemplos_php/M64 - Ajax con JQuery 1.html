@@ -50,22 +50,37 @@
         background-color: aquamarine;
       }
 
-      .respuesta , #res{
-        background-color: aquamarine;
+      .respuesta {
+        position: relative;
+        bottom: 400px;
+        left: 300px;
+        width: 200px;
+        height: 50px;
+        padding: 20px;
         margin: 20px;
         color: #000;
-        padding: 20px;
         border-radius: 6px;
-        width: 500px;
+        background-color: aquamarine;
       }
 
+      #res {
+        position: relative;
+        bottom: 380px;
+        left: 300px;
+        width: 450px;
+        height: 50px;
+        padding: 20px;
+        margin: 20px;
+        color: #000;
+        border-radius: 6px;
+        background-color: aquamarine;
+      }
 
     </style>
   </head>
   <body>
 
     <h1>Datos para enviar a PHP</h1>
-
     <label>Nombre</label>
     <input type="text" id="nombre" placeholder="Nombre" accept="text/plain"><br><br>
     <label>Apellido</label>
@@ -119,7 +134,7 @@
         var nombre = $("#nombre").val(),
                 apellido = $("#apellido").val(),
                 edad = $("#edad").val(),
-                //"nombre del parámetro POST":valor (el cual es el objeto guardado en las variables de arriba)
+                //"nombre del parámetro POST" :valor (el cual es el objeto guardado en las variables de arriba)
                 datos = {
                   "nombre": nombre,
                   "apellido": apellido,

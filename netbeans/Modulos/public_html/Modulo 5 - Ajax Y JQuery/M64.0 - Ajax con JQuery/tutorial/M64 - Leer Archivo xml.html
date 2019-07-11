@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="shortcut icon" href="https://goo.gl/cais23">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link href="../../sources/css/cssPrincipal.css" type="text/css" rel="stylesheet">
     <style>
 
       button#loadXmlFile{
@@ -20,6 +21,10 @@
         padding: 10px;
         border-radius: 7px;
         background-color: #ccffcc;
+      }
+
+      div{
+        margin: 10px;
       }
 
     </style>
@@ -94,14 +99,20 @@
 
             table += cols + '</table>';
             $('#xmlData').html(table).css(estilo1);
-            $('#d1').html("StatusText : " + xhr.statusText + " - Status : " + xhr.status).css(estilo2);
+            $('#d1').html("StatusText : "
+                    + xhr.statusText
+                    + " - Status : " + xhr.status).css(estilo2);
           }, error: function (xhr, status, error) {
             var estilo2 = {
               "width": "250px",
               "padding": "20px",
               "background-color": "#ffffcc"
             };
-            $("#textNoData").html("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText).css(estilo2);
+            $("#textNoData").html("Result: "
+                    + status + " "
+                    + error + " "
+                    + xhr.status + " "
+                    + xhr.statusText).css(estilo2);
           }
         });
       }

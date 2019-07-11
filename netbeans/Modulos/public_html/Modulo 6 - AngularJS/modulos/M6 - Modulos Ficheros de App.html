@@ -11,8 +11,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   </head>
   <body>
+
+    <pre>
+    < div ng-app="myApp" ng-controller="miControlador">
+      {{ nombre + " " + apellidos}}
+    < /div>
+    </pre>
+
+    <pre>
+    //    Modulo
+    var app = angular.module("myApp", []);
+
+    //    Controladores
+    app.controller("miControlador", function ($scope) {
+      $scope.nombre = "Mario";
+      $scope.apellidos = "Flores";
+    });
+      
+    </pre>
 
     <p>Todas las aplicaciones deben de tener un modulo y un controlador</p>
 
@@ -20,16 +39,15 @@
       {{ nombre + " " + apellidos}}
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script>
-        //    Modulo
-        var app = angular.module("myApp", []);
+      //    Modulo
+      var app = angular.module("myApp", []);
 
-        //    Controladores
-        app.controller("miControlador", function ($scope) {
-          $scope.nombre = "Mario";
-          $scope.apellidos = "Flores";
-        });
+      //    Controladores
+      app.controller("miControlador", function ($scope) {
+        $scope.nombre = "Mario";
+        $scope.apellidos = "Flores";
+      });
     </script>
 
   </body>

@@ -14,7 +14,22 @@ https://www.tutorialrepublic.com/jquery-tutorial/jquery-ajax-get-and-post-reques
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="shortcut icon" href="https://goo.gl/cais23">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
-    <!--<style></style>-->
+    <style>
+
+      h2{
+        margin: 10px auto;
+        padding: 10px;
+        border-radius: 7px;
+        width: 500px;
+        background: #99ffff;
+      }
+
+      button{
+        margin: 10px;
+        padding: 5px;
+      }
+
+    </style>
   </head>
   <body>
 
@@ -57,7 +72,7 @@ https://www.tutorialrepublic.com/jquery-tutorial/jquery-ajax-get-and-post-reques
        */
       $('button').click(function () {
         // Display the returned data in browser
-        $.get('http://192.168.114.128/date-time.php', function (data) {
+        $.get('http://localhost/date-time.php', function (data) {
           $('#result').html(data);
         });
       });
@@ -65,3 +80,6 @@ https://www.tutorialrepublic.com/jquery-tutorial/jquery-ajax-get-and-post-reques
     </script>
   </body>
 </html>
+
+<!--<?php
+echo date('F d, Y h:i:s A');-->

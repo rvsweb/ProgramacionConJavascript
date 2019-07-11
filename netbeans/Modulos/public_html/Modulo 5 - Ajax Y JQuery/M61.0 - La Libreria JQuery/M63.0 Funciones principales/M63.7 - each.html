@@ -17,37 +17,35 @@
     <style>
 
       input{
+        display: block;
+        margin: 10px;
         background: #99ff99;
         border-radius: 12px;
-        display: block;
-        height: 50px;
         font-family: Roboto, sans-serif , monospace;
         font-weight: bold;
-        margin: 30px;
-        width: 180px;
       }
 
       #boton1 ,#boton2{
+        display: block;
         background: #ccffff;
+        padding: 10px;
       }
 
-      div{
-        background-color: #ff9999;
-        width: 100px;
-        height: 100px;
-        margin: 10px;
-        align-items: center;
-        display: flex;
+      ul#u1{
+        background-color: #cc99ff;
         background: #cc99ff;
         border-radius: 12px;
-        margin: 10px;
-        justify-content: center;
-        text-align: center;
+        width: 100px;
       }
 
+      li{
+        padding: 10px;
+        display: block;
+      }
+
+
       section{
-        display: inline-table;
-        position: static;
+        display: block;
         font-family: 'Roboto', Verdana, sans-serif;
         padding: 12px;
         margin: 20px;
@@ -65,7 +63,7 @@
 
     <input id="boton1" type="button" value="Lanzar evento">
 
-    <ul id="div1">
+    <ul id="u1">
       <li>fadeIn()</li>
       <li>fadeOut()</li>
       <li>fadeTo()</li>
@@ -100,16 +98,13 @@
     <script>
 
       var estilos1 = {
-        'align-items': 'center',
-        'display': 'flex',
-        'background': '#cc99ff',
+        'display': 'block',
+        'text-align' : 'center',
+        'font-family': 'Lobster',
+        'background': '#ffff99',
+        'padding': '10px',
         'border-radius': '12px',
-        'margin': '10px',
-        'padding-left': '15px',
-        'justify-content': 'left',
-        'text-align': 'left',
-        'height': '50px',
-        'width': '180px'
+        'width': '100px'
       };
 
       $("input").click(function () {

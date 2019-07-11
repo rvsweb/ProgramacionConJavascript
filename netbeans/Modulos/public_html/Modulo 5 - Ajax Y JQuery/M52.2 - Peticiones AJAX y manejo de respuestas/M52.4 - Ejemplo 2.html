@@ -24,6 +24,7 @@
       }
 
       div#myDiv{
+        text-align: center;
         background-color: #ffcc99;
         border-radius: 12px;
         display: block;
@@ -38,7 +39,7 @@
       input#i2{
         bottom: 75px;
         position: fixed;
-        margin-left: 2px;
+        margin-left: 12px;
         padding: 10px;
         font-size: 20px;
       }
@@ -49,8 +50,8 @@
 
     <div id="myDiv">
       <h2>Let Ajax change this text</h2>
-      <input type="button" onclick="loadXMLDoc()" value="Change Content">
-      <input id='i1' type="button" name="loadXMLHTML" value="Pulsar"/>
+      <input type="button" onclick="loadXMLDoc()" value="Mostrar Contenido">
+      <input id='i1' type="button" name="loadXMLHTML" value="Cambiar Imagen"/>
     </div>   
 
     <input id="i2" type="button" value="Actualizar" />
@@ -129,13 +130,12 @@
           {
             document.getElementById('myDiv').innerHTML = xmlhttp.responseText;
           }
-        };
+        };  
         xmlhttp.open("GET", "../M52.3 - Maneras de desarrollar con JQuery/M5.0 - Ajax Y JQuery.html", true);
         xmlhttp.send();
       };
 
       document.getElementById('i1').addEventListener('click', loadXMLHTML);
-
       document.getElementById('i2').addEventListener('click', actualizarPagina);
 
       /**

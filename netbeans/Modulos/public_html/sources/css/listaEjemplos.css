@@ -4,54 +4,110 @@
     link: https://jsfiddle.net/cRsZE/984/
 */
 
+/**{
+  border: 1px solid red;
+}*/
+
+@font-face{
+  font-family: "Telefonica Light";
+  src: url("font/TelefonicaWeb-Light.ttf");
+}
+
+main{
+  display: block;
+  position: relative;
+  background-image:
+    url("../..//paginaPrincipal/assets/img/backgrounds/logo.jpg");
+  height: 1000px;
+  font-family: "Telefonica Light";
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 h1{
   display: block;
-  width: 500px;
+  position: relative;
+  top: 130px;
+  width: 800px;
   margin: 30px auto;
+  margin-top: 30px;
   padding: 15px;
   text-align: center;
   font-size: 3.2em;
-  border-radius: 12px;
-  background: #ff9999;
+  border-radius: 40px;
+  color: #10bbca;
+  border: 2px solid #10bbca;
 }
 
 h2{
   display: block;
+  position: relative;
+  top: 470px;
   width: 500px;
   margin: 0 auto;
   padding: 10px;
   text-align: center;
   font-size: 3em;
-  background: #ccccff;
+  color: #10bbca;
+  border-radius: 40px;
+  border: 2px solid #10bbca;
+}
+
+p#titulo{
+  position: relative;
+  top: 120px;
+  width: 900px;
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  text-align: center;
+  font-size: 2em;
+  color: #10bbca;
+  border-radius: 40px;
+  border: 2px solid #10bbca;
+
 }
 
 p{
+  position: relative;
   display: block;
-  width: 500px;
   margin: 20px auto;
   padding: 10px;
   border-radius: 12px;
   text-align: center;
   font-size: 2em;
-  background: #ff9999;
+  color: #000;
 }
 
-main{
+div#contenedor{
   display: block;
-  background-image: url("../..//paginaPrincipal/assets/img/backgrounds/b1.jpg");
-  height: 1200px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  width: 700px;
+  top: 500px;
+  color: #10bbca;
+  border-radius: 40px;
+  border: 2px solid #10bbca;
+}
+
+footer#foot{
+  display: block;
+  position: relative;
+  top: 500px;
+  height: 300px;
 }
 
 ul , li {
   display: block;
+  position: relative;
   margin: 0 auto;  
   border-radius: 7px;
 }
 
 ul#menu-desplegable{
+  display: block;
   text-align: center;
   width: 500px;
   padding: 30px;
@@ -59,10 +115,10 @@ ul#menu-desplegable{
 
 span.titulo{
   font-size: 30px;
+  color: #003245;
 }
 
 ul#header-nav{
-  background: #ff9999;  
   width: 1000px;
 }
 
@@ -73,7 +129,7 @@ li{
 }
 
 li:hover, a:active  {
-  background-color: #99ff99;
+  background-color: #10bbca;
 }
 
 /* my code */
@@ -98,10 +154,11 @@ ul#menu-desplegable:after {
 .header-nav{
   padding: 10px;
   border-radius: 7px;
-  background-color: #ccccff;
+  background-color: #ffffff;
 }
 
 a{
+  color: #000;
   font-size: 20px;
   text-decoration: none;
 }
@@ -119,7 +176,6 @@ ul#menu-desplegable1{
 }
 
 ul#header-nav1{
-  background: #ff9999;  
   width: 1000px;
 }
 
@@ -155,7 +211,6 @@ ul#menu-desplegable2{
 }
 
 ul#header-nav2{
-  background: #ff9999;  
   width: 1000px;
 }
 
@@ -180,7 +235,7 @@ ul#menu-desplegable2:after {
 .header-nav2{
   padding: 10px;
   border-radius: 7px;
-  background-color: #ccccff;
+  background-color: #ffffff;
 }
 
 /*-------------*/
@@ -216,7 +271,7 @@ ul#menu-desplegable3:after {
 .header-nav3{
   padding: 10px;
   border-radius: 7px;
-  background-color: #ccccff;
+  background-color: #ffffff;
 }
 
 /*-------------*/
@@ -252,7 +307,7 @@ ul#menu-desplegable4:after {
 .header-nav4{
   padding: 10px;
   border-radius: 7px;
-  background-color: #ccccff;
+  background-color: #ffffff;
 }
 /*-------------*/
 
@@ -288,7 +343,7 @@ ul#menu-desplegable5:after {
 .header-nav5{
   padding: 10px;
   border-radius: 7px;
-  background-color: #ccccff;
+  background-color: #ffffff;
 }
 /*-------------*/
 
@@ -324,5 +379,5 @@ ul#menu-desplegable6:after {
 .header-nav6{
   padding: 10px;
   border-radius: 7px;
-  background-color: #ccccff;
+  background-color: #10bbca;
 }

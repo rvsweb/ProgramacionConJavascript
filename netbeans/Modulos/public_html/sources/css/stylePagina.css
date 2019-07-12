@@ -214,9 +214,8 @@ img {
   backface-visibility: hidden;
 }
 
-  /* bg = background */
-.navbar .navbar-no-bg{ 
-  background: #444 !important;
+.navbar.navbar-no-bg{ /* bg = background */
+  background: #444;
   background: rgba(0, 0, 0, 0.2);
 }
 
@@ -255,7 +254,7 @@ img {
 /* marco que tiene el icono en la barra del menu 'nav' */
 .navbar-brand{
   width: 136px;
-  background: url("../img/ico/iconos/60x60bb.jpg") left center no-repeat;
+  background: url("../..//paginaPrincipal/assets/img/ico/iconos/60x60bb.jpg") left center no-repeat;
   border: 0;
   text-indent: -99999px;
 }
@@ -360,47 +359,6 @@ img {
 
 }
 
-/**** About us ****/
-
-/* Caja principal */
-.about-us-box{
-  margin-top: 100px;
-  /*border: 5px solid red;*/
-}
-
-/* Caja de texto a la izqu. */
-.about-us-box-text{
-  padding-right: 30px;
-  text-align: left;
-}
-
-/* Caja titulo de texto a la izqu. */
-.about-us-box-text h3{
-  margin-top: 0;
-}
-
-/* Caja subtitulo de texto a la izqu. */
-.about-us-box-text .medium-paragraph{
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-/* Caja contenido enlace dentro del contenido */
-.about-us-box-text a{
-  border-bottom: 1px dashed #9b59b6;
-}
-
-/* enlace dentro del contenido */
-.about-us-box-text a:hover , 
-.about-us-box-text a:focus{
-  border: 0;
-}
-
-/* imagen a la derecha */
-.about-us-box-img img{
-  border-radius: 4px;
-}
-
 /* More Services */
 .more-services-box{
   margin-top: 30px;
@@ -443,88 +401,6 @@ img {
 .call-to-action-container .section-bottom-button{
   padding-top: 30px;
 }
-
-/**** Portfolio ****/
-
-/* Caja principales de forma vertical que ocupa todo el alto */
-.portfolio-box{
-  padding-top: 30px;
-  text-align: left;
-}
-
-/* Caja de la 2 imagenes del portfolio-box a la derecha */
-.portfolio-box-image{
-  overflow: hidden;
-  border-radius: 4px;
-}
-
-
-/* Efecto zoom de los bordes de la caja de la 2 imagenes del portfolio-box a la derecha */
-.portfolio-box-image img{
-  -o-transition: all .8s;
-  -moz-transition: all .8s;
-  -webkit-transition: all .8s;
-  -ms-transition: all .8s;
-  transition: all .8s;
-}
-
-.portfolio-box-image:hover img{
-  -o-transform: scale(1.25);
-  -moz-transform: scale(1.25);
-  -webkit-transform: scale(1.25);
-  -ms-transform: scale(1.25);
-  border: 5px solid red;
-  transform: scale(1.25);
-}
-
-/* Caja de los titulos inferiores */
-.portfolio-box h3{
-  margin-top: 30px;
-}
-
-/* Caja de los titulos inferiores y los enlaces */
-.portfolio-box h3 a { 
-  color: #555;
-}
-
-/* Efecto zoom en las caja de los titulos inferiores y los enlaces */
-.portfolio-box h3 a:hover, .portfolio-box h3 a:focus { color: #9b59b6;}
-
-/* Caja de los titulos inferiores mayor personalizacion */
-.portfolio-box h3 i{
-  padding-left: 10px;
-  color: #ccc;
-  -o-transition: all .3s;
-  -moz-transition: all .3s;
-  -webkit-transition: all .3s;
-  -ms-transition: all .3s;
-  transition: all .3s;
-}
-
-/* Caja para el icono cuando se selecciona */
-.portfolio-box h3:hover i{
-  padding-left: 15px;
-}
-
-/* Caja para las fechas */
-.portfolio-box-date{
-  padding-bottom: 10px;
-  font-size: 14px;
-  color: #aaa;
-  text-transform: uppercase;
-}
-
-/* Caja para los iconos de las fechas */
-.portfolio-box-date i {
-  padding-right: 5px;
-  color: #ddd;
-}
-
-/* Caja para el contenedor */
-.portfolio-container .section-bottom-button{
-  padding-top: 40px;
-}
-
 
 /**** Testimonials ****/
 /*Caja principal*/
@@ -613,79 +489,6 @@ img {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb24b', 
     endColorstr='#9b59b6', GradientType=0 ); /* IE6-9 */
   border: 0;
-}
-
-/**** Blog ****/
-
-/* Caja individual de cada elemento de la seccion */
-.blog-box{
-  margin-top: 30px;
-  text-align: left;
-}
-
-/* Icono envuelve la imagen */
-.blog-box-image{
-  margin-top: 8px;
-  overflow: hidden;
-  border-radius: 4px;
-}
-
-/* Imagen del icono */
-.blog-box-image img{
-  -o-transition: all .8s;
-  -moz-transition: all .8s;
-  -webkit-animation: all .8s;
-  -ms-transition: all .8s;
-  transition: all .8s;
-}
-
-/* Elemento que se ilumina a situarse encima el puntero */
-.blog-box-image:hover img{
-  -o-transform: scale(1.25);
-  -moz-transform: scale(1.25);
-  -webkit-transform: scale(1.25);
-  -ms-transform: scale(1.25);
-  transform: scale(1.25);
-}
-
-/* Titulo de los elementos de la seccion blog */
-.blog-box h3{
-  margin-top: 0;
-}
-
-/* Elemento del enlace */
-.blog-box h3 i{
-  padding-left: 10px;
-  color: #ccc;
-  -o-transition: all .3s;
-  -moz-transition: all .3s;
-  -webkit-transition: all .3s;
-  -ms-transition: all .3s;
-  transition: all .3s;
-}
-
-/* Icono dentro del titulo */
-.blog-box h3:hover i{
-  padding-left: 15px;
-}
-
-/* Caja del texto de la fecha */
-.blog-box-date{
-  padding-bottom: 10px;
-  font-size: 14px;
-  color: #aaa;
-  text-transform: uppercase;
-}
-
-/* Icono que aparece al lado de la fecha */
-.blog-box-date i{
-  padding-right: 5px;
-  color: #ddd;
-}
-
-/* Caja que esta al final con el boton */
-.blog-container .section-bottom-button{
-  padding-top: 40px;
 }
 
 /*** Footer ***/

@@ -5,20 +5,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="https://goo.gl/cais23">
+
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
           crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
-    <link rel="stylesheet" href="paginaPrincipal/assets/css/animate.css">
-    <link rel="stylesheet" href="paginaPrincipal/assets/css/style.css">
-    <link rel="stylesheet" href="paginaPrincipal/assets/css/media-queries.css">
+
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+    <link rel="stylesheet" type="text/css" href="paginaPrincipal/assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="paginaPrincipal/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="paginaPrincipal/assets/css/media-queries.css">
     <link rel="stylesheet" type="text/css" href="sources/css/listaEjemplos.css">
 
   </head>
   <body>
     <!-- Menu Superior -->
-    <nav class="navbar navbar-dark fixed-top navbar-expand-md navbar-no-bg">
+    <nav class="navbar navbar-dark fixed-top navbar-expand-md navbar-no-bg" 
+         style="padding-top: 0px ; padding-bottom: 0px">
       <div class="container"> <!-- clase bootstrap -->
         <a class="navbar-brand" href="paginaPrincipal/index.html">
           Programaci&oacute;n con Javascript - 4&ast; Edici&oacute;n</a><!-- Icono MX enlace -->
@@ -38,67 +43,49 @@
               <a class="nav-link" href="paginaPrincipal/index.html">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link scroll-link" href="#about-us">Contenidos</a>
+              <a class="nav-link" href="paginaContenido.html">Contenidos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#testimonials">Tecnologias</a>
+              <a class="nav-link scroll-link" href="#about-us">Ejemplos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#portfolio">Ejemplos</a>
+              <a class="nav-link" href="paginaTecnologias.html">Tecnologias</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sobre mí</a>
+              <a class="nav-link" href="paginaSobreMi.html">Sobre mí</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <main>
-      <h1>Listado de Temas de Curso</h1>
-      <p id="titulo">Aqu&iacute; se muestran todos los temas y ejemplos tratados en el curso</p>
+      <h1>Listado de Ejemplos del Curso</h1>
+      <p id="titulo">Aqu&iacute; se muestran los ejemplos tanto del curso como de fuente externas a él</p>
       <h2 class="about-us-container">
 
         <span id="about-us" class="about-us-box wow fadeInLeft">
           <span class="about-us-box-text">
-            Modulos
+            Ejemplos de Código
           </span>
         </span>   
       </h2>
 
-      <!-- Seccion - Call to action-->
-<!--      <div class="call-to-action-container section-container section-container-image-bg">
-        <div class="container">
-          <div class="row">
-            <div class="col call-to-action section-description wow fadeInLeftBig">
-              <p>
-                Todas las tecnologías expuesta en este website son totalmente 
-                gratuitas asi que no dudes en empezar a aprenderlas , 
-                manejarlas y utilizarlas en tus propios proyectos
-              </p>
+      <div id="contenedor">
+        <div class="call-to-action-container section-container section-container-image-bg"
+             style="padding-bottom: 20px;">
+          <div class="container">
+            <div class="row">
+              <div class="col call-to-action section-description wow fadeInLeftBig">
+                <p>
+                  Los ejemplos de código expuestos en esta sección pertenecen en parte 
+                  al curso oficial y otros a fuentes externas para que sea más
+                  fácil su entendimiento y uso en las aplicaciones que deseen realizar.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>-->
-    <!-- Seccion - Call to action-->
-    
-    <div class="call-to-action-container section-container section-container-image-bg">
-      <div class="container">
-        <div class="row">
-          <div class="col call-to-action section-description wow fadeInLeftBig">
-            <p>
-              Todas las tecnologías expuesta en este website son totalmente 
-              gratuitas asi que no dudes en empezar a aprenderlas , 
-              manejarlas y utilizarlas en tus propios proyectos
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-      <div id="contenedor">
-        <ul id="menu-desplegable">
+        <ul id="menu-desplegable" style="padding-top:0px">
           <li class="nav-desplegable">
             <span class="titulo">Modulo 1 - Paginas Dinamicas</span>
             <ul class="header-nav">
@@ -657,6 +644,8 @@
           </li>
         </ul>
 
+
+
         <ul id="menu-desplegable6">
           <li class="nav-desplegable6">
             <span class="titulo">Modulo 6 - NodeJS </span>
@@ -761,9 +750,10 @@
 
             <div class="col-md-6 offset-md-1 footer-right">
               <a href="https://www.facebook.com/MiriadaX/"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://twitter.com/miriadax?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
-                <i class="fab fa-twitter"></i></a>
+              <a href="https://twitter.com/miriadax?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fab fa-twitter"></i></a>
               <a href="https://www.instagram.com/explore/tags/miriadax/?hl=es"><i class="fab fa-instagram"></i></a>
+              <a href="https://github.com/RVSWeb/ProgramacionConJavascript/"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/raul-vela/"><i class="fab fa-linkedin"></i></a>
             </div>
           </div>
 
@@ -784,6 +774,7 @@
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
             crossorigin="anonymous">
     </script>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
             crossorigin="anonymous">
@@ -795,5 +786,6 @@
     <script src="paginaPrincipal/assets/js/waypoints.min.js"></script>
     <script src="paginaPrincipal/assets/js/scripts.js"></script>
     <script src="sources/js/desplegables.js"></script> 
+
   </body>
 </html>

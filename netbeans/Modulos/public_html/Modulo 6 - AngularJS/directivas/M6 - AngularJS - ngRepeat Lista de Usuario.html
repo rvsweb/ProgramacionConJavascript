@@ -18,20 +18,45 @@
     <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
     <script src="//code.angularjs.org/snapshot/angular-animate.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <style></style>
+    <style>
+
+      div{
+        width: 300px;
+        display: block;
+        margin: 10px;
+        padding: 20px;
+        border-radius: 12px;
+        background-color: #ccffcc;
+      }
+
+      div#d1{
+        display: block;
+        padding: 5px;
+      }
+
+      input{
+        display: block;
+        margin: 10px;
+        text-align: center;
+        height: auto;
+      }
+
+    </style>
   </head>
 
   <body ng-app="ngRepeat">
     <div ng-controller="repeatController">
-      I have {{friends.length}} friends. They are:
-      <input type="search" ng-model="q" placeholder="filter friends..." aria-label="filter friends" />
+      Yo tengo {{friends.length}} amigos. <div id="d1">Todos ellos son : </div>
+      <input type="search" ng-model="q" placeholder="Busca a tu compi" aria-label="filter friends" />
 
       <ul class="example-animate-container">
         <li class="animate-repeat" ng-repeat="friend in friends| filter: q as results track by friend.name">
-          [{{$index + 1}}] {{friend.name}} who is {{friend.age}} years old.
+          [{{$index + 1}}] {{friend.name}} tiene {{friend.age}} años
         </li>
         <li class="animate-repeat" ng-if="results.length === 0">
-          <strong>No results found...</strong>
+          <span>Prueba de nuevo</span>
+          <br />
+          <strong>Tu amigo no lo hemos encontrado</strong>
         </li>
       </ul>
     </div>

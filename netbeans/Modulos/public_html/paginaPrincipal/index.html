@@ -4,13 +4,14 @@
 <html lang="es">
   <head>
     <!-- Required meta tags -->
-    <title>Programaci&oacute;n con Javascript - 4&ast; Edici&oacute;n</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="author" content="Raul Vela Salas">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="OnePage de contenidos curso JQuery AngularJs NodeJs">
+    <meta name="description" content="Contenidos curso JS JQuery AngularJs NodeJs">
+
+    <title>Programaci&oacute;n con Javascript - 4&ast; Edici&oacute;n</title>
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
@@ -58,13 +59,13 @@
               <a class="nav-link scroll-link" href="#about-us">Contenidos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link scroll-link" href="#services">Tecnologias</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link scroll-link" href="#portfolio">Ejemplos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link scroll-link" href="#">Sobre mí</a>
+              <a class="nav-link scroll-link" href="#services">Tecnologias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../paginaSobreMi.html">Sobre mí</a>
             </li>
           </ul>
         </div>
@@ -142,8 +143,97 @@
       </div>
     </div>
 
+
+    <!-- Seccion - Call to action-->
+    <div class="call-to-action-container section-container section-container-image-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col call-to-action section-description wow fadeInLeftBig">
+            <p>
+              Todos los ejemplos de código expuestos en este website son totalmente 
+              gratuitos y libres, no dudes en usarlos , aprenderlos , 
+              manejarlas y utilizarlos en tus propios proyectos software
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio : Presentacion de los proyectos creados por la empresa -->
+    <div class="portfolio-container section-container">
+      <div class="container">
+        <div class="row">
+          <div class="col portfolio section-description wow fadeIn">
+            <h2>Ejemplos de Codigos</h2>
+            <div class="divider-1 wow fadeInUp"><span></span></div>
+            <p>
+              En este website hay más de 200 ejemplos básicos
+              y funcionales acompañados de <a href="../paginaContenido.html"><b>pdf</b></a> de teoría de cada 
+              tema que te ayudarán a 
+              comprender mejor el uso de estas tecnologías 
+            </p>
+          </div>
+        </div>
+
+        <div class="col section-bottom-button wow fadeInUp" style="padding-top: 0px;">
+          <a class="btn btn-primary btn-link-3" href="../paginaEjemplos.html">Ver más Ejemplos</a>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 portfolio-box wow fadeInUp">
+            <div class="portfolio-box-image">
+              <img src="assets/img/testimonials/jquery.jpg" 
+                   alt="logo JQuery" 
+                   data-at2x="assets/img/testimonials/jquery.jpg">
+            </div>
+            <h3>
+              <a href="../Modulo 5 - Ajax Y JQuery/M52.1 - Ejemplo JSON/M52.4 - JSON Basico.html">Ejemplo JQuery</a><i class="fas fa-angle-right"></i></h3>
+            <div class="portfolio-box-date"><i class="far fa-calendar"></i>10 Junio 2019</div>
+            <p>
+              Un sencillo ejemplo de una petición por AJAX usando la librería JQuery de un archivo JSON
+              para mostrar un listado de datos 
+            </p>
+          </div>
+
+          <div class="col-md-4 portfolio-box wow fadeInDown">
+            <div class="portfolio-box-image">
+              <img src="assets/img/testimonials/angular.jpg"
+                   alt="logo AngularJS"
+                   data-at2x="assets/img/testimonials/angular.jpg">                   
+            </div>
+
+            <h3><a href="../Modulo 6 - AngularJS/directivas/M6 - AngularJS - ngRepeat Lista de Usuario.html">AngularJS</a><i class="fas fa-angle-right"></i></h3>
+            <div class="portfolio-box-date"><i class="far fa-calendar"></i>15 Junio 2019</div>
+            <p>
+              Ejemplo de una pequeña aplicación que muestra los datos de una lista de usuarios los cuales
+              se pueden organizar por distintas categorias
+            </p>
+          </div>
+
+          <div class="col-md-4 portfolio-box wow fadeInUp">
+            <div class="portfolio-box-image">
+              <img src="assets/img/testimonials/nodejs.jpg"
+                   alt="Imagen marmol amarillo"
+                   data-at2x="assets/img/testimonials/nodejs.jpg">
+            </div>
+            <h3>
+              <a href="../sources/paginasContenido/ejemploNodeJS.html">NodeJS</a>
+              <i class="fas fa-angle-right"></i>
+            </h3>
+            <div class="portfolio-box-date"><i class="far fa-calendar"></i>21 Junio 2019</div>
+            <p>
+              Ejemplo de codigo de como crear un servidor en NodeJS el cual esta a la escucha
+              de las peticiones que se hagan a traves del navegador sobre el puerto que tiene
+              configurado
+            </p>
+          </div>
+        </div> <!-- end row --> 
+
+      </div> <!-- end container -->
+    </div> 
+
     <!-- Seccion - Testimonials -->
-    <div class="testimonials-container section-container section-container-image-bg">
+    <div class="services-container testimonials-container section-container section-container-image-bg">
       <div class="container">
         <div class="row">
           <div class="col testimonials section-description wow fadeIn"></div>
@@ -296,190 +386,21 @@
 
           </div>
         </div> <!-- End row secundaria -->
+        <div class="col section-bottom-button wow fadeInUp" style="padding-top: 30px;">
+          <a class="btn btn-primary btn-link-3" href="../paginaTecnologias.html">Saber más</a>
+        </div>
       </div>
     </div>
 
     <!-- Seccion : More services -->
-    <div class="services-container more-services-container section-container">
+    <div class="more-services-container section-container">
       <div class="container">
-
         <div class="row">   <!-- Cabecera de la fila principal -->
-          <div class="col more-services section-description wow fadeIn">
-            <h2>Enlaces a las tecnologias oficiales</h2>
-            <div class="divider-1 wow fadeInUp"><span></span></div>
-          </div>
+          
         </div>
-
-        <div class="row"> <!-- 1º fila de elementos -->
-          <div class="col-md-6 more-services-box wow fadeInLeft">
-            <div class="row">
-              <div class="col-md-3">
-                <div class="more-services-box-icon">
-                  <i class="fab fa-js"></i>
-                </div>
-              </div>
-              <div class="col-md-9">
-                <h3>Javascript</h3>
-                <p>
-                  Accede a la guia standard oficial de 
-                  <a href="https://www.ecma-international.org/publications/standards/Ecma-262.htm">
-                    ECMA-262</a> 
-                  la cual Javascript usa en su implementación
-
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 more-services-box wow fadeInLeft">
-            <div class="row">
-              <div class="col-md-3">
-                <div class="more-services-box-icon">
-                  <i class="fas fa-magic"></i>
-                </div>
-              </div>
-              <div class="col-md-9">
-                <h3>JQuery</h3>
-                <p>
-                  Accede a la libreria oficial de 
-                  <a href="https://jquery.com/">JQUERY</a>
-                  para darle mayor dinamismo a tus websites
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> <!-- END - 1º fila de elementos -->
-
-        <div class="row"> <!-- 2º fila de elementos -->
-          <div class="col-md-6 more-services-box wow fadeInLeft">
-            <div class="row">
-              <div class="col-md-3">
-                <div class="more-services-box-icon">
-                  <i class="fab fa-node"></i>
-                </div>
-              </div>
-              <div class="col-md-9">
-                <h3>NodeJS</h3>
-                <p>
-                  Accede a la programación del lado del servidor con
-                  <a href="https://nodejs.org/es/">NodeJS</a> 
-                  para gestionar mejor tus aplicaciones Back-End
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 more-services-box wow fadeInLeft">
-            <div class="row">
-              <div class="col-md-3">
-                <div class="more-services-box-icon">
-                  <i class="fab fa-angular"></i>
-                </div>
-              </div>
-              <div class="col-md-9">
-                <h3>AngularJS</h3>
-                <p>
-                  Accede al framework <a href="https://angularjs.org/">AngularJS</a> 
-                  para crear tus propias aplicaciones Simple Page Applications <b>(SPA)</b>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> <!-- END - 2º fila de elementos -->
-
       </div>  
-    </div> <!-- END - More-services-container section-container -->
-
-    <!-- Seccion - Call to action-->
-    <div class="call-to-action-container section-container section-container-image-bg">
-      <div class="container">
-        <div class="row">
-          <div class="col call-to-action section-description wow fadeInLeftBig">
-            <p>
-              Todas las tecnologías expuesta en este website son totalmente 
-              gratuitas asi que no dudes en empezar a aprenderlas , 
-              manejarlas y utilizarlas en tus propios proyectos
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-    <!-- Portfolio : Presentacion de los proyectos creados por la empresa -->
-    <div class="portfolio-container section-container">
-      <div class="container">
-        <div class="row">
-          <div class="col portfolio section-description wow fadeIn">
-            <h2>Ejemplos de Codigos</h2>
-            <div class="divider-1 wow fadeInUp"><span></span></div>
-            <p>
-              En este website hay más de 200 ejemplos básicos
-              y funcionales acompañados de <a href="../paginaContenido.html"><b>pdf</b></a> de teoría de cada 
-              tema que te ayudarán a 
-              comprender mejor el uso de estas tecnologías 
-            </p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-4 portfolio-box wow fadeInUp">
-            <div class="portfolio-box-image">
-              <img src="assets/img/testimonials/jquery.jpg" 
-                   alt="logo JQuery" 
-                   data-at2x="assets/img/testimonials/jquery.jpg">
-            </div>
-            <h3>
-              <a href="../Modulo 5 - Ajax Y JQuery/M52.1 - Ejemplo JSON/M52.4 - JSON Basico.html">Ejemplo JQuery</a><i class="fas fa-angle-right"></i></h3>
-            <div class="portfolio-box-date"><i class="far fa-calendar"></i>10 Junio 2019</div>
-            <p>
-              Un sencillo ejemplo de una petición por AJAX usando la librería JQuery de un archivo JSON
-              para mostrar un listado de datos 
-            </p>
-          </div>
-
-          <div class="col-md-4 portfolio-box wow fadeInDown">
-            <div class="portfolio-box-image">
-              <img src="assets/img/testimonials/angular.jpg"
-                   alt="logo AngularJS"
-                   data-at2x="assets/img/testimonials/angular.jpg">                   
-            </div>
-
-            <h3><a href="../Modulo 6 - AngularJS/directivas/M6 - AngularJS - ngRepeat Lista de Usuario.html">AngularJS</a><i class="fas fa-angle-right"></i></h3>
-            <div class="portfolio-box-date"><i class="far fa-calendar"></i>15 Junio 2019</div>
-            <p>
-              Ejemplo de una pequeña aplicación que muestra los datos de una lista de usuarios los cuales
-              se pueden organizar por distintas categorias
-            </p>
-          </div>
-
-          <div class="col-md-4 portfolio-box wow fadeInUp">
-            <div class="portfolio-box-image">
-              <img src="assets/img/testimonials/nodejs.jpg"
-                   alt="Imagen marmol amarillo"
-                   data-at2x="assets/img/testimonials/nodejs.jpg">
-            </div>
-            <h3>
-              <a href="../sources/paginasContenido/ejemploNodeJS.html">NodeJS</a>
-              <i class="fas fa-angle-right"></i>
-            </h3>
-            <div class="portfolio-box-date"><i class="far fa-calendar"></i>21 Junio 2019</div>
-            <p>
-              Ejemplo de codigo de como crear un servidor en NodeJS el cual esta a la escucha
-              de las peticiones que se hagan a traves del navegador sobre el puerto que tiene
-              configurado
-            </p>
-          </div>
-        </div> <!-- end row --> 
-
-        <div class="row">
-          <div class="col section-bottom-button wow fadeInUp">
-            <a class="btn btn-primary btn-link-3" href="../paginaContenido.html">Ver más Ejemplos</a>
-          </div>
-        </div> <!-- end row --> 
-      </div> <!-- end container -->
     </div> 
+    <!-- END - More-services-container section-container -->
 
     <!--Footer-->
     <footer>
@@ -494,12 +415,11 @@
           <!--Seccion iconos de las redes sociales--> 
           <div class="col-md-6 offset-md-1 footer-right">
             <a href="https://www.facebook.com/MiriadaX/"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com/miriadax?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
-              <i class="fab fa-twitter"></i></a>
+            <a href="https://twitter.com/miriadax?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fab fa-twitter"></i></a>
             <a href="https://www.instagram.com/explore/tags/miriadax/?hl=es"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/RVSWeb/ProgramacionConJavascript/"><i class="fab fa-github"></i></a>
           </div>
         </div>
-
 
         <div class="row"> <!-- Seccion final flecha para subir hasta el principio de la pagina -->
           <div class="col footer-bottom">

@@ -214,8 +214,9 @@ img {
   backface-visibility: hidden;
 }
 
-.navbar.navbar-no-bg{ /* bg = background */
-  background: #444;
+  /* bg = background */
+.navbar .navbar-no-bg{ 
+  background: #444 !important;
   background: rgba(0, 0, 0, 0.2);
 }
 

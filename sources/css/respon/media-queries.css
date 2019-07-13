@@ -173,7 +173,7 @@ only screen and (                min-resolution: 2dppx) {
   /* logo */
   .navbar-brand {
     /*background-image: url("../img/ico/logo@2x.png") !important;*/ 
-    background-image: url("../img/ico/iconos/60x60bb.jpg") !important; 
+    background-image: url("../..//..//assets/img/backgrounds/logoResponsivo.jpg") !important; 
     background-repeat: no-repeat !important; 
     background-size: 136px 39px !important;
   }

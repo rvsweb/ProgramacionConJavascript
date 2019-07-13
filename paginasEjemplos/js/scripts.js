@@ -34,16 +34,16 @@ jQuery(document).ready(function () {
   });
 
   /*
-   Background slideshow
+   Background slideshow - Pone la imagen de fondo y queda horrible
    */
-  $('.top-content').backstretch("assets/img/backgrounds/1.jpg");
-  $('.call-to-action-container').backstretch("assets/img/backgrounds/1.jpg");
-  $('.testimonials-container').backstretch("assets/img/backgrounds/1.jpg");
+//  $('.top-content').backstretch("assets/img/backgrounds/1.jpg");
+//  $('.call-to-action-container').backstretch("assets/img/backgrounds/1.jpg");
+//  $('.testimonials-container').backstretch("assets/img/backgrounds/1.jpg");
 
   $('#top-navbar-1').on('shown.bs.collapse', function () {
     $('.top-content').backstretch("resize");
   });
-  
+
   $('#top-navbar-1').on('hidden.bs.collapse', function () {
     $('.top-content').backstretch("resize");
   });
@@ -56,18 +56,12 @@ jQuery(document).ready(function () {
    Wow
    */
   new WOW().init();
-
 });
 
 /**
- * 
+ * Hide imagen
  */
-jQuery(window).load(function () {
-
-  /*
-   Hidden images
-   */
+$(window).on('load', function () {
   $(".testimonial-image img").attr("style", "width: auto !important; height: auto !important;");
-
 });
 

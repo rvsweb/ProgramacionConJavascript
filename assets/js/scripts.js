@@ -43,7 +43,7 @@ jQuery(document).ready(function () {
   $('#top-navbar-1').on('shown.bs.collapse', function () {
     $('.top-content').backstretch("resize");
   });
-  
+
   $('#top-navbar-1').on('hidden.bs.collapse', function () {
     $('.top-content').backstretch("resize");
   });
@@ -56,18 +56,9 @@ jQuery(document).ready(function () {
    Wow
    */
   new WOW().init();
-
 });
 
-/**
- * 
- */
-jQuery(window).load(function () {
-
-  /*
-   Hidden images
-   */
+$(window).on('load', function () {
   $(".testimonial-image img").attr("style", "width: auto !important; height: auto !important;");
-
 });
 

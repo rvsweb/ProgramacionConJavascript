@@ -1,4 +1,4 @@
-# Curso 
+# Curso Miriadax
 
 Programación con JavaScript (4.ª edición)
 

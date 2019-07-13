@@ -1,0 +1,87 @@
+<!--Created on 02-jul-2019, 14:07:46-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>titulo</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="shortcut icon" href="../../sources/assets/img/ico/iconos/rvs-logo.jpg">
+    <style>
+
+      div , p , input{
+        margin: 10px;
+      }
+
+    </style>
+
+    <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+    <script>
+
+
+      (function (angular) {
+        'use strict';
+        var myApp = angular.module('spicyApp2', []);
+
+        myApp.controller('SpicyController', ['$scope', function ($scope) {
+            $scope.customSpice = 'wasabi';
+            $scope.spice = 'very';
+
+            $scope.spicy = function (spice) {
+              $scope.spice = spice;
+            };
+          }]);
+      })(window.angular);
+
+      /**
+       * Constructor
+       * 
+       * @param {type} $scope
+       * @returns {undefined}
+       */
+      function cochesController($scope) {
+        $scope.coche = {
+          marca: "Audi",
+          modelo: "A5"
+        };
+      }
+    </script>
+  </head>
+  <body ng-app="spicyApp2">
+    <div ng-controller="SpicyController">
+      <input ng-model="customSpice">
+      <button ng-click="spicy('chili')">Chili</button>
+      <button ng-click="spicy(customSpice)">Custom spice</button>
+      <p>The food is {{spice}} spicy!</p>
+    </div>
+
+    <footer style="
+            position: fixed;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(189, 195, 199);
+            color: #000;
+            text-align: center;">
+      <aside style="height: 55px;">
+        <img alt="Licencia de Creative Commons" src="https://licensebuttons.net/l/by/4.0/80x15.png" />
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        </a>Este obra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+        <p style="
+           margin-top: 5px;
+           font-size: 20px;
+           font-family: 'Lobster', cursive;
+           ">Powered by RVS</p>
+      </aside>
+    </footer>
+  </body>
+</html>

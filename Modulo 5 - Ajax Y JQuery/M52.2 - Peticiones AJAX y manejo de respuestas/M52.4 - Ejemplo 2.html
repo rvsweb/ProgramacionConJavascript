@@ -1,0 +1,151 @@
+<!--Created on 09-jun-2019, 20:46:02-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>M52.3 - Peticiones AJAX y manejo de respuestas</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link href="../sources/css/cssPrincipal.css" type="text/css" rel="stylesheet">
+    <style>
+
+      input{
+        border-radius: 12px;
+        padding: 10px;
+        background-color: #ccffff;
+        margin: 5px;
+      }
+
+      div#myDiv{
+        text-align: center;
+        background-color: #ffcc99;
+        border-radius: 12px;
+        display: block;
+        padding: 10px;
+        margin: 10px;
+        margin-left: 15%;
+        margin-right: 15%;
+        text-align: center;
+        width: 550px;
+      }
+
+      input#i2{
+        bottom: 75px;
+        position: fixed;
+        margin-left: 12px;
+        padding: 10px;
+        font-size: 20px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div id="myDiv">
+      <h2>Let Ajax change this text</h2>
+      <input type="button" onclick="loadXMLDoc()" value="Mostrar Contenido">
+      <input id='i1' type="button" name="loadXMLHTML" value="Cambiar Imagen"/>
+    </div>   
+
+    <input id="i2" type="button" value="Actualizar" />
+
+    <footer style="
+            position: fixed;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(189, 195, 199);
+            color: #000;
+            text-align: center;">
+      <aside style="height: 55px;">
+        <img alt="Licencia de Creative Commons" src="https://licensebuttons.net/l/by/4.0/80x15.png" />
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        </a>Este obra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+        <p style="
+           margin-top: 5px;
+           font-size: 20px;
+           font-family: 'Lobster', cursive;
+           ">Powered by RVS</p>
+      </aside>
+    </footer>
+    <script>
+
+      /**
+       * Peticion por Ajax
+       * 
+       * @returns {undefined}
+       */
+      function loadXMLDoc() {
+//      Declaramos una variable para almacenar
+        var xmlhttp;
+//      Si es un navegador distinto a Microsoft
+        if (window.XMLHttpRequest) {
+          xmlhttp = new XMLHttpRequest();
+        } else {
+//      Si el navegador es IE6 , IE5 'code for'
+          xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+//      Funcion anonima para realizarla peticion
+        xmlhttp.onreadystatechange = function () {
+//        Si el recurso esta preparado && la petición al servidor es correcta
+          if (xmlhttp.readyState === 4 && xmlhttp.status === 200)
+          {
+//          Agregamos el elemento 'texto' al documento
+            document.getElementById('myDiv').innerHTML = xmlhttp.responseText;
+          }
+        };
+//      Enviamos el elemento mediante 'get' y un elemento 'ajax.txt' , peticion true  
+        xmlhttp.open("GET", "ajax.txt", true);
+//      Enviamos el elemento
+        xmlhttp.send();
+      }
+
+      /**
+       * Peticion por Ajax
+       * 
+       * @returns {undefined}
+       */
+      loadXMLHTML = function () {
+        var xmlhttp;
+        if (window.XMLHttpRequest) {
+          xmlhttp = new XMLHttpRequest();
+        } else {
+//          code for IE6 , IE5
+          xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function () {
+          if (xmlhttp.readyState === 4 && xmlhttp.status === 200)
+          {
+            document.getElementById('myDiv').innerHTML = xmlhttp.responseText;
+          }
+        };  
+        xmlhttp.open("GET", "../M52.3 - Maneras de desarrollar con JQuery/M5.0 - Ajax Y JQuery.html", true);
+        xmlhttp.send();
+      };
+
+      document.getElementById('i1').addEventListener('click', loadXMLHTML);
+      document.getElementById('i2').addEventListener('click', actualizarPagina);
+
+      /**
+       * 
+       * @returns {recarga la pagina}
+       */
+      function actualizarPagina() {
+        location.reload(true);
+      }
+
+    </script>
+  </body>
+</html>

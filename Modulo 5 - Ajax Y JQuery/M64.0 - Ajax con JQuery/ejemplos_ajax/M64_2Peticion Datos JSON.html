@@ -1,0 +1,78 @@
+<!--Created on 27-jun-2019, 13:04:20-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Peticion Datos JSON</title>
+    <meta charset="UTF-8">
+    <!-- Metadatos basicos  -->
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <!-- Fondo navegador -->
+    <!--<meta name="theme-Color" content="#121010">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="https://goo.gl/cais23">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="../../sources/css/cssPrincipal3.css" type="text/css" rel="stylesheet">
+    <!--Usar para CSS internos-->
+    <style>
+
+      div#d1{
+        width: 200px;
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+        background-color: #ccffff;
+        border-radius: 6px;
+      }
+
+    </style>
+    <link rel="stylesheet" 
+          type="text/css" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+  </head>
+  <body>
+
+    <div id="d1"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+//Llamada a JQuery Ajax 
+      var jqxhr =
+//            Ajax devuelve un objeto del tipo jqXHR
+              $.ajax({
+//Dirección del servidor donde enviar datos                
+                url: "M64_xDevolverDatosDePeticion.html",
+                dataType: 'json',
+//Datos que se envian al servidor para ser tratados en PHP para acceder a los elemento
+                data: {
+                  name: "The name",
+                  desc: "The description"
+                }
+              })
+//            Interface(funcion para manejar el evento)
+              .done(function (data, textStatus, jqXHR) {
+//            data = datos vueltos a la peticion hecha al servidor
+                $('#d1').html(data);
+                console.log("Estado : " + textStatus);
+                var x = ("Estado : " + textStatus);
+                document.getElementById('d1').innerHTML = x;
+              })
+//            Interface(funcion para manejar el evento)
+              .fail(function (jqXHR, textStatus, errorThrown) {
+                console.log("Error : " + textStatus);
+                var x = ("Error : " + textStatus);
+                document.getElementById('d1').innerHTML = x;
+              })
+//            Interface(funcion para manejar el evento)
+              .always(function (jqXHROrData, textStatus, jqXHROrErrorThrown) {
+                console.log("Complete : " + textStatus);
+                var x = ("Complete : " + textStatus);
+                document.getElementById('d1').innerHTML = x;
+              })
+              ;
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!--Created on 02-jul-2019, 14:07:46-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<!--directiva-->
+<html lang="es">
+  <head>
+    <title>titulo</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <style></style>
+  </head>
+  <body>
+
+    <div ng-controller="miControlador">
+      <input type="checkbox" ng-model='dato1'> Muestra
+      <input type="checkbox" ng-model='dato2'> Oculta
+    </div>
+
+    <h3 ng-show="dato1">Hola</h3>
+    <h3 ng-hide="dato2">Adios</h3>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Ejemplo de tipos de Datos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../sources/css/cssPrincipal.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <h2>Operador de Negaci&oacute;n - mediante N&uacute;meros o Cadenas</h2>
+      <p>Suelen utilizar &AMP;&AMP; y &vert; &vert; pero eso significa que utiliza la doble comprobaci&oacute;n</p>
+      <p>Significa que si el 1º operador es falso no sigue comprobando el siguiente valor l&oacute;gico</p>
+      <p>Se pueden crear simplemente con una comprobaci&oacute;n con los operadores &AMP; y &verbar; </p>
+      <script>
+
+        var v1 = 10;
+        var v2 = 20;
+
+        var t = v1 + v2;
+
+        if (t > v1 & t > v2) {
+          console.log("Valor de " + t + " es mayor que " + v1 + " y " + v2);
+        } else {
+          console.log("Valor no es mayor");
+        }
+
+        if (t > v1 | t > v2) {
+          console.log("Valor de " + t + " es mayor que " + v1 + " y " + v2);
+        } else {
+          console.log("Valor no es mayor");
+        }
+      </script>
+    </main>
+    <div>
+      <p>Los ejemplos se ven a trav&eacute;s de la consola del navegador</p>
+      <a class="action" href="../../paginaContenido.html">Volver al menu principal</a>
+    </div>
+  </body>
+</html>

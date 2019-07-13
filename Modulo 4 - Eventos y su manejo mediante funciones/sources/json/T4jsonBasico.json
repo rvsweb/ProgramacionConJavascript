@@ -1,0 +1,16 @@
+{
+  "id": "0001",
+  "type": "donut",
+  "name": "Cake",
+  "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Pound_layer_cake.jpg",
+    "width": 828,
+    "height": 643
+  },
+  "thumbnail": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Nuvola_apps_2_cookie.png",
+    "width": 128,
+    "height": 128
+  },
+  "dateEntry": "2010-12-05"
+}

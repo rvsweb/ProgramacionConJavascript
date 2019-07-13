@@ -1,0 +1,189 @@
+<!--Created on 25-jun-2019, 11:40:44-->
+<!-- Referencia : https://mimentevuela.wordpress.com/2016/08/29/devolver-json-en-php-y-obtener-datos-con-ajax/ -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>jQuery AJAX POST Form</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link href="../../sources/css/cssPrincipal3.css" type="text/css" rel="stylesheet">
+    <style>
+
+      h1{
+        width: 500px;
+        padding: 10px;
+        margin: 10px;
+        background-color: #ffcccc;
+        border-radius: 20px;
+      }      
+
+      label{
+        width: 120px;
+        display: block;
+        margin: 5px;
+        padding: 5px;
+        background-color: aquamarine;
+        font-family: Roboto,sans-serif;
+      }
+
+      input{
+        width: 120px;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 5px;
+      }
+
+      div.enviar{
+        margin: 10px;
+        width: 190px;
+        vertical-align: 100px;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 50px;
+        background-color: aquamarine;
+      }
+
+      .respuesta {
+        position: relative;
+        bottom: 400px;
+        left: 300px;
+        width: 200px;
+        height: 50px;
+        padding: 20px;
+        margin: 20px;
+        color: #000;
+        border-radius: 6px;
+        background-color: aquamarine;
+      }
+
+      #res {
+        position: relative;
+        bottom: 380px;
+        left: 300px;
+        width: 450px;
+        height: 50px;
+        padding: 20px;
+        margin: 20px;
+        color: #000;
+        border-radius: 6px;
+        background-color: aquamarine;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <h1>Datos para enviar a PHP</h1>
+    <label>Nombre</label>
+    <input type="text" id="nombre" placeholder="Nombre" accept="text/plain"><br><br>
+    <label>Apellido</label>
+    <input type="text" id="apellido" placeholder="Apellido" accept="text/plain"><br><br>
+    <label>Edad</label>
+    <input type="number" id="edad" placeholder="Edad" accept="text/plain">
+
+    <div class="enviar">
+      <h3>Enviar</h3>
+    </div>
+
+    <div class="respuesta"></div>
+    <div id='res'></div>
+
+
+    <footer style="
+            position: fixed;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(189, 195, 199);
+            color: #000;
+            text-align: center;">
+
+      <aside style="height: 55px;">
+        <img alt="Licencia de Creative Commons" src="https://licensebuttons.net/l/by/4.0/80x15.png" />
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        </a>Este obra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+        <p style="
+           margin-top: 5px;
+           font-size: 20px;
+           font-family: 'Lobster', cursive;
+           ">Powered by RVS</p>
+      </aside>
+    </footer>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+
+      /**
+       * Evento que se lanza al lanzar el boton 'click'
+       * 
+       * @type type
+       */
+      $(".enviar").click(function (e) {
+        e.preventDefault(); // detenemos el evento para cargar los datos del form
+//        Cargamos los datos
+        var nombre = $("#nombre").val(),
+                apellido = $("#apellido").val(),
+                edad = $("#edad").val(),
+                //"nombre del parámetro POST" :valor (el cual es el objeto guardado en las variables de arriba)
+                datos = {
+                  "nombre": nombre,
+                  "apellido": apellido,
+                  "edad": edad
+                };
+        $.ajax({
+          url: "http://localhost/example/phpDatos.php",
+          async: true,
+          type: "POST",
+          data: datos
+        }).done(function (respuesta) {
+
+          if (respuesta.estado === "ok") {
+
+            console.log(JSON.stringify(respuesta));
+            document.getElementById('res').innerHTML = JSON.stringify(respuesta);
+
+            var nombreCompleto = respuesta.nombre + " " + respuesta.apellido + " " + respuesta.edad;
+
+            $(".respuesta").html("Servidor:<br><pre>" + JSON.stringify(nombreCompleto, null, 2) + "</pre>");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<!--<?php
+
+//Obtenemos los datos de los input
+
+$nombre = trim($_POST["nombre"]);
+$apellido = trim($_POST["apellido"]);
+$edad = trim($_POST["edad"]);
+
+$nom = strip_tags($nombre);
+$ape = strip_tags($apellido);
+$eda = strip_tags($edad);
+
+//Seteamos el header de "content-type" como "JSON" para que jQuery lo reconozca como tal
+header('Content-Type: application/json');
+
+//Guardamos los datos en un array
+$datos = array(
+    'estado' => 'ok',
+    'nombre' => $nombre,
+    'apellido' => $apellido,
+    'edad' => $edad
+);
+
+//Devolvemos el array pasado a JSON como objeto
+echo json_encode($datos, JSON_FORCE_OBJECT);-->

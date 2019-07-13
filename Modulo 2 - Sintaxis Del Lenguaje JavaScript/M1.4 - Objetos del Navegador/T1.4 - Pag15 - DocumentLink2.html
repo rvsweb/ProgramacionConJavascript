@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Ejemplo del Objeto screen</title>
+    <!-- Se carga una imagen aleatoria -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="" sizes="32x32">
+    <link href="../sources/css/cssPrincipal.css" type="text/css" rel="stylesheet">
+
+    <style>
+      img  {
+        background-color: gainsboro;
+        width: 100px;
+        padding: 50px;
+        padding-left: 10%;
+        padding-right: 10%;
+        border-radius: 15px;
+        border: 5px solid gray ;
+      }
+    </style>
+  <body>
+
+    <a href="" name="linkImg1" onclick="return changeImg(0)">
+      <img src="img/usa.gif" id="img1" alt="imagen1">
+    </a>
+
+    <a href="" name="linkImg2" onclick="return changeImg(1)">
+      <img src="img/canada.gif" id="img2" alt="imagen2">
+    </a>
+
+    <br />
+
+    <p>
+      Para que funcione este ejemplo tienes que ejecutar el siguiente ejemplo
+      <br />
+      <a href="T1.4 - Pag17 - History.html">Ejemplo</a>
+    </p>
+    <button onclick="goForward()">Go Forward</button>
+
+    <script>
+
+
+      function goForward() {
+        window.history.forward();
+      }
+
+      /**
+       * 
+       * @param {int} imgNumber
+       * @returns {Boolean}
+       */
+      function changeImg(imgNumber) {
+//        No usar variables globables
+        var myImages = new Array("./img/usa.gif", "./img/canada.gif", "./img/jamaica.gif", "./img/mexico.gif");
+//        Obtenemos Coleccion objetos con la imagen pasada por parametro dentro de la funcion
+        var imgClicked = document.images[imgNumber];
+//        Genera numero aleatorio
+        var newImgNumber = Math.round(Math.random() * 3);
+//        Mientras : el valor del objeto en la posicion sea != -1 
+        while (imgClicked.src.indexOf(myImages[newImgNumber]) !== -1) {
+//      Generamos otro numero aleatorio  
+          newImgNumber = Math.round(Math.random() * 3);
+        }
+//      Mostramos la imagen al pulsar
+        imgClicked.src = myImages[newImgNumber];
+        return false;
+      }
+    </script>
+    <a class="action" href="../../paginaContenido.html">Volver al menu principal</a>
+  </body>
+</html>

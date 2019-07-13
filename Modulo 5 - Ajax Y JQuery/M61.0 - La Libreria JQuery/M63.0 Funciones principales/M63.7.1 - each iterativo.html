@@ -1,0 +1,212 @@
+<!--Created on 11-jun-2019, 20:34:38-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Funciones principales JQuery con Ajax</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <style>
+
+      body{
+        background-color: #9999ff;
+      }
+      
+      section{
+        display: inline-table;
+        position: static;
+        font-family: 'Roboto', Verdana, sans-serif;
+        padding: 12px;
+        margin: 20px;
+        border-radius: 12px;
+        background-color: #ffff99;
+      }
+
+      div{
+        align-items: center;
+        background-color: #ff9999;
+        border-radius: 12px;
+        height: 100px;
+        justify-content: center;
+        width: 100px;
+        margin: 10px;
+        padding: 0 5px 0 5px;
+        position: fixed;
+        line-height: 100px;  
+        vertical-align: middle;
+        text-align: center;
+      }
+
+      input{
+        background: #99ff99;
+        border-radius: 12px;
+        display: block;
+        height: 50px;
+        font-family: Roboto, sans-serif , monospace;
+        font-weight: bold;
+        margin: 30px;
+        width: 180px;
+      }
+
+      ul.mi-listado{
+        width: 300px;
+      }
+
+      #boton1{
+        background: #ccffff;
+      }
+
+      #div1{
+        display: none;
+        top: 179px;
+        left: 250px;
+        background-color: #ff9999;
+      }
+
+      #div2{
+        display:  fixed;
+        top: 300px;
+        left: 250px;
+        background-color: #ff9999;
+      }
+
+      #div3{
+        display:  fixed;
+        top: 420px;
+        left: 250px;
+        background-color: #ff9999;
+      }
+
+      li{
+        font-weight: bolder;
+        background-color: #ffcc99;
+        border-radius: 12px;
+        padding: 15px;
+        list-style: none;
+        margin: 5px;
+        width: 50%;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <section id="sec1">
+      <h2>Funciones principales JQuery con Ajax - each()</h2>
+    </section>
+
+    <div id="div1"></div>
+    <div id="div2">Evento toggle()</div>
+    <div id="div3">Evento each()</div>
+
+    <input id="boton1" type="button" value="Lanzar evento">
+
+    <input id="boton2" type="button" value="Evento Desactivado">
+
+    <ul class="mi-listado">
+      <li>fadeIn()</li>
+      <li>fadeOut()</li>
+      <li>toggle()</li>
+      <li>each()</li>
+    </ul>
+
+    <footer style="
+            position: fixed;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(189, 195, 199);
+            color: #000;
+            text-align: center;">
+      <aside style="height: 55px;">
+        <img alt="Licencia de Creative Commons" src="https://licensebuttons.net/l/by/4.0/80x15.png" />
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        </a>Este obra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+        <span style="
+              margin-top: 5px;
+              font-size: 20px;
+              font-family: 'Lobster', cursive;
+              "><br>Powered by &Ropf;VS</span>
+      </aside>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+
+// Definir el texto dentro de la caja
+      var estilos1 = {
+        'align-items': 'center',
+        'display': 'flex',
+        'background': '#cc99ff',
+        'border-radius': '12px',
+        'margin': '10px',
+        'padding-left': '15px',
+        'justify-content': 'left',
+        'text-align': 'left',
+        'height': '100px',
+        'width': '180px'
+      };
+
+      var estilos2 = {
+        'align-items': 'center',
+        'display': 'flex',
+        'background': '#99ff99',
+        'border-radius': '12px',
+        'margin': '10px',
+        'padding-left': '15px',
+        'justify-content': 'left',
+        'text-align': 'left',
+        'height': '50px',
+        'font-weight': 'bolder',
+        'width': '180px'
+      };
+
+      var texto = {
+        'height': '100px',
+        'width': '280px',
+        'font-weight': 'bolder',
+        'font-size': '20px'
+      };
+
+      $('#boton1').click(function () {
+        $('.mi-listado li').each(function (index) {
+          switch (index) {
+            case 0:
+              $("#div1").fadeIn(1000).text("fadeIn : Aparece").css(estilos1);
+              setTimeout(function () {
+                $("#div1").fadeOut(3000).text("fadeOut : Desaparece").css(estilos2);
+              }, 3000);
+              setTimeout(function () {
+                $('#boton2').attr("value", "Evento Activado");
+              }, 1000);
+              break;
+            case 1:
+              $('#boton2').click(function () {
+                $('#div2').toggle().css(texto);
+              });
+              break;
+            case 2:
+              $('#boton2').click(function () {
+                $('li').each(function () {
+                  var x = $('li').text();
+                  $('#div3').text(x).css(texto);
+                });
+              });
+              break;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,189 @@
+<!--Created on 27-jun-2019, 21:47:45-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Ajax Comprobar Email</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <link rel="stylesheet" 
+          type="text/css" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <style>
+      input{
+        display: block;
+        position: static;
+        width: 300px;
+        padding: 5px;
+        margin: 10px;
+        background-color: #ffcccc;
+      }
+      h3{
+        display: block;
+        width: 50px;
+        margin: 10px;
+        padding: 8px;
+        border-radius: 7px;
+        background-color: #99ff99;
+      }
+      button{
+        display: block;
+        position: static;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 7px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <section>
+      <h3>Email</h3>
+      <input id="email" type="email" placeholder="Subscribe to this blog with your email address">
+      <button id='submit'>Submit</button>
+      <div id='message'></div>
+    </section>
+
+    <footer style="
+            position: fixed;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(189, 195, 199);
+            color: #000;
+            text-align: center;">
+
+      <aside style="height: 55px;">
+        <img alt="Licencia de Creative Commons" src="https://licensebuttons.net/l/by/4.0/80x15.png" />
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        </a>Este obra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+        <p style="
+           margin-top: 5px;
+           font-size: 20px;
+           font-family: 'Lobster', cursive;
+           ">Powered by RVS</p>
+      </aside>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+    </script>
+    <script>
+
+      $("#submit").click(function () {
+        if (getValidarCorreo()) {
+          $.ajax({
+            type: "POST",
+            dataType: 'text',
+            processData: true,
+            url: "http://192.168.114.128/jquery-ajax-subscribe.php",
+            data: {
+//            clave: valor - Datos que se envia al servidor
+              email: $("#email").val() // Le pasamos el valor almacenado en el input
+            },
+//          function para mostrar respuesta correcta
+            success: function (msg) {
+//              Respuesta correcta recibida del servidor
+              $("#message").html(msg).css(getEstilos('#99ffff'));
+            },
+            timeout: 3000,
+//          function para mostrar respuesta incorrecta
+            error: function (jqXHR, textStatus, errorThrown) {
+              $("#message").html(getErrores(jqXHR)).css(getEstilos('#ff0033'));
+            }
+          });
+        }
+        return false;
+      });
+
+      /**
+       * 
+       * @returns {Boolean}
+       */
+      function getValidarCorreo() {
+        var errorMessage = "";
+//Obtenemos el valor del input del 'email'
+//Si valor obtenido del correo es vacio         
+        if ($("#email").val() === '') {
+          errorMessage += " Enter your email address<br />";
+//Si valor obtenido del correo es invalido porque coindice con la RegExp         
+        } else if (!(geEmailValidate())) {
+          errorMessage += " Invalid email address<br />";
+        }
+        $("#message").html(errorMessage).css(getEstilos("#ff0033"));
+        if (errorMessage.length === 0) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      /**
+       * Obtenemos la lista de errores
+       * 
+       * @param {type} jqXHR
+       * @returns {String}
+       */
+      function getErrores(jqXHR) {
+        var msg = "";
+        switch (jqXHR.status) {
+          case 0:
+            msg = ('Not connect: Verify Network.');
+            break;
+          case 404:
+            msg = ('Requested page not found [404]');
+            break;
+          case 500:
+            msg = ('Internal Server Error [500].');
+            break;
+          case 'timeout':
+            msg = ('Time out error.');
+            break;
+          case 'abort':
+            msg = ('Ajax request aborted.');
+            break;
+          default:
+            msg = ('Uncaught Error: ' + jqXHR.responseText);
+            break;
+        }
+        return msg;
+      }
+
+      /**
+       * Expresion regular para comprobar el email
+       * 
+       * @returns true si existe una coincidencia entre la expresión regular y la cadena especificada de lo contrario retorna false.
+       */
+      function getEmailValidate() {
+        var email = $("#email").val();
+        var reqExp = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return reqExp.test(email);
+      }
+
+      /**
+       * Devuelve los estilos 
+       * 
+       * @param {type} color
+       * @returns {getEstilos.estilo} objeto de tipo String 
+       */
+      function getEstilos(color) {
+        var estilo = {
+          'margin': '10px',
+          'padding': '10px',
+          'width': '200px',
+          'background': color,
+          'border-radius': '12px'
+        };
+        return estilo;
+      }
+    </script>
+  </body>
+</html>

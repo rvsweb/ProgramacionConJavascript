@@ -1,0 +1,1 @@
+Peticion hecha mediante JQuery Ajax a un archivo txt

@@ -1,0 +1,136 @@
+<!--Created on 11-jun-2019, 20:34:38-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Funciones principales JQuery con Ajax</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link href="../../sources/css/cssPrincipal3.css" type="text/css" rel="stylesheet">
+    <style>
+
+      input{
+        background: #99ff99;
+        border-radius: 12px;
+        display: block;
+        height: 50px;
+        font-family: Roboto, sans-serif , monospace;
+        font-weight: bold;
+        margin: 30px;
+        width: 200px;
+      }
+
+      #boton1 ,#boton2{
+        background: #ccffff;
+      }
+
+      div{
+        display: none;
+        background-color: #ff9999;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+      }
+
+      section{
+        display: inline-table;
+        position: static;
+        font-family: 'Roboto', Verdana, sans-serif;
+        padding: 12px;
+        margin: 20px;
+        border-radius: 12px;
+        background-color: #ffff99;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <section id="sec1">
+      <h2>Funciones principales JQuery con Ajax - fadeIn() &AMP; fadeOut()</h2>
+    </section>
+
+    <input id="boton5" type="button" value="Lanzar evento FadeTo">
+
+    <input id="boton6" type="button" value="Lanzar evento FadeIn">
+
+    <div id="div3"></div>
+    <div id="div4"></div>
+    <div id="div5"></div>
+
+    <footer style="
+            position: fixed;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(189, 195, 199);
+            color: #000;
+            text-align: center;">
+      <aside style="height: 55px;">
+        <img alt="Licencia de Creative Commons" src="https://licensebuttons.net/l/by/4.0/80x15.png" />
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        </a>Este obra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+        <span style="
+              margin-top: 5px;
+              font-size: 20px;
+              font-family: 'Lobster', cursive;
+              "><br>Powered by &Ropf;VS</span>
+      </aside>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+
+      var estilos1 = {
+        'align-items': 'center',
+        'display': 'flex',
+        'background': '#cc99ff',
+        'border-radius': '12px',
+        'margin': '10px',
+        'justify-content': 'center',
+        'text-align': 'center',
+        'height': '100px',
+        'width': '100px'
+      };
+
+      var estilos2 = {
+        'align-items': 'center',
+        'display': 'flex',
+        'background': '#ff9999',
+        'border-radius': '12px',
+        'margin': '10px',
+        'justify-content': 'center',
+        'text-align': 'center',
+        'height': '100px',
+        'width': '100px'
+      };
+
+      $(document).ready(function () {
+        $("input#boton5").click(function () {
+          $("#div3").fadeTo("fast", 0.3);
+          $("#div4").fadeTo("slow", 0.6);
+          $("#div5").fadeTo(2000, 0.9);
+        });
+      });
+
+      $(document).ready(function () {
+        $("input#boton6").click(function () {
+          $("#div3").fadeOut("fast");
+          $("#div4").fadeOut("slow");
+          $("#div5").fadeOut(2000);
+        });
+      });
+
+    </script>
+  </body>
+</html>

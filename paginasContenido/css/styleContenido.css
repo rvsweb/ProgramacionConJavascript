@@ -31,7 +31,7 @@ a, a:hover , a:focus{
 }
 
 /*** Titulos Centrales de cada seccion ***/
-h1 , h2{
+h2{
   margin-top: 30px;
   font-family: 'Telefonica Light' , sans-serif;
   font-size: 38px;
@@ -45,8 +45,11 @@ h1 , h2{
 }
 
 h2.titulo2{
-  margin-top: 50px;
   margin: 20px auto;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 40px;
+  color: #10bbca;
 }
 
 /*** Subtitulo de cada seccion ***/
@@ -95,8 +98,9 @@ img {
 /* Linea que separa cada seccion */
 .section-container { 
   margin: 0 auto;
-  padding-bottom: 80px;
+  padding-bottom: 30px;
 }
+
 
 /* Linea que separa la seccion de color gris - background */
 .section-container-gray-bg {
@@ -379,6 +383,11 @@ img {
 }
 
 /* More Services */
+
+div.more-services{
+  background-color: #ff33ff;
+}
+
 .more-services-box{
   margin-top: 30px;
   text-align: left;

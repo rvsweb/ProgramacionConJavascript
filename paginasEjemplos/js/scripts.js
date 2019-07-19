@@ -34,7 +34,7 @@ jQuery(document).ready(function () {
   });
 
   /*
-   Background slideshow - Pone la imagen de fondo y queda horrible
+   * Background slideshow - Pone la imagen de fondo y queda horrible
    */
 //  $('.top-content').backstretch("assets/img/backgrounds/1.jpg");
 //  $('.call-to-action-container').backstretch("assets/img/backgrounds/1.jpg");

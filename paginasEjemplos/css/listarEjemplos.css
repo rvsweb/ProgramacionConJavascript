@@ -1,0 +1,381 @@
+/* 
+    Created on : 09-jul-2019, 16:09:57
+    Author     : RVS
+    link: https://jsfiddle.net/cRsZE/984/
+*/
+
+/**{
+  border: 1px solid red;
+}*/
+
+@font-face{
+  font-family: "Telefonica Light";
+  src: url("../font/TelefonicaWeb-Light.ttf");
+}
+
+main{
+  display: block;
+  position: relative;
+  background-image:
+    url("../..//paginaPrincipal/assets/img/backgrounds/logo.jpg");
+  height: 1000px;
+  font-family: "Telefonica Light";
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1#titulo1{
+  display: block;
+  position: relative;
+  top: 130px;
+  width: 800px;
+  margin: 30px auto;
+  padding: 20px 15px 20px 15px;
+  text-align: center;
+  font-size: 3.2em;
+  border-radius: 40px;
+  color: #10bbca;
+  border: 2px solid #10bbca;
+}
+
+h2{
+  display: block;
+  position: relative;
+  top: 470px;
+  width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  font-size: 3em;
+  color: #10bbca;
+  border-radius: 40px;
+  border: 2px solid #10bbca;
+}
+
+p#titulo{
+  position: relative;
+  top: 120px;
+  width: 590px;
+  display: block;
+  margin: 20px auto;
+  padding: 15px;
+  text-align: center;
+  font-size: 2em;
+  color: #10bbca;
+  border-radius: 40px;
+  border: 2px solid #10bbca;
+}
+
+p{
+  position: relative;
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 2em;
+  color: #000;
+}
+
+div#contenedor{
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  width: 700px;
+  top: 500px;
+  color: #10bbca;
+  border-radius: 40px;
+  border: 2px solid #10bbca;
+}
+
+footer#foot{
+  display: block;
+  position: relative;
+  top: 500px;
+  height: 300px;
+}
+
+ul , li {
+  display: block;
+  position: relative;
+  margin: 0 auto;  
+  border-radius: 7px;
+}
+
+ul#menu-desplegable{
+  display: block;
+  text-align: center;
+  width: 500px;
+  padding: 30px;
+}
+
+span.titulo{
+  font-size: 30px;
+  color: #003245;
+}
+
+ul#header-nav{
+  width: 1000px;
+}
+
+li{
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+li:hover, a:active  {
+  background-color: #10bbca;
+}
+
+/* my code */
+ul#menu-desplegable:before {
+  display: inline-block;
+  width: 50px;
+}
+
+ul#menu-desplegable:after {
+  display: inline-block;
+  width: 50px;
+}
+
+.nav-desplegable ul {
+  display: none;   
+}
+
+.nav-desplegable ul.visible {
+  display: block;   
+}
+
+.header-nav{
+  padding: 10px;
+  border-radius: 7px;
+  background-color: #ffffff;
+}
+
+a{
+  color: #000;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+a.salto{
+  display: block;
+  padding-bottom: 10px;
+}
+
+/*-------------*/
+ul#menu-desplegable1{
+  text-align: center;
+  width: 500px;
+  padding: 30px;
+}
+
+ul#header-nav1{
+  width: 1000px;
+}
+
+ul#menu-desplegable1:before {
+  display: inline-block;
+  width: 50px;
+}
+
+ul#menu-desplegable1:after {
+  display: inline-block;
+  width: 50px;
+}
+
+.nav-desplegable1 ul {
+  display: none;   
+}
+
+.nav-desplegable1 ul.visible {
+  display: block;   
+}
+
+.header-nav1{
+  padding: 10px;
+  border-radius: 7px;
+  background-color: #ccccff;
+}
+
+/*-------------*/
+ul#menu-desplegable2{
+  text-align: center;
+  width: 500px;
+  padding: 30px;
+}
+
+ul#header-nav2{
+  width: 1000px;
+}
+
+ul#menu-desplegable2:before {
+  display: inline-block;
+  width: 50px;
+}
+
+ul#menu-desplegable2:after {
+  display: inline-block;
+  width: 50px;
+}
+
+.nav-desplegable2 ul {
+  display: none;   
+}
+
+.nav-desplegable2 ul.visible {
+  display: block;   
+}
+
+.header-nav2{
+  padding: 10px;
+  border-radius: 7px;
+  background-color: #ffffff;
+}
+
+/*-------------*/
+ul#menu-desplegable3{
+  text-align: center;
+  width: 500px;
+  padding: 30px;
+}
+
+ul#header-nav3{
+  background: #ff9999;  
+  width: 1000px;
+}
+
+ul#menu-desplegable3:before {
+  display: inline-block;
+  width: 50px;
+}
+
+ul#menu-desplegable3:after {
+  display: inline-block;
+  width: 50px;
+}
+
+.nav-desplegable3 ul {
+  display: none;   
+}
+
+.nav-desplegable3 ul.visible {
+  display: block;   
+}
+
+.header-nav3{
+  padding: 10px;
+  border-radius: 7px;
+  background-color: #ffffff;
+}
+
+/*-------------*/
+ul#menu-desplegable4{
+  text-align: center;
+  width: 500px;
+  padding: 30px;
+}
+
+ul#header-nav4{
+  background: #ff9999;  
+  width: 1000px;
+}
+
+ul#menu-desplegable4:before {
+  display: inline-block;
+  width: 50px;
+}
+
+ul#menu-desplegable4:after {
+  display: inline-block;
+  width: 50px;
+}
+
+.nav-desplegable4 ul {
+  display: none;   
+}
+
+.nav-desplegable4 ul.visible {
+  display: block;   
+}
+
+.header-nav4{
+  padding: 10px;
+  border-radius: 7px;
+  background-color: #ffffff;
+}
+/*-------------*/
+
+ul#menu-desplegable5{
+  text-align: center;
+  width: 500px;
+  padding: 30px;
+}
+
+ul#header-nav5{
+  background: #ff9999;  
+  width: 1000px;
+}
+
+ul#menu-desplegable5:before {
+  display: inline-block;
+  width: 50px;
+}
+
+ul#menu-desplegable5:after {
+  display: inline-block;
+  width: 50px;
+}
+
+.nav-desplegable5 ul {
+  display: none;   
+}
+
+.nav-desplegable5 ul.visible {
+  display: block;   
+}
+
+.header-nav5{
+  padding: 10px;
+  border-radius: 7px;
+  background-color: #ffffff;
+}
+/*-------------*/
+
+ul#menu-desplegable6{
+  text-align: center;
+  width: 500px;
+  padding: 30px;
+}
+
+ul#header-nav6{
+  background: #ff9999;  
+  width: 1000px;
+}
+
+ul#menu-desplegable6:before {
+  display: inline-block;
+  width: 50px;
+}
+
+ul#menu-desplegable6:after {
+  display: inline-block;
+  width: 50px;
+}
+
+.nav-desplegable6 ul {
+  display: none;   
+}
+
+.nav-desplegable6 ul.visible {
+  display: block;   
+}
+
+.header-nav6{
+  padding: 10px;
+  border-radius: 7px;
+  background-color: #10bbca;
+}

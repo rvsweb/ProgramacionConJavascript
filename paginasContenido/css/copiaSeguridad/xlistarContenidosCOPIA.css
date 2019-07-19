@@ -4,20 +4,23 @@
     link: https://jsfiddle.net/cRsZE/984/
 */
 
-/**{
+/*
+*{
   border: 1px solid red;
-}*/
+}
+*/
 
 @font-face{
   font-family: "Telefonica Light";
-  src: url("font/TelefonicaWeb-Light.ttf");
+  src: url("../font/TelefonicaWeb-Light.ttf");
 }
 
+/*
 main{
   display: block;
   position: relative;
   background-image:
-    url("../..//paginaPrincipal/assets/img/backgrounds/logo.jpg");
+    url("../..//assets/img/backgrounds/logo.jpg");
   height: 1000px;
   font-family: "Telefonica Light";
   background-size: cover;
@@ -66,7 +69,6 @@ p#titulo{
   color: #10bbca;
   border-radius: 40px;
   border: 2px solid #10bbca;
-
 }
 
 p{
@@ -98,50 +100,53 @@ footer#foot{
   top: 500px;
   height: 300px;
 }
+*/
 
 ul , li {
   display: block;
   position: relative;
   margin: 0 auto;  
   border-radius: 7px;
-}
+} 
 
 ul#menu-desplegable{
   display: block;
   text-align: center;
-  width: 500px;
+  /*width: 500px;*/
   padding: 30px;
 }
 
+/*
 span.titulo{
   font-size: 30px;
   color: #003245;
 }
+*/
 
 ul#header-nav{
   width: 1000px;
-}
+}/*
 
-li{
+*/li{
   padding: 10px;
   margin-top: 5px;
   margin-bottom: 5px;
-}
+}/*
 
-li:hover, a:active  {
+*/li:hover, a:active  {
   background-color: #10bbca;
-}
+}/*
 
-/* my code */
-ul#menu-desplegable:before {
+ my code 
+*/ul#menu-desplegable:before {
   display: inline-block;
   width: 50px;
-}
+}/*
 
-ul#menu-desplegable:after {
+*/ul#menu-desplegable:after {
   display: inline-block;
   width: 50px;
-}
+}/*
 
 .nav-desplegable ul {
   display: none;   
@@ -168,7 +173,8 @@ a.salto{
   padding-bottom: 10px;
 }
 
-/*-------------*/
+-------------
+ 
 ul#menu-desplegable1{
   text-align: center;
   width: 500px;
@@ -203,7 +209,8 @@ ul#menu-desplegable1:after {
   background-color: #ccccff;
 }
 
-/*-------------*/
+/*
+-------------
 ul#menu-desplegable2{
   text-align: center;
   width: 500px;
@@ -237,8 +244,10 @@ ul#menu-desplegable2:after {
   border-radius: 7px;
   background-color: #ffffff;
 }
+*/
 
-/*-------------*/
+/*
+-------------
 ul#menu-desplegable3{
   text-align: center;
   width: 500px;
@@ -274,7 +283,7 @@ ul#menu-desplegable3:after {
   background-color: #ffffff;
 }
 
-/*-------------*/
+-------------
 ul#menu-desplegable4{
   text-align: center;
   width: 500px;
@@ -309,7 +318,7 @@ ul#menu-desplegable4:after {
   border-radius: 7px;
   background-color: #ffffff;
 }
-/*-------------*/
+-------------
 
 ul#menu-desplegable5{
   text-align: center;
@@ -345,7 +354,7 @@ ul#menu-desplegable5:after {
   border-radius: 7px;
   background-color: #ffffff;
 }
-/*-------------*/
+-------------
 
 ul#menu-desplegable6{
   text-align: center;
@@ -381,3 +390,4 @@ ul#menu-desplegable6:after {
   border-radius: 7px;
   background-color: #10bbca;
 }
+*/

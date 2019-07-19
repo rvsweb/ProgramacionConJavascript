@@ -1,4 +1,5 @@
 
+/* Todo lo que este por encima de 992px */
 @media (min-width: 992px) {
   .services-box 
   .services-box-icon { 
@@ -17,13 +18,13 @@
   }
 
   h2.titulo2  { 
-    font-size: 32px; 
-    margin: 20px auto;
-    width: 320px;
+    width: 970px; 
   }
 
 }
 
+
+/*Todo lo que este por encima de 992px y por debajo de 1199px*/
 @media (min-width: 992px) and (max-width: 1199px) {
   .services-box 
   .services-box-icon { 
@@ -44,11 +45,13 @@
   h2.titulo2  { 
     font-size: 32px; 
     margin-top: 20px;
-    width: 320px;
+    width: 810px;
+    /*border: 5px solid #ff33ff;*/
   }
 
 }
 
+/*Todo lo que este por encima de 768px y por debajo de 991px*/
 @media (min-width: 768px) and (max-width: 991px) {
   .navbar-expand-md 
   .navbar-nav 
@@ -112,13 +115,13 @@
 
   h2.titulo2  { 
     font-size: 32px; 
-    margin: 20px auto;
-    width: 320px;
+    width: 590px;
   }
 
 }
 
-@media (max-width: 767px) {
+/*Todo lo que este por encima de 420px y por debajo de 767px*/
+@media (min-width: 420px) and (max-width: 767px) {
 
   .navbar.navbar-no-bg { background: #444 !important;  }
   .navbar-dark .navbar-toggler { border-color: #444; }
@@ -209,23 +212,23 @@
     display: block;
   }
 
-  h2.titulo2  { 
-    font-size: 32px; 
-    margin: 20px auto;
-    width: 320px;
-  }
-
 } 
 
+/*Todo lo que este por debajo de 415px*/
 @media (max-width: 415px) {
-  h1, h2.titulo2 { 
+
+  h2.titulo2 { 
     font-size: 32px; 
-    margin: 20px auto;
-    width: 320px;
+    margin: 30px auto;
+    width: 321px;
   }
 
   div.row.justify-content-center{
     width: 370px;
+  }
+
+  div.col-md-9.col-md-offset-3{
+    padding-right: 0px;
   }
 }
 

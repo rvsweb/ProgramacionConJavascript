@@ -24,7 +24,7 @@ strong {
 }
 
 /*** Enlaces se iluminan al señalarlos ***/
-a , a:hover , a:focus{
+a, a:hover , a:focus{
   color: #9b59b6;
   text-decoration: none;
   transition: all .3s;
@@ -45,6 +45,7 @@ h1 , h2{
 }
 
 h2.titulo2{
+  margin-top: 50px;
   margin: 20px auto;
 }
 

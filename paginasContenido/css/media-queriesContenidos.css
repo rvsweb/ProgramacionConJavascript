@@ -16,6 +16,12 @@
     display: block;
   }
 
+  h2.titulo2  { 
+    font-size: 32px; 
+    margin: 20px auto;
+    width: 320px;
+  }
+
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -33,6 +39,12 @@
 
   a.contenido{    
     display: block;
+  }
+
+  h2.titulo2  { 
+    font-size: 32px; 
+    margin-top: 20px;
+    width: 320px;
   }
 
 }
@@ -96,6 +108,12 @@
     display: block;
     padding: 10px;
     margin: 20px;
+  }
+
+  h2.titulo2  { 
+    font-size: 32px; 
+    margin: 20px auto;
+    width: 320px;
   }
 
 }
@@ -191,12 +209,23 @@
     display: block;
   }
 
+  h2.titulo2  { 
+    font-size: 32px; 
+    margin: 20px auto;
+    width: 320px;
+  }
+
 } 
 
 @media (max-width: 415px) {
-  h1, h2 { 
+  h1, h2.titulo2 { 
     font-size: 32px; 
-    margin-top: 20px;
+    margin: 20px auto;
+    width: 320px;
+  }
+
+  div.row.justify-content-center{
+    width: 370px;
   }
 }
 

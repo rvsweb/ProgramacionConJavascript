@@ -1,6 +1,7 @@
 /* 
     Created on : 17-jun-2019, 14:07:43
     Author     : RVS
+    Archivo que esta usando index.html
 */
 body{
   font-family: 'Open Sans' , sans-serif;
@@ -20,7 +21,6 @@ a , a:hover , a:focus{
   color: #9b59b6;
   text-decoration: none;
   transition: all .3s;
-  border: 5px solid red;
 }
 
 /*** Titulos Centrales de cada seccion ***/

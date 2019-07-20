@@ -141,7 +141,7 @@
     filter: alpha(opacity= 50);
     border: 2px solid #10bbca;
   }
-
+  
   /* 2º SubCaja con el iframe de la Caja con los temas */
   a.contenido{    
     display: block;
@@ -203,10 +203,8 @@
 
   a.contenido{    
     display: block;
-    width: 605px;
     padding: 10px;
     margin: 20px;
-
   }
 
   /* 2º SubCaja con el iframe de la Caja con los temas */
@@ -291,6 +289,12 @@
   col-md-6.more-services-box{
     margin-right: auto;
     margin-left: auto;
+  }
+
+  a.contenido{    
+    display: block;
+    padding: 5px;
+    margin: 10px;
   }
 
   main#principal{

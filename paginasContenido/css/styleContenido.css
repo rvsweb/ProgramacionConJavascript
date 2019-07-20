@@ -23,7 +23,7 @@ strong {
   font-weight: 600;
 }
 
-/*** Enlaces se iluminan al señalarlos ***/
+/*** Enlaces se iluminan al señalarlos - Barra Superior ***/
 a, a:hover , a:focus{
   color: #9b59b6;
   text-decoration: none;
@@ -50,6 +50,7 @@ h2.titulo2{
   padding: 20px;
   border-radius: 40px;
   color: #10bbca;
+  color: #ffffff;
 }
 
 /*** Subtitulo de cada seccion ***/
@@ -58,7 +59,7 @@ h3.titulo3{
   font-family: 'Telefonica Light', sans-serif;
   font-size: 22px;
   font-weight: 300;
-  color : #555; 
+  color : #fff; 
   line-height: 30px;
   text-align: center; /**/
   border-radius: 12px;
@@ -94,6 +95,15 @@ img {
 }
 
 /**** General style , all sections ****/
+main#principal{
+  display: block;
+  background-image:
+    url("../..//assets/img/backgrounds/1@2x.jpg");
+  font-family: "Telefonica Light";
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 /* Linea que separa cada seccion */
 .section-container { 
@@ -135,88 +145,6 @@ img {
 
 .section-bottom-button{
   padding-top: 60px;
-}
-
-/* Boton Download 1 - seccion principal */ 
-.btn-link-1{
-  display: inline-block;
-  height: 50px;
-  margin: 0 5px;
-  padding: 0 28px;
-  background: #9b59b6;
-  background: rgba(155,89,182,0.7);
-  border: 0;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 48px;
-  color: #fff;
-  border-radius: 4px;
-  transition: all .3s;
-}
-
-.btn-link-1:hover, .btn-1:focus, .btn-link-1:active, .btn-link-1:active:focus,
-.btn-link-1.btn-primary:not(:disabled):not(.disabled):active,
-.btn-link-1.btn-primary:not(:disabled):not(.disabled):active:focus{
-  background: #9b59b6;
-  background: rgba(155,89,182,0.9);
-  outline: 0;
-  color: #fff;
-  box-shadow: none;
-}
-
-/* Boton Servicios 2 - seccion principal */ 
-.btn-link-2{
-  display: inline-block;
-  height: 50px;
-  margin: 0 5px;
-  padding: 0 28px;
-  background: #333;
-  background: rgba(0,0,0,0.2);
-  border: 0;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 48px;
-  color: #fff;
-  border-radius: 4px;
-  transition: all .3s;
-}
-
-.btn-link-2:hover, .btn-2:focus, .btn-link-2:active, .btn-link-2:active:focus,
-.btn-link-2.btn-primary:not(:disabled):not(.disabled):active,
-.btn-link-2.btn-primary:not(:disabled):not(.disabled):active:focus{
-  background: #333;
-  background: rgba(0,0,0,0.4);
-  outline: 0;
-  color: #fff;
-  box-shadow: none;
-}
-
-/* Boton Load more - Seccion portafolios */
-.btn-link-3{
-  display: inline-block;
-  height: 50px;
-  margin: 0 5px;
-  padding: 0 28px;
-  background: none;
-  border: 1px solid #9b59b6;
-  border-bottom: 2px solid #9b59b6;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 48px;
-  color: #9b59b6;
-  transition: all .3s;
-}
-
-.btn-link-3:hover, .btn-3:focus, .btn-link-3:active, .btn-link-3:active:focus,
-.btn-link-3.btn-primary:not(:disabled):not(.disabled):active,
-.btn-link-3.btn-primary:not(:disabled):not(.disabled):active:focus{
-  padding: 0 10px;
-  background: none;
-  border: 0;
-  border-bottom: 2px solid #9b59b6;
-  outline: 0;
-  color: #9b59b6;
-  box-shadow: none;
 }
 
 /*** Divider ***/
@@ -262,7 +190,6 @@ img {
   color: #fff;
 }
 
-
 /* se activa cuando ponemos el puntero encima del boton del menu */
 .navbar-dark .navbar-nav .nav-link:focus{
   color: #fff;
@@ -277,7 +204,8 @@ img {
 
 /* marco que tiene el icono en la barra del menu 'nav' */
 .navbar-brand{
-  width: 136px;
+  width: 60px;
+  margin-right: 0px;
   background: url("../..//paginaPrincipal/assets/img/ico/iconos/60x60bb.jpg") left center no-repeat;
   border: 0;
   text-indent: -99999px;
@@ -290,102 +218,10 @@ img {
   padding: 210px 0;
 }
 
-/* Caja del contenido principal aparece en el centro de la pantalla */
-.top-content .text{
-  color: #fff;
-}
-
-/* Caja del titulo */
-.top-content .text h1{
-  margin-top: 25px;
-  color: #fff;
-}
-
-/* Caja del subtitulo principal*/
-.top-content .desciption{
-  margin: 30px 0 10px 0;
-}
-
-/* Caja del subtitulo principal*/
-.top-content .desciption p{
-  opacity: 0.8;
-}
-
-/* Caja que envuelve los botones */
-.top-content .top-big-link{
-  margin-top: 45px;
-}
-
-/***** Services *****/
-
-/* Caja seccion servicios */
-.services-box{
-  padding-top: 30px;
-  text-align: left;
-}
-
-/* Personalizacion de botones con iconos de la seccion servicios */
-.services-box .services-box-icon{
-  width: 80px;
-  height: 80px;
-  margin: 0 auto;
-  font-size: 40px;
-  color: #fff;
-  line-height: 80px;
-  text-align: center;
-  border-radius: 28px;
-
-  background: #9b59b6;
-  /*Modificamos los colores de fondo para mozilla*/
-  background: -moz-linear-gradient(
-    top,  
-    #ffb24b 0%, 
-    #9b59b6 100%); /* FF3.6+ */
-
-  /*Modificamos los colores de fondo para chrome */
-  background: -webkit-gradient(
-    linear, 
-    left top, 
-    left bottom, 
-    color-stop(0%,#ffb24b), 
-    color-stop(100%,#9b59b6)); /* Chrome,Safari4+ */
-
-  background: -webkit-linear-gradient(
-    top,  
-    #ffb24b 0%,
-    #9b59b6 100%); /* Chrome10+,Safari5.1+ */
-
-  background: -o-linear-gradient(
-    top,  
-    #ffb24b 0%,
-    #9b59b6 100%); /* Opera 11.10+ */
-
-  background: -ms-linear-gradient(
-    top,  
-    #ffb24b 0%,
-    #9b59b6 100%); /* IE10+ */
-
-  background: linear-gradient(
-    to bottom,  
-    #ffb24b 0%,
-    #9b59b6 100%); /* W3C */
-
-  filter: progid:DXImageTransform.Microsoft.gradient(
-    startColorstr='#ffb24b', 
-    endColorstr='#9b59b6',
-    GradientType=0); /* IE6-9 */
-}
-
-/*Caja para cada seccion de los servicios junto a su icono */ 
-.services-box h3{
-  margin-top: 0;
-  padding: 0 0 10px 0;
-}
-
 /* More Services */
-
+/*Titulo - Contenido del curso */
 div.more-services{
-  background-color: #ff33ff;
+  /*background-color: #ff33ff;*/
 }
 
 .more-services-box{
@@ -424,100 +260,6 @@ div.more-services{
   margin-top: 0;
   padding: 7px;
   border-radius: 12px;
-}
-
-/* Caja que envuelve el boton de Download */
-.call-to-action-container .section-bottom-button{
-  padding-top: 30px;
-}
-
-/**** Testimonials ****/
-/*Caja principal*/
-.testimonials-container{
-  padding-bottom: 70px;
-}
-
-/*Caja central */
-.testimonial-list{
-  margin-top: 30px;
-  text-align: center;
-}
-
-/*Caja central con la imagen */
-.testimonial-list .testimonial-image img{
-  max-width: 160px;
-  border-radius: 4px;
-}
-
-/*Texto de la Caja central con la imagen */
-.testimonial-list .testimonial-text{
-  margin-top: 30px;
-  opacity: 0.8;
-}
-
-/*Texto de la Caja central con la imagen y enlace principal */
-.testimonial-list .testimonial-text a {
-  color: #fff;
-  border-bottom:  1px dashed #fff;
-}
-
-/*Texto del enlace de la caja central que se ilumina */
-.testimonial-list .testimonial-text a:hover,
-.testimonial-list .testimonial-text a:focus{
-  color: #fff;
-  border: 0;
-}
-
-/*Punto de la caja central - Elemento de navegacion */
-.testimonial-list .nav-tabs{
-  margin-top: 45px;
-  border: 0;
-  justify-content: center;
-}
-
-/* Cada Elemento de la lista */
-.testimonial-list .nav-tabs li{
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-/* Cada Elemento de la lista como enlace */
-.testimonial-list .nav-tabs li a{
-  width: 16px;
-  height: 16px;
-  padding: 0;
-  background: none;
-  border: 1px solid #fff;
-  border-color: rgba(255,255,255,0.8);
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-}
-
-/* Cada Elemento de la lista como enlace cuando se pasa por encina con el puntero*/
-.testimonial-list .nav-tabs li a:hover,
-.testimonial-list .nav-tabs li a:focus{
-  background: #fff;
-  background: rgba(255,255,255,0.8);
-  border: 1px solid #fff;
-  border-color: rgba(255,255,255,0.8);
-}
-
-/* Cada Elemento de la lista como enlace cuando se selecciona */
-.testimonial-list .nav-tabs li a.active,
-.testimonial-list .nav-tabs li a.active:focus{
-  background: #9b59b6;
-  background: -moz-linear-gradient(top, #ffb24b 0% , #9b59b6 100%);
-  background: -webkit-gradient(linear, left top, left bottom, 
-    color-stop(0%,#ffb24b), 
-    color-stop(100%,#9b59b6)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #ffb24b 0% , #9b59b6 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #ffb24b 0% , #9b59b6 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #ffb24b 0% , #9b59b6 100%); /* IE10+ */
-  background: linear-gradient(to bottom, #ffb24b 0% , #9b59b6 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb24b', 
-    endColorstr='#9b59b6', GradientType=0 ); /* IE6-9 */
-  border: 0;
 }
 
 /*** Footer ***/

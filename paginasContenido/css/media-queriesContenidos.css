@@ -1,45 +1,68 @@
 
 /* Todo lo que este por encima de 992px */
 @media (min-width: 992px) {
-  .services-box 
-  .services-box-icon { 
-    width: 60px; 
-    height: 60px; 
-    font-size: 32px; 
-    line-height: 60px; 
-    border-radius: 22px; 
-  }
-  .about-us-box-text { 
-    padding-right: 0; 
+
+  main#principal{
+    display: block;
+    background-image:
+      url("../..//assets/img/backgrounds/1@2x.jpg");
+    font-family: "Telefonica Light";
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   a.contenido{    
     display: block;
+    padding: 10px;
+    margin: 20px;
+  }
+
+  /* 2º SubCaja con el iframe de la Caja con los temas */
+  a.contenido:hover{    
+    display: block;
+    padding: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background: #10bbca;
+    opacity: 0.5;
+    filter: alpha(opacity= 50);
+    border-radius: 12px;
   }
 
   h2.titulo2  { 
     width: 970px; 
   }
 
-}
+  /*Caja principal que pone el nombre de los temas del curso*/
+  h3.titulo3:hover{
+    background: #10bbca;
+    opacity: 0.5;
+    filter: alpha(opacity= 50);
+    border: 2px solid #10bbca;
+  }
 
+}
 
 /*Todo lo que este por encima de 992px y por debajo de 1199px*/
 @media (min-width: 992px) and (max-width: 1199px) {
-  .services-box 
-  .services-box-icon { 
-    width: 60px; 
-    height: 60px; 
-    font-size: 32px; 
-    line-height: 60px; 
-    border-radius: 22px; 
-  }
-  .about-us-box-text { 
-    padding-right: 0; 
-  }
 
   a.contenido{    
     display: block;
+    padding: 10px;
+    margin: 20px;
+  }
+
+  /* 2º SubCaja con el iframe de la Caja con los temas */
+  a.contenido:hover{    
+    display: block;
+    padding: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background: #10bbca;
+    opacity: 0.5;
+    filter: alpha(opacity= 50);
+    border-radius: 12px;
   }
 
   h2.titulo2  { 
@@ -49,10 +72,29 @@
     /*border: 5px solid #ff33ff;*/
   }
 
+  /*Caja principal que pone el nombre de los temas del curso*/
+  h3.titulo3:hover{
+    background: #10bbca;
+    opacity: 0.5;
+    filter: alpha(opacity= 50);
+    border: 2px solid #10bbca;
+  }
+
+  main#principal{
+    display: block;
+    background-image:
+      url("../..//assets/img/backgrounds/1@2x.jpg");
+    font-family: "Telefonica Light";
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
-/*Todo lo que este por encima de 768px y por debajo de 991px*/
+/* Todo lo que este por encima de 768px y por debajo de 991px*/
+/* Ejemplo : enlace iluminados */
 @media (min-width: 768px) and (max-width: 991px) {
+
   .navbar-expand-md 
   .navbar-nav 
   .nav-link { 
@@ -60,64 +102,54 @@
     padding-right: 0.6rem; 
   }
 
-  .top-content { 
-    padding: 180px 0; 
-  }
-
   .section-description p { 
     padding: 0; 
   }
 
-  .services-box 
-  .services-box-icon { 
-    width: 50px; 
-    height: 50px; 
-    font-size: 26px; 
-    line-height: 50px; 
-    border-radius: 18px; 
-  }
-
-  .about-us-box { 
-    margin-top: 80px; 
-  }
-
-  .about-us-box:last-child { 
-    margin-top: 50px; 
-  }
-
-  .about-us-box-text { 
-    padding-right: 0; 
-    text-align: center; 
-  }
-
-  .more-services-box 
-  .more-services-box-icon { 
-    width: 50px; 
-    height: 50px; 
-    font-size: 26px; 
-    line-height: 50px; 
-    border-radius: 18px; 
-  }
-
-  .portfolio-box h3:hover i { 
-    padding-left: 10px; 
-  }
-
-  .blog-box h3:hover i { 
-    padding-left: 10px; 
-  }
-
-  a.contenido{    
+  main#principal{
     display: block;
-    padding: 10px;
-    margin: 20px;
+    background-image:
+      url("../..//assets/img/backgrounds/1@2x.jpg");
+    font-family: "Telefonica Light";
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
+  /* Titulo - Contenido del curso*/ 
   h2.titulo2  { 
     font-size: 32px; 
     width: 590px;
   }
 
+  /*Caja principal que pone el nombre de los temas del curso*/
+  h3.titulo3:hover{
+    background: #10bbca;
+    opacity: 0.5;
+    filter: alpha(opacity= 50);
+    border: 2px solid #10bbca;
+  }
+
+  /* 2º SubCaja con el iframe de la Caja con los temas */
+  a.contenido{    
+    display: block;
+    padding: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+  }
+
+  /* 2º SubCaja con el iframe de la Caja con los temas */
+  a.contenido:hover{    
+    display: block;
+    padding: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background: #10bbca;
+    opacity: 0.5;
+    filter: alpha(opacity= 50);
+    border-radius: 12px;
+  }
 }
 
 /*Todo lo que este por encima de 420px y por debajo de 767px*/
@@ -135,36 +167,50 @@
     padding-bottom: 0.3rem; 
   }
 
-  .top-content { padding: 140px 0; }
-  .top-content .top-big-link { margin-top: 25px; }
-  .top-content .top-big-link a.btn { margin-top: 10px; }
-
-  .section-description p { padding: 0; }
-
-  .services-container { 
-    padding-bottom: 60px;
+  .section-description p { 
+    padding: 0; 
   }
 
-  .services-box { 
-    text-align: center; 
+  /* Titulo - Contenido del curso*/ 
+  h2.titulo2 { 
+    font-size: 32px; 
+    width: 590px;
   }
 
-  .services-box h3 { 
-    margin-top: 20px; 
-    padding-top: 10px; 
+  /*Caja principal que pone el nombre de los temas del curso*/
+  h3.titulo3:hover{
+    background: #10bbca;
+    opacity: 0.5;
+    filter: alpha(opacity= 50);
+    border: 2px solid #10bbca;
   }
 
-  .about-us-box { 
-    margin-top: 80px; 
+  a.contenido{    
+    display: block;
+    padding: 10px;
+    margin: 20px;
   }
 
-  .about-us-box:last-child { 
-    margin-top: 50px;
+  /* 2º SubCaja con el iframe de la Caja con los temas */
+  a.contenido:hover{    
+    display: block;
+    padding: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background: #10bbca;
+    opacity: 0.5;
+    filter: alpha(opacity= 50);
+    border-radius: 12px;
   }
 
-  .about-us-box-text { 
-    padding-right: 0; 
-    text-align: center; 
+  main#principal{
+    display: block;
+    background-image:
+      url("../..//assets/img/backgrounds/1@2x.jpg");
+    font-family: "Telefonica Light";
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .more-services-box { 
@@ -176,28 +222,6 @@
     padding-top: 10px; 
   }
 
-  .portfolio-box { 
-    text-align: center; 
-  }
-
-  .portfolio-box-image { 
-    max-width: 540px; 
-    margin: 0 auto; 
-  }
-
-  .blog-box { 
-    text-align: center; 
-  }
-
-  .blog-box-image { 
-    max-width: 540px; 
-    margin: 0 auto; 
-  }
-
-  .blog-box h3 { 
-    margin-top: 30px; 
-  }
-
   footer { 
     text-align: center; 
   }
@@ -206,16 +230,15 @@
     padding-top: 10px; 
     text-align: center; 
   }
-  .footer-bottom { padding-top: 20px; }
 
-  a.contenido{    
-    display: block;
+  .footer-bottom { 
+    padding-top: 20px; 
   }
 
 } 
 
 /*Todo lo que este por debajo de 415px*/
-@media (max-width: 415px) {
+@media (min-width: 240px) and (max-width: 415px) {
 
   h2.titulo2 { 
     font-size: 32px; 
@@ -224,11 +247,34 @@
   }
 
   div.row.justify-content-center{
-    width: 370px;
+    /*width: 370px;*/
+    margin-right: auto;
+    margin-left: auto;
   }
 
   div.col-md-9.col-md-offset-3{
-    padding-right: 0px;
+    padding-left: auto;
+    padding-right: auto;
+  }
+
+  col-md-6.more-services-box{
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  main#principal{
+    display: block;
+    background-image:
+      url("../..//assets/img/backgrounds/1@2x.jpg");
+    font-family: "Telefonica Light";
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 430px;
+  }
+
+  footer#pie1{
+    width: 430px !important;
   }
 }
 

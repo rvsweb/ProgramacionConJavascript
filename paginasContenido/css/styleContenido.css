@@ -228,7 +228,8 @@ main#principal{
 }
 
 /* Iconos representan cada seccion de 'more services' */
-.more-services-box .more-services-box-icon{
+.more-services-box 
+.more-services-box-icon{
   width: 60px;
   height: 60px;
   margin: 0 auto;

@@ -24,18 +24,34 @@ strong {
 }
 
 /*** Enlaces se iluminan al señalarlos - Barra Superior ***/
-a, a:hover , a:focus{
+/*a, a:hover , a:focus{
   color: #fff;
+  color: red;
   text-decoration: none;
+  transition: all .3s;
+}*/
+
+/*** Enlaces se iluminan al señalarlos - Subcaja elementos ***/
+a.contenido, 
+a.contenido:hover , 
+a.contenido:focus{
+  display: block;
+  padding: 10px;
+  margin: 10px;
+  color: #eee;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 12px;
+  border: 1px solid #10bbca;
   transition: all .3s;
 }
 
 /*** Titulos Centrales de cada seccion ***/
 h2{
   margin-top: 30px;
-  font-family: 'Telefonica Light' , sans-serif;
   font-size: 38px;
   font-weight: 300;
+  font-family: 'Telefonica Light' , sans-serif;
   color: #555;
   line-height: 50px;
   text-align: center; 
@@ -45,22 +61,24 @@ h2{
 }
 
 h2.titulo2{
-  margin: 20px auto;
-  margin-top: 50px;
+  display: block;
+  margin: 50px auto;
+  margin-bottom: 15px;
   padding: 20px;
-  border-radius: 40px;
   color: #10bbca;
+  border-radius: 40px;
 }
 
 /*** Subtitulo de cada seccion ***/
 h3.titulo3{
-  margin-bottom: 0px;
+  display: block;
+  margin: 10px;
   font-family: 'Telefonica Light', sans-serif;
   font-size: 22px;
   font-weight: 300;
-  color : #fff; 
   line-height: 30px;
-  text-align: center; /**/
+  color : #fff; 
+  text-align: center; /* mis estilo */
   border-radius: 12px;
   border: 2px solid #10bbca;
 }
@@ -164,7 +182,8 @@ main#principal{
   backface-visibility: hidden;
 }
 
-.navbar.navbar-no-bg{ /* bg = background */
+/* bg = background */
+.navbar.navbar-no-bg{ 
   background: #444;
   background: rgba(0, 0, 0, 0.2);
 }
@@ -238,7 +257,6 @@ main#principal{
   line-height: 60px;
   text-align: center;
   border-radius: 22px;
-
   background : #9b59b6;
   background: -moz-linear-gradient(top, #ffb24b 0%, #9b59b6 100%);
   background: -webkit-gradient(linear, left top, left bottom, 

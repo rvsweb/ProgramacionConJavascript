@@ -1,112 +1,16 @@
 
-/* Todo lo que este por encima de 992px */
-@media (min-width: 992px) {
-
-  main#principal{
-    display: block;
-    background-image:
-      url("../..//assets/img/backgrounds/1@2x.jpg");
-    font-family: "Telefonica Light";
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  a.contenido{    
-    display: block;
-    padding: 10px;
-    margin: 20px;
-  }
-
-  /* 2º SubCaja con el iframe de la Caja con los temas */
-  a.contenido:hover{    
-    display: block;
-    padding: 15px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    background: #10bbca;
-    opacity: 0.5;
-    filter: alpha(opacity= 50);
-    border-radius: 12px;
-  }
-
-  h2.titulo2  { 
-    width: 970px; 
-  }
-
-  /*Caja principal que pone el nombre de los temas del curso*/
-  h3.titulo3:hover{
-    background: #10bbca;
-    opacity: 0.5;
-    filter: alpha(opacity= 50);
-    border: 2px solid #10bbca;
-  }
-
-}
-
-/*Todo lo que este por encima de 992px y por debajo de 1199px*/
 @media (min-width: 992px) and (max-width: 1199px) {
-
-  .navbar.navbar-no-bg { background: #444 !important;  }
-  .navbar-dark .navbar-toggler { border-color: #444; }
-  .navbar-dark .navbar-toggler:focus { 
-    background: #333; 
-    outline: 0; 
-  }
-
-  .navbar-expand-md .navbar-nav .nav-link { 
-    padding-top: 0.3rem; 
-    padding-bottom: 0.3rem; 
-  }
-
-  a.contenido{    
-    display: block;
-    padding: 10px;
-    margin: 20px;
-  }
-
-  /* 2º SubCaja con el iframe de la Caja con los temas */
-  a.contenido:hover{    
-    display: block;
-    padding: 15px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    background: #10bbca;
-    opacity: 0.5;
-    filter: alpha(opacity= 50);
-    border-radius: 12px;
-  }
-
-  h2.titulo2  { 
+  .services-box
+  { 
+    width: 60px; 
+    height: 60px; 
     font-size: 32px; 
-    margin-top: 20px;
-    width: 810px;
-    /*border: 5px solid #ff33ff;*/
-  }
-
-  /*Caja principal que pone el nombre de los temas del curso*/
-  h3.titulo3:hover{
-    background: #10bbca;
-    opacity: 0.5;
-    filter: alpha(opacity= 50);
-    border: 2px solid #10bbca;
-  }
-
-  main#principal{
-    display: block;
-    background-image:
-      url("../..//assets/img/backgrounds/1@2x.jpg");
-    font-family: "Telefonica Light";
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    line-height: 60px; 
+    border-radius: 22px; 
   }
 }
 
-/* Todo lo que este por encima de 768px y por debajo de 991px*/
-/* Ejemplo : enlace iluminados */
 @media (min-width: 768px) and (max-width: 991px) {
-
   .navbar-expand-md 
   .navbar-nav 
   .nav-link { 
@@ -114,120 +18,67 @@
     padding-right: 0.6rem; 
   }
 
+  .top-content { 
+    padding: 180px 0; 
+  }
+
   .section-description p { 
     padding: 0; 
   }
 
-  main#principal{
-    display: block;
-    background-image:
-      url("../..//assets/img/backgrounds/1@2x.jpg");
-    font-family: "Telefonica Light";
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  .services-box { 
+    width: 50px; 
+    height: 50px; 
+    font-size: 26px; 
+    line-height: 50px; 
+    border-radius: 18px; 
   }
 
-  /* Titulo - Contenido del curso*/ 
-  h2.titulo2  { 
-    font-size: 32px; 
-    width: 590px;
+  .more-services-box 
+  .more-services-box-icon { 
+    display: block;
+    width: 50px; 
+    height: 50px; 
+    font-size: 26px; 
+    line-height: 50px; 
+    border-radius: 18px; 
   }
 
-  /*Caja principal que pone el nombre de los temas del curso*/
-  h3.titulo3:hover{
-    background: #10bbca;
-    opacity: 0.5;
-    filter: alpha(opacity= 50);
-    border: 2px solid #10bbca;
-  }
-  
-  /* 2º SubCaja con el iframe de la Caja con los temas */
-  a.contenido{    
-    display: block;
-    padding: 15px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    border-radius: 12px;
-  }
-
-  /* 2º SubCaja con el iframe de la Caja con los temas */
-  a.contenido:hover{    
-    display: block;
-    padding: 15px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    background: #10bbca;
-    opacity: 0.5;
-    filter: alpha(opacity= 50);
-    border-radius: 12px;
-  }
 }
 
-/*Todo lo que este por encima de 420px y por debajo de 767px*/
-@media (min-width: 420px) and (max-width: 767px) {
+/*Todo lo que este por debajo de 767px */
+@media (max-width: 767px) {
 
   .navbar.navbar-no-bg { background: #444 !important;  }
   .navbar-dark .navbar-toggler { border-color: #444; }
-  .navbar-dark .navbar-toggler:focus { 
+  .navbar-dark .navbar-toggler:focus {
     background: #333; 
     outline: 0; 
   }
 
+  /* Barra de navegacion desplegado en vertical */
   .navbar-expand-md .navbar-nav .nav-link { 
     padding-top: 0.3rem; 
     padding-bottom: 0.3rem; 
   }
 
-  section-container{
-    width: 610px;
+  .top-content { padding: 140px 0; }
+  .top-content .top-big-link { margin-top: 25px; }
+  .top-content .top-big-link a.btn { margin-top: 10px; }
+
+  .section-description p { padding: 0; }
+
+  .services-container { 
+    padding-bottom: 60px;
   }
 
-  .section-description p { 
-    padding: 0; 
+  .services-box { 
+    text-align: center; 
   }
 
-  /* Titulo - Contenido del curso*/ 
-  h2.titulo2 { 
-    font-size: 32px; 
-    width: 590px;
-  }
-
-  /*Caja principal que pone el nombre de los temas del curso*/
-  h3.titulo3:hover{
-    background: #10bbca;
-    opacity: 0.5;
-    filter: alpha(opacity= 50);
-    border: 2px solid #10bbca;
-  }
-
-  a.contenido{    
-    display: block;
-    padding: 10px;
-    margin: 20px;
-  }
-
-  /* 2º SubCaja con el iframe de la Caja con los temas */
-  a.contenido:hover{    
-    display: block;
-    padding: 15px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    background: #10bbca;
-    opacity: 0.5;
-    filter: alpha(opacity= 50);
-    border-radius: 12px;
-  }
-
-  main#principal{
-    display: block;
-    background-image:
-      url("../..//assets/img/backgrounds/1@2x.jpg");
-    font-family: "Telefonica Light";
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 757px;
+  .services-box h3 { 
+    margin-top: 20px; 
+    padding-top: 10px; 
   }
 
   .more-services-box { 
@@ -239,81 +90,22 @@
     padding-top: 10px; 
   }
 
-  footer#pie1 { 
-    width: 756px;
+  footer { 
+    text-align: center; 
   }
 
   .footer-right { 
     padding-top: 10px; 
     text-align: center; 
   }
-
-  .footer-bottom { 
-    padding-top: 20px; 
-  }
-
-} 
-
-/*Todo lo que este por debajo de 415px*/
-@media (min-width: 240px) and (max-width: 415px) {
-
-  .navbar.navbar-no-bg { background: #444 !important;  }
-  .navbar-dark .navbar-toggler { border-color: #444; }
-  .navbar-dark .navbar-toggler:focus { 
-    background: #333; 
-    outline: 0; 
-  }
-
-  .navbar-expand-md .navbar-nav .nav-link { 
-    padding-top: 0.3rem; 
-    padding-bottom: 0.3rem; 
-  }
-
-  h2.titulo2 { 
-    font-size: 32px; 
-    margin: 30px auto;
-    width: 321px;
-  }
-
-  div.row.justify-content-center{
-    /*width: 370px;*/
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  div.col-md-9.col-md-offset-3{
-    padding-left: auto;
-    padding-right: auto;
-  }
-
-  col-md-6.more-services-box{
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  a.contenido{    
-    display: block;
-    padding: 5px;
-    margin: 10px;
-  }
-
-  main#principal{
-    display: block;
-    background-image:
-      url("../..//assets/img/backgrounds/1@2x.jpg");
-    font-family: "Telefonica Light";
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 430px;
-  }
-
-  footer#pie1{
-    width: 430px !important;
-  }
+  .footer-bottom { padding-top: 20px; }
 }
 
-/*plugin Retina-ize images/icons para los dispositivos IOS mejora la vision de los pixeles*/ 
+@media (max-width: 415px) {
+  h1, h2 { font-size: 32px; }
+}
+
+/* plugin Retina-ize images/icons para los dispositivos IOS mejora la vision de los pixeles */
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
@@ -321,10 +113,11 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
-  logo 
+  /* logo */
   .navbar-brand {
     background-image: url("../..//assets/img/ico/iconos/60x60bb.jpg") !important; 
     background-repeat: no-repeat !important; 
     background-size: auto !important;
   }
+
 }

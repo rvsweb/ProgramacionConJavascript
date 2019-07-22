@@ -22,7 +22,7 @@ ul#menu-desplegable6
   list-style-type: none;
   padding: 10px;
   border-radius: 12px;
-  border: 2px solid #10bbca;
+  border: 3px solid #10bbca;
 }
 
 /* Dentro de la lista - la 2º Seccion de la lista desplegaba */
@@ -34,6 +34,13 @@ li.lista {
   border-radius: 12px;
   border: 2px solid #10bbca;
 }
+
+/* Recuadro completa   */
+li.lista:hover , 
+a.contenido:active  {
+  font-size: 25px;
+}
+
 
 ul#header-nav{
   padding: 10px;
@@ -74,7 +81,6 @@ ul#menu-desplegable6:after
   display: none;  
   margin: 10px;
   border-radius: 12px;
-  /*background: #ffffff;*/
 }
 
 /* Fondo de la barra del desplegable */ 
@@ -89,19 +95,12 @@ ul#menu-desplegable6:after
   display: block; 
   /*Fondo de imagen*/
   /*background: #ffffff;*/
-  /*background-color: #10bbca;*/
 }
 
 /* Interior de la ventana secundaria */
 ul.header-nav{
   padding: 10px;
   font-size: 15px;
-}
-
-/* Recuadro completa   */
-li:hover, a:active  {
-  /*background-color: #10bbca;*/
-  font-size: 25px;
 }
 
 object.ventana{

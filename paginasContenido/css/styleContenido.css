@@ -183,7 +183,7 @@ main#principal{
 }
 
 /* bg = background */
-.navbar.navbar-no-bg{ 
+.navbar .navbar-no-bg{ 
   background: #444;
   background: rgba(0, 0, 0, 0.2);
 }

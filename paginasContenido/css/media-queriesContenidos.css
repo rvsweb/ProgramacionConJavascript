@@ -1,4 +1,12 @@
 
+@media (min-width: 1199px) {
+
+  h2.titulo2{
+    width: 480px;
+  }
+
+}
+
 @media (min-width: 992px) and (max-width: 1199px) {
   .services-box
   { 
@@ -8,6 +16,11 @@
     line-height: 60px; 
     border-radius: 22px; 
   }
+
+  h2.titulo2{
+    width: 480px;
+  }
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -20,6 +33,10 @@
 
   .top-content { 
     padding: 180px 0; 
+  }
+
+  h2.titulo2{
+    width: 480px;
   }
 
   .section-description p { 
@@ -103,6 +120,7 @@
 
 @media (max-width: 415px) {
   h1, h2 { font-size: 32px; }
+
 }
 
 /* plugin Retina-ize images/icons para los dispositivos IOS mejora la vision de los pixeles */

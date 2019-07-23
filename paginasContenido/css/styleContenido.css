@@ -30,7 +30,6 @@ h2{
   margin-top: 30px;
   font-size: 38px;
   font-weight: 300;
-  font-family: 'Telefonica Light' , sans-serif;
   color: #555;
   line-height: 50px;
   text-align: center; 
@@ -192,7 +191,7 @@ main#principal{
 .navbar-brand{
   width: 60px;
   margin-right: 0px;
-  background: url("../..//paginaPrincipal/assets/img/ico/iconos/60x60bb.jpg") left center no-repeat;
+  background: url("../ico/60x60bb.jpg") left center no-repeat;
   text-indent: -99999px;
 }
 /****** End Top menu ******/

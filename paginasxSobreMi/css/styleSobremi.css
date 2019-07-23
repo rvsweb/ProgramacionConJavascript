@@ -5,12 +5,12 @@
 
 @font-face{
   font-family: "Telefonica Light";
-  src: url("../..//sources/css/font/TelefonicaWeb-Light.ttf");
+  src: url("../font/TelefonicaWeb-Light.ttf");
 }
 
 body{
   font-family: 'Telefonica Light' , sans-serif;
-  font-size: 26px;
+  font-size: 16px;
   font-weight: 300;
   color: #888;
   line-height: 30px;
@@ -30,11 +30,11 @@ a , a:hover , a:focus{
 
 /*** Titulos Centrales de cada seccion ***/
 h1 , h2{
-  font-family: '' , sans-serif;
+  
 }
 
 h2#titulo2{
-  margin-top: 10px;
+  margin-top: 20px;
   font-size: 38px;
   font-weight: 300;
   color: #555;
@@ -43,7 +43,6 @@ h2#titulo2{
 
 /*** Subtitulo de cada seccion ***/
 h3{
-  font-family: 'Montserrat', sans-serif;
   font-size: 22px;
   font-weight: 300;
   color : #555;
@@ -264,7 +263,7 @@ img {
 /* marco que tiene el icono en la barra del menu 'nav' */
 .navbar-brand{
   width: 136px;
-  background: url("../..//assets/img/ico/iconos/60x60bb.jpg") left center no-repeat;
+  background: url("../ico/60x60bb.jpg") left center no-repeat;
   border: 0;
   text-indent: -99999px;
 }

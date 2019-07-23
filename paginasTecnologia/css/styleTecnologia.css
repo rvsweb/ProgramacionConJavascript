@@ -5,7 +5,7 @@
 
 @font-face{
   font-family: "Telefonica Light";
-  src: url("../..//sources/css/font/TelefonicaWeb-Light.ttf");
+  src: url("../font/TelefonicaWeb-Light.ttf");
 }
 
 body{
@@ -262,7 +262,7 @@ img {
 /* marco que tiene el icono en la barra del menu 'nav' */
 .navbar-brand{
   width: 136px;
-  background: url("../..//assets/img/ico/iconos/60x60bb.jpg") left center no-repeat;
+  background: url("../ico/60x60bb.jpg") left center no-repeat;
   border: 0;
   text-indent: -99999px;
 }

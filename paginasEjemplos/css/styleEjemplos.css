@@ -88,7 +88,6 @@ main#principal{
   display: block;
   background-image:
     url("../..//assets/img/backgrounds/1@2x.jpg");
-  font-family: "Telefonica Light";
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -194,7 +193,7 @@ main#principal{
 .navbar-brand{
   width: 60px;
   margin-right: 0px;
-  background: url("../..//paginaPrincipal/assets/img/ico/iconos/60x60bb.jpg") left center no-repeat;
+  background: url("../ico/60x60bb.jpg") left center no-repeat;
   text-indent: -99999px;
 }
 /****** End Top menu ******/
@@ -305,7 +304,3 @@ footer{
 .footer-bottom a:hover, .footer-bottom a:focus {
   color: #888;
 }
-
-
-
-

@@ -144,7 +144,7 @@ only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
   /* logo */
   .navbar-brand {
-    background-image: url("../..//assets/img/ico/iconos/60x60bb.jpg") !important; 
+    background-image: url("../ico/logoResponsivo.jpg") !important; 
     background-repeat: no-repeat !important; 
     background-size: auto !important;
   }

@@ -23,7 +23,7 @@ strong {
 
 /*** Enlaces se iluminan al señalarlos ***/
 a , a:hover , a:focus{
-  color: #9b59b6;
+  color: #00b5cc;
   text-decoration: none;
   transition: all .3s;
 }

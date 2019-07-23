@@ -9,6 +9,26 @@
   src: url("../font/TelefonicaWeb-Light.ttf");
 }
 
+/** Subtitulo de cada seccion **/
+h3.titulo3{
+  display: block;
+  margin: 10px;
+  font-family: 'Telefonica Light', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 30px;
+  color : #fff; 
+  text-align: center; /* mis estilo */
+  border-radius: 12px;
+  border: 2px solid #10bbca;
+}
+
+
+/** Subtitulo de cada seccion : Cuando me posiciono encima se activa **/
+h3.titulo3:hover{
+  background: #10bbca;
+}
+
 ul#menu-desplegable , 
 ul#menu-desplegable1 , 
 ul#menu-desplegable2 ,
@@ -101,6 +121,29 @@ ul#menu-desplegable6:after
 ul.header-nav{
   padding: 10px;
   font-size: 15px;
+}
+
+/*** Enlaces se iluminan al señalarlos - Subcaja elementos ***/
+a.contenido{
+  display: block;
+  padding: 10px;
+  margin: 10px;
+  color: #eee;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 12px;
+  border: 1px solid #10bbca;
+  transition: all .3s;
+}
+
+/* Se activa cuando pongo el curso encima */
+a.contenido:hover { 
+  background: #10bbca;
+}
+
+a.contenido:focus{
+  font-weight: bolder;
+  color: red;
 }
 
 object.ventana{

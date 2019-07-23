@@ -5,6 +5,11 @@
     Archivo    : stylePagina
 */
 
+*{
+  border: 1px solid red;
+}
+
+
 @font-face{
   font-family: "Telefonica Light";
   src: url("../font/TelefonicaWeb-Light.ttf");
@@ -22,7 +27,6 @@ body{
 strong { 
   font-weight: 600;
 }
- 
 
 
 /*** Titulos Centrales de cada seccion ***/
@@ -50,8 +54,14 @@ h2.titulo2{
 
 h1#titulo1{
   color: #10bbca;
-  font-size: 1.5em;
+  font-size: 2em;
 }
+
+p#titulo{
+  color: #10bbca;
+  padding: 10px;
+}
+
 
 /*** Todas las imagenes que aparecen ***/
 img { 
@@ -303,4 +313,7 @@ footer{
 .footer-bottom a:hover, .footer-bottom a:focus {
   color: #888;
 }
+
+
+
 

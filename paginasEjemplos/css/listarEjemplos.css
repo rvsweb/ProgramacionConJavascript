@@ -1,381 +1,153 @@
 /* 
-    Created on : 09-jul-2019, 16:09:57
+    Created on : 09-jul-2019 - 16:09:57
     Author     : RVS
     link: https://jsfiddle.net/cRsZE/984/
 */
-
-/**{
-  border: 1px solid red;
-}*/
 
 @font-face{
   font-family: "Telefonica Light";
   src: url("../font/TelefonicaWeb-Light.ttf");
 }
 
-main{
+/** Subtitulo de cada seccion **/
+h3.titulo3{
   display: block;
-  position: relative;
-  background-image:
-    url("../..//paginaPrincipal/assets/img/backgrounds/logo.jpg");
-  height: 1000px;
-  font-family: "Telefonica Light";
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-h1#titulo1{
-  display: block;
-  position: relative;
-  top: 130px;
-  width: 800px;
-  margin: 30px auto;
-  padding: 20px 15px 20px 15px;
-  text-align: center;
-  font-size: 3.2em;
-  border-radius: 40px;
-  color: #10bbca;
+  margin: 10px;
+  font-family: 'Telefonica Light', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 30px;
+  color : #fff; 
+  text-align: center; /* mis estilo */
+  border-radius: 12px;
   border: 2px solid #10bbca;
 }
 
-h2{
-  display: block;
-  position: relative;
-  top: 470px;
-  width: 500px;
-  margin: 0 auto;
-  padding: 10px;
-  text-align: center;
-  font-size: 3em;
-  color: #10bbca;
-  border-radius: 40px;
-  border: 2px solid #10bbca;
+
+/** Subtitulo de cada seccion : Cuando me posiciono encima se activa **/
+h3.titulo3:hover{
+  background: #10bbca;
 }
 
-p#titulo{
-  position: relative;
-  top: 120px;
-  width: 590px;
-  display: block;
-  margin: 20px auto;
-  padding: 15px;
+ul#menu-desplegable , 
+ul#menu-desplegable1 , 
+ul#menu-desplegable2 ,
+ul#menu-desplegable3 ,
+ul#menu-desplegable4 ,
+ul#menu-desplegable5 ,
+ul#menu-desplegable6 
+{
   text-align: center;
-  font-size: 2em;
-  color: #10bbca;
-  border-radius: 40px;
-  border: 2px solid #10bbca;
-}
-
-p{
-  position: relative;
-  display: block;
-  margin: 20px auto;
+  margin: 0 auto;  
+  list-style-type: none;
   padding: 10px;
   border-radius: 12px;
-  text-align: center;
-  font-size: 2em;
-  color: #000;
-}
-
-div#contenedor{
-  display: block;
-  position: relative;
-  margin: 0 auto;
-  margin-bottom: 100px;
-  width: 700px;
-  top: 500px;
-  color: #10bbca;
-  border-radius: 40px;
-  border: 2px solid #10bbca;
-}
-
-footer#foot{
-  display: block;
-  position: relative;
-  top: 500px;
-  height: 300px;
-}
-
-ul , li {
-  display: block;
-  position: relative;
-  margin: 0 auto;  
-  border-radius: 7px;
-}
-
-ul#menu-desplegable{
-  display: block;
-  text-align: center;
-  width: 500px;
-  padding: 30px;
-}
-
-span.titulo{
-  font-size: 30px;
-  color: #003245;
+  border: 3px solid #10bbca;
 }
 
 ul#header-nav{
-  width: 1000px;
-}
-
-li{
   padding: 10px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
+} 
 
-li:hover, a:active  {
-  background-color: #10bbca;
-}
-
-/* my code */
-ul#menu-desplegable:before {
-  display: inline-block;
+/*Mi Codigo*/
+ul#menu-desplegable:before , 
+ul#menu-desplegable1:before , 
+ul#menu-desplegable2:before ,
+ul#menu-desplegable3:before ,
+ul#menu-desplegable4:before ,
+ul#menu-desplegable5:before ,
+ul#menu-desplegable6:before 
+{
   width: 50px;
 }
 
-ul#menu-desplegable:after {
-  display: inline-block;
+ul#menu-desplegable:after , 
+ul#menu-desplegable1:after , 
+ul#menu-desplegable2:after ,
+ul#menu-desplegable3:after ,
+ul#menu-desplegable4:after ,
+ul#menu-desplegable5:after ,
+ul#menu-desplegable6:after 
+{
   width: 50px;
 }
 
-.nav-desplegable ul {
-  display: none;   
+/* Ventana desplegable */
+#nav-desplegable ul , 
+#nav-desplegable1 ul , 
+#nav-desplegable2 ul ,
+#nav-desplegable3 ul ,
+#nav-desplegable4 ul ,
+#nav-desplegable5 ul ,
+#nav-desplegable6 ul 
+{
+  display: none;  
+  margin: 10px;
+  border-radius: 12px;
 }
 
-.nav-desplegable ul.visible {
-  display: block;   
+/* Fondo de la barra del desplegable */ 
+#nav-desplegable .visible , 
+#nav-desplegable1 .visible1 , 
+#nav-desplegable2 .visible2 , 
+#nav-desplegable3 .visible3 ,  
+#nav-desplegable4 .visible4 ,
+#nav-desplegable5 .visible5 ,
+#nav-desplegable6 .visible6  
+{
+  display: block; 
+  /*Fondo de imagen*/
+  /*background: #ffffff;*/
 }
 
-.header-nav{
+/* Interior de la ventana secundaria */
+ul.header-nav{
   padding: 10px;
-  border-radius: 7px;
-  background-color: #ffffff;
+  font-size: 15px;
 }
 
-a{
-  color: #000;
+
+/* Dentro de la lista - la 2º Seccion de la lista desplegaba */
+li.lista {
+  padding: 10px;
+  /*text-align: center;*/
+  list-style-type: none;
+  /*color: #ffffff;*/
+  border-radius: 12px;
+  border: 2px solid #10bbca;
+}
+
+/* Recuadro completa */
+li.lista:hover , 
+a.contenido:active  {
   font-size: 20px;
-  text-decoration: none;
 }
 
-a.salto{
+/*** Enlaces se iluminan al señalarlos - Subcaja elementos ***/
+a.contenido{
   display: block;
-  padding-bottom: 10px;
-}
-
-/*-------------*/
-ul#menu-desplegable1{
-  text-align: center;
-  width: 500px;
-  padding: 30px;
-}
-
-ul#header-nav1{
-  width: 1000px;
-}
-
-ul#menu-desplegable1:before {
-  display: inline-block;
-  width: 50px;
-}
-
-ul#menu-desplegable1:after {
-  display: inline-block;
-  width: 50px;
-}
-
-.nav-desplegable1 ul {
-  display: none;   
-}
-
-.nav-desplegable1 ul.visible {
-  display: block;   
-}
-
-.header-nav1{
   padding: 10px;
-  border-radius: 7px;
-  background-color: #ccccff;
-}
-
-/*-------------*/
-ul#menu-desplegable2{
+  margin: 10px;
+  color: #eee;
+  font-size: 10px;
   text-align: center;
-  width: 500px;
-  padding: 30px;
+  text-decoration: none;
+  border-radius: 12px;
+  border: 1px solid #10bbca;
+  transition: all .3s;
 }
 
-ul#header-nav2{
-  width: 1000px;
+/* Se activa cuando pongo el curso encima */
+a.contenido:hover { 
+  font-size: 15px;
+  background: #10bbca;
 }
 
-ul#menu-desplegable2:before {
-  display: inline-block;
-  width: 50px;
+a.contenido:focus{
+  font-weight: bolder;
+  color: red;
 }
 
-ul#menu-desplegable2:after {
-  display: inline-block;
-  width: 50px;
-}
-
-.nav-desplegable2 ul {
-  display: none;   
-}
-
-.nav-desplegable2 ul.visible {
-  display: block;   
-}
-
-.header-nav2{
-  padding: 10px;
-  border-radius: 7px;
-  background-color: #ffffff;
-}
-
-/*-------------*/
-ul#menu-desplegable3{
-  text-align: center;
-  width: 500px;
-  padding: 30px;
-}
-
-ul#header-nav3{
-  background: #ff9999;  
-  width: 1000px;
-}
-
-ul#menu-desplegable3:before {
-  display: inline-block;
-  width: 50px;
-}
-
-ul#menu-desplegable3:after {
-  display: inline-block;
-  width: 50px;
-}
-
-.nav-desplegable3 ul {
-  display: none;   
-}
-
-.nav-desplegable3 ul.visible {
-  display: block;   
-}
-
-.header-nav3{
-  padding: 10px;
-  border-radius: 7px;
-  background-color: #ffffff;
-}
-
-/*-------------*/
-ul#menu-desplegable4{
-  text-align: center;
-  width: 500px;
-  padding: 30px;
-}
-
-ul#header-nav4{
-  background: #ff9999;  
-  width: 1000px;
-}
-
-ul#menu-desplegable4:before {
-  display: inline-block;
-  width: 50px;
-}
-
-ul#menu-desplegable4:after {
-  display: inline-block;
-  width: 50px;
-}
-
-.nav-desplegable4 ul {
-  display: none;   
-}
-
-.nav-desplegable4 ul.visible {
-  display: block;   
-}
-
-.header-nav4{
-  padding: 10px;
-  border-radius: 7px;
-  background-color: #ffffff;
-}
-/*-------------*/
-
-ul#menu-desplegable5{
-  text-align: center;
-  width: 500px;
-  padding: 30px;
-}
-
-ul#header-nav5{
-  background: #ff9999;  
-  width: 1000px;
-}
-
-ul#menu-desplegable5:before {
-  display: inline-block;
-  width: 50px;
-}
-
-ul#menu-desplegable5:after {
-  display: inline-block;
-  width: 50px;
-}
-
-.nav-desplegable5 ul {
-  display: none;   
-}
-
-.nav-desplegable5 ul.visible {
-  display: block;   
-}
-
-.header-nav5{
-  padding: 10px;
-  border-radius: 7px;
-  background-color: #ffffff;
-}
-/*-------------*/
-
-ul#menu-desplegable6{
-  text-align: center;
-  width: 500px;
-  padding: 30px;
-}
-
-ul#header-nav6{
-  background: #ff9999;  
-  width: 1000px;
-}
-
-ul#menu-desplegable6:before {
-  display: inline-block;
-  width: 50px;
-}
-
-ul#menu-desplegable6:after {
-  display: inline-block;
-  width: 50px;
-}
-
-.nav-desplegable6 ul {
-  display: none;   
-}
-
-.nav-desplegable6 ul.visible {
-  display: block;   
-}
-
-.header-nav6{
-  padding: 10px;
-  border-radius: 7px;
-  background-color: #10bbca;
+object.ventana{
+  width: 150px;
 }

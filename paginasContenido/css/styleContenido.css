@@ -32,9 +32,7 @@ strong {
 }*/
 
 /*** Enlaces se iluminan al señalarlos - Subcaja elementos ***/
-a.contenido, 
-a.contenido:hover , 
-a.contenido:focus{
+a.contenido{
   display: block;
   padding: 10px;
   margin: 10px;
@@ -45,6 +43,17 @@ a.contenido:focus{
   border: 1px solid #10bbca;
   transition: all .3s;
 }
+
+/* Se activa cuando pongo el curso encima */
+a.contenido:hover { 
+  background: #10bbca;
+}
+
+a.contenido:focus{
+  font-weight: bolder;
+  color: red;
+}
+
 
 /*** Titulos Centrales de cada seccion ***/
 h2{
@@ -69,7 +78,7 @@ h2.titulo2{
   border-radius: 40px;
 }
 
-/*** Subtitulo de cada seccion ***/
+/** Subtitulo de cada seccion **/
 h3.titulo3{
   display: block;
   margin: 10px;
@@ -81,6 +90,12 @@ h3.titulo3{
   text-align: center; /* mis estilo */
   border-radius: 12px;
   border: 2px solid #10bbca;
+}
+
+
+/** Subtitulo de cada seccion : Cuando me posiciono encima se activa **/
+h3.titulo3:hover{
+  background: #10bbca;
 }
 
 /*** Todas las imagenes que aparecen ***/
@@ -188,7 +203,7 @@ main#principal{
   background: rgba(0, 0, 0, 0.2);
 }
 
-/* caja del menu */
+/* Barra superior - Caja del menu */
 .navbar-dark .navbar-nav{
   font-size: 15px;
   color: #fff;
@@ -199,7 +214,6 @@ main#principal{
 .navbar-dark .navbar-nav .nav-link{
   color: #fff;
   color: rgba(255, 255, 255, 0.8);
-  border: 0;
 }
 
 /* marco que aperece cuando ponemos el puntero encima */
@@ -224,7 +238,6 @@ main#principal{
   width: 60px;
   margin-right: 0px;
   background: url("../..//paginaPrincipal/assets/img/ico/iconos/60x60bb.jpg") left center no-repeat;
-  border: 0;
   text-indent: -99999px;
 }
 /****** End Top menu ******/

@@ -99,7 +99,7 @@
   }
 
   .more-services-box { 
-    text-align: center; 
+    /*text-align: center;*/ 
   }
 
   .more-services-box h3 { 
@@ -115,12 +115,23 @@
     padding-top: 10px; 
     text-align: center; 
   }
+  
   .footer-bottom { padding-top: 20px; }
 }
 
 @media (max-width: 415px) {
+
   h1, h2 { font-size: 32px; }
 
+  /* Se activa cuando pongo el curso encima */
+  a.contenido:hover { 
+    background: #10bbca;
+  }
+
+  a.contenido:focus{
+    font-weight: bolder;
+    color: red;
+  }
 }
 
 /* plugin Retina-ize images/icons para los dispositivos IOS mejora la vision de los pixeles */

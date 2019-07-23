@@ -1,0 +1,100 @@
+<!--Created on 03-jun-2019, 17:07:25-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Ejemplo de codigo Javascript en el propio documento</title>
+    <!-- Metadatos basicos - Seccion Tecnica  -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="src/css/cssPrincipal.css" type="text/css" rel="stylesheet">
+    <style>
+
+      div{
+        display: block;
+      }
+      
+      ul{
+        display: block;
+        list-style-type: none;
+        align-content: center; 
+        width: 80%; 
+        padding: 20px; 
+        margin: 20px; 
+        height: 30px;
+      }
+
+      li{
+        font-family: 'Lato', sans-serif;
+        display: block;
+        background-color: #aaa;
+        border-radius: 10px;
+        width: 400px;
+        margin: 10px;
+        padding: 10px;
+      }
+
+      a#enlace{
+        display: block;
+        width: 200px;
+        margin: 0 auto;
+        margin-top: 80px;
+        padding: 10px;
+        align-content: center;
+        text-align: center;
+        background-color: #99ff99;
+        border-radius: 7px;
+      }
+
+    </style>
+        <script src="js/codigo2.js">
+          // Este codigo nunca se va a ejecutar porque la etiqueta script esta enlazando con un archivo
+          //      alert("mensaje de prueba que no se lanza");
+        </script>
+  </head>
+
+  <body>
+    <div>
+      <ul>
+        <li>1º Lanza el Script que este en la pagina principal en este caso en el footer</li>
+        <li>2º Lanza el Script que este en el archivo externo</li>
+      </ul>
+    </div>
+
+    <footer style="
+            position: fixed;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(189, 195, 199);
+            color: #000;
+            text-align: center;">
+      <aside style="height: 55px;">
+        <img alt="Licencia de Creative Commons" src="https://licensebuttons.net/l/by/4.0/80x15.png" />
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        </a>Este obra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+        <p style="
+           margin-top: 5px;
+           font-size: 20px;
+           font-family: 'Lobster', cursive;
+           ">Powered by RVS</p>
+      </aside>
+    </footer>
+    <script>
+      alert("Mensaje que se ejecuta dentro de la pagina principal 1");
+    </script>
+    <div>
+        <a class="action" href="../paginaContenido.html">Volver al menu principal</a>
+    </div>
+  </body>
+</html>

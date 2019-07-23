@@ -1,0 +1,117 @@
+<!--Created on 14-jun-2019, 19:42:44-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>M63.1 - empty()</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link href="../../sources/css/cssPrincipal3.css" type="text/css" rel="stylesheet">
+    <style>
+
+      h2{
+        margin: 30px;
+      }
+
+      div {
+        align-content: center;
+        border-radius: 12px;
+        line-height: 100px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: x-large;
+        font-weight: bolder;
+        margin: 10px;
+        padding: 20px;
+        height: 100px;
+        width: 170px;
+        padding: 20px;
+      }
+
+      div#d1{
+        background-color:#99ff99;
+      }
+
+      div#d2{
+        background-color: #ff9999;
+        width: auto;
+      }
+
+      p.parrafo{
+        display: block;
+        width: 300px;
+        margin: 10px;
+        padding: 20px;
+        color: #ff3333;
+        font-weight: bolder;
+        font-size: 20px;
+        background-color: #ffcc99;
+        border-radius: 12px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <section id="s1">
+      <h2>Ejecutar la funcion empty()</h2>
+      <div id="d1">Elmina el div 1</div>
+      <p class="parrafo">Quitar parrafo <span>incluyendo span</span></p>
+    </section>
+
+    <section id="s2">
+      <h2>Ejecutar la funcion empty()</h2>
+      <div id="d2">Elimina todo el contenido del documento</div>
+      <p class="parrafo">Quitar parrafo <span>incluyendo span</span></p>
+    </section>
+
+
+    <footer style="
+            position: fixed;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(189, 195, 199);
+            color: #000;
+            text-align: center;">
+      <aside style="height: 55px;">
+        <img alt="Licencia de Creative Commons" src="https://licensebuttons.net/l/by/4.0/80x15.png" />
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        </a>Este obra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+        <p style="
+           margin-top: 5px;
+           font-size: 20px;
+           font-family: 'Lobster', cursive;
+           ">Powered by RVS</p>
+      </aside>
+    </footer>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+
+      $("div").click(function () {
+        setTimeout(function () {
+          $("section#s1").empty();
+        }, 1000);
+        $("p").empty();
+      });
+
+      $("div#d2").click(function () {
+        setTimeout(function () {
+          $("body").empty();
+        }, 1000);
+      });
+
+    </script>
+  </body>
+</html>

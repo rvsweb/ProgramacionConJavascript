@@ -1,0 +1,39 @@
+/* 
+    Created on : 05-jun-2019, 11:37:30
+    Author     : RVS
+*/
+
+h1{
+  text-align: center;
+  padding-left: auto;
+  padding-right: auto;
+}
+
+label[for=num1] , [for=num2]{
+  align-content: center;
+  background-color: #ccffff;
+  border-radius: 15px;
+  margin-bottom: 50px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+input{
+  background-color: #99ff99;
+  border-radius: 15px;
+  display: block;
+  margin: 10px;
+  width: 200px;
+}
+
+input#num1 , input#num2 {
+  padding-left: 10px;
+  background-color: #99ff99;
+  font-size: 30px;
+}
+
+button{
+  margin-left: 5px;
+  border-radius: 15px;
+  padding: 10px;
+}

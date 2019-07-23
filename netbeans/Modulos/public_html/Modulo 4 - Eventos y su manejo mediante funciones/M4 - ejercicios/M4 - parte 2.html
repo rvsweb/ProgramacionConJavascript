@@ -1,0 +1,79 @@
+<!--Created on 09-jun-2019, 18:31:21-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Manejo del DOM</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link href="../sources/css/cssPrincipal.css" type="text/css" rel="stylesheet">
+    <style>
+
+      p#p1{
+        font-size: 20px;
+        border: 1px solid black;
+        background-color: #ffff99;
+        padding: 10px;
+        margin: 10px;
+        width: 150px;
+      }
+
+      p.p1{
+        font-size: 15px;
+        border: 1px solid black;
+        background-color: #99ff99;
+        padding: 10px;
+        margin: 10px;
+        width: 150px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <!--    Parte 2
+    Añadir un nuevo elemento <p> con el texto “Texto del nuevo párrafo”
+    y que sea hijo del body -->
+
+    <p id="p1">Elemento</p>
+
+
+    <footer style="
+            position: fixed;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(189, 195, 199);
+            color: #000;
+            text-align: center;">
+      <aside style="height: 55px;">
+        <img alt="Licencia de Creative Commons" src="https://licensebuttons.net/l/by/4.0/80x15.png" />
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        </a>Este obra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+        <p style="
+           margin-top: 5px;
+           font-size: 20px;
+           font-family: 'Lobster', cursive;
+           ">Powered by RVS</p>
+      </aside>
+    </footer>
+    <script>
+
+      var nuevoNodo = document.createElement('p');
+      nuevoNodo.innerHTML = "Nuevo elemento añadido";
+      nuevoNodo.setAttribute("class", "p1");
+      document.getElementById('p1').appendChild(nuevoNodo);
+
+    </script>
+  </body>
+</html>

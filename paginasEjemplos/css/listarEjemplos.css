@@ -110,11 +110,10 @@ ul.header-nav{
 /* Dentro de la lista - la 2º Seccion de la lista desplegaba */
 li.lista {
   padding: 10px;
-  /*text-align: center;*/
   list-style-type: none;
-  /*color: #ffffff;*/
   border-radius: 12px;
   border: 2px solid #10bbca;
+  margin: 10px;
 }
 
 /* Recuadro completa */

@@ -1,0 +1,160 @@
+<!--Created on 14-jun-2019, 19:42:44-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>M63.3 - mouseover mouseout()</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <style>
+
+      table{
+        text-align: center;
+        background-color: #ff9999;
+        border: 1px solid red;
+        border-radius: 12px;
+        padding: 20px;
+        margin: 30px;
+        width: 600px;
+        height: 200px;
+      }
+
+      thead{
+        padding: 110px;
+        margin: 30px;
+        width: 500px;
+        height:200px;
+      }
+
+      tbody{
+        padding: 110px;
+        margin: 30px;
+        width: 500px;
+        height: 200px;
+      }
+
+      tfoot{
+        padding: 110px;
+        margin: 30px;
+        width: 500px;
+        height: 200px;
+      }
+
+      #td0{
+        background-color: #999999;
+      }
+
+      td{
+        border: 1px solid black;
+        width: 500px;
+        height: 100px;
+      }
+
+      ul{
+        border-radius: 12px;
+        list-style: none;
+        margin: 10px ;
+        padding: 10px;
+        border: 1px solid red;
+        width: 200px;
+      }
+
+      li{
+        padding: 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <table>
+      <thead>
+        <tr>
+          <td></td>
+          <td>Columna 1</td>
+          <td>Columna 2</td>
+          <td>Columna 3</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>f1</td>
+          <td>f2</td> 
+          <td>f3</td> 
+          <td>f4</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>ff1</td>
+          <td>ff2</td> 
+          <td>ff3</td> 
+          <td>ff4</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+    </ul>
+
+    <footer style="
+            position: fixed;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(189, 195, 199);
+            color: #000;
+            text-align: center;">
+      <aside style="height: 55px;">
+        <img alt="Licencia de Creative Commons" src="https://licensebuttons.net/l/by/4.0/80x15.png" />
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        </a>Este obra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+        <p style="
+           margin-top: 5px;
+           font-size: 20px;
+           font-family: 'Lobster', cursive;
+           ">Powered by RVS</p>
+      </aside>
+    </footer>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+
+      $('table').mouseover(function () {
+        $('thead').each(function () {
+          $('td').css("background-color", "#ffff99");
+        });
+      });
+
+      $('table').mouseleave(function () {
+        $('thead').each(function () {
+          $('td').css("background-color", "#cc99ff");
+        });
+      });
+
+      $('li').mouseover(function () {
+        $(this).css("background-color", "#cc99ff");
+      });
+
+      $('li').mouseleave(function () {
+        $(this).css("background-color", "white");
+      });
+
+
+    </script>
+  </body>
+</html>

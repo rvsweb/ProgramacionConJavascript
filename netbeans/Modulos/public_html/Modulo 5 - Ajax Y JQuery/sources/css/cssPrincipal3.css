@@ -1,0 +1,43 @@
+
+body{
+  background-color: #126bbf;
+}
+
+p {
+  font-family: 'Raleway',sans-serif; 
+  font-size: 18px; 
+  font-weight: 500; 
+  line-height: 32px; 
+  margin: 0 0 24px; 
+}
+
+ul , li {
+  display: block;
+  margin: 0 auto;
+  align-content: center;
+}
+
+li:hover, a:active  {
+  background-color: #99ff99;
+}
+
+.action{
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 180px;
+  border-radius: 3px;
+  align-content: center;
+}
+
+.action:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 6px 25px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.action:hover, a:active {
+  background-color: red;
+}

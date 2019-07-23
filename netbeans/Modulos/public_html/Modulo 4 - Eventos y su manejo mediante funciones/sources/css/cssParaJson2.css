@@ -1,0 +1,68 @@
+/* 
+    Created on : 08-jun-2019, 19:54:13
+    Author     : RVS
+*/
+
+h2{
+  background-color: #ccffff;
+  padding: 20px;
+  font-size: 20px;
+  margin: 12px;
+  width: 500px;
+}
+
+section{
+  padding: 20px;
+}
+
+ul{
+  display: block;
+}
+
+li{
+  padding: 15px;
+  font-size: 20px;
+  background-color: #ccffff;
+}
+
+li.l1{
+  display: inline-block;
+  text-align: center;
+  list-style:none;
+  margin: 10px;
+  border: 1px solid #000;
+  background-color: #ffff99;
+  width: 200px;
+}
+
+li.liancho{
+  width: auto;
+}
+
+li#li3{
+  margin-left: 267px;
+}
+
+span#s1 , span#s2   {
+  color: red;
+  font-size: x-large;
+  font-weight: bold;  
+  width: auto;
+}
+
+span#s3 {
+  color: red;
+  font-size: x-large;
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+p.elementos{
+  background-color: #99ff99;
+  width: 100px;
+  margin-left: 50px;
+  padding: 10px;
+  font-family:  Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  width: 120px;
+}

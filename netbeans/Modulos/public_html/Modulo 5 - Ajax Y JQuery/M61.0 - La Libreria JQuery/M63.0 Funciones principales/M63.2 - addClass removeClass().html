@@ -1,0 +1,124 @@
+<!--Created on 11-jun-2019, 20:34:38-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Funciones principales JQuery con Ajax</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link href="../../sources/css/cssPrincipal3.css" type="text/css" rel="stylesheet">
+    <style>
+
+      p#p1,p#p2,p#p3 {
+        margin: 20px;
+      }
+
+      input#boton1, input#boton2{
+        margin: 10px;
+        background: #99ff99;
+        border-radius: 12px;
+        display: block;
+        height: 50px;
+        font-family: Roboto, sans-serif , monospace;
+        font-weight: bold;
+        margin: 30px;
+        width: 100px;
+      }
+
+      div.redondeado{
+        background-color: #ff9999;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+      }
+
+      section{
+        display: inline-table;
+        position: static;
+        font-family: Roboto, Verdana, sans-serif;
+        padding: 12px;
+        margin: 20px;
+        border-radius: 12px;
+        background-color: #ffff99;
+      }
+
+      .intro {
+        background-color: #ccffff;
+        border-radius: 12px;
+        font-size: 150%;
+        padding: 10px;
+        margin: 10px;
+        width: 100px;
+      }
+
+      .intro2 {
+        background-color: hotpink;
+        border-radius: 12px;
+        font-size: 150%;
+        padding: 10px;
+        margin: 10px;
+        width: 100px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <section id="sec1">
+      <h2>Funciones principales JQuery con Ajax - attr()</h2>
+    </section>
+
+    <p id="p1">Parrafo 1</p>
+    <p id="p2">Parrafo 2</p>
+    <p id="p3">Parrafo 3</p>
+
+    <input id="boton1" type="button" value="Pulsar">
+
+    <footer style="
+            position: fixed;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(189, 195, 199);
+            color: #000;
+            text-align: center;">
+      <aside style="height: 55px;">
+        <img alt="Licencia de Creative Commons" src="https://licensebuttons.net/l/by/4.0/80x15.png" />
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        </a>Este obra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+        <p style="
+           margin-top: 5px;
+           font-size: 20px;
+           font-family: 'Lobster', cursive;
+           ">Powered by RVS</p>
+      </aside>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+
+      $(document).ready(function () {
+        $("input").click(function () {
+          $("p#p2 , p#p3").addClass("intro");
+        });
+      });
+
+      $(document).ready(function () {
+        $("input").click(function () {
+          $("p:first").addClass("intro2");
+        });
+      });
+
+    </script>
+  </body>
+</html>

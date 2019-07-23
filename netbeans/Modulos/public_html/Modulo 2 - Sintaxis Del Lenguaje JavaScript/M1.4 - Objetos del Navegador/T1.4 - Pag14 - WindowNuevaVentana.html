@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Objetos document write</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../sources/css/cssObjetoWindow.css" type="text/css">
+    <link rel="icon" type="image/png" href="../../sources/img/60x60bb.jpg" sizes="32x32">
+    <link href="../sources/css/cssPrincipal.css" type="text/css" rel="stylesheet">
+    <script>
+
+      function AbrirVentana() {
+        ventana = open("", "nueva", "toolbar=no,directories=no,menubar=no,width=380,height=180");
+        ventana.document.write("<head>");
+        ventana.document.write("<title>Nueva Ventana desde Javascript</title>");
+        ventana.document.write("</head>");
+        ventana.document.write("<body>");
+        ventana.document.write("<font size=4 color=red>Nueva Ventana</font><br><br><br>");
+        ventana.document.write("<form><input type='button' value='Cerrar' onClick='self.close()'></form>");
+        ventana.document.write("</body>");
+      }
+
+    </script>
+  </head>
+  <body>
+    <form>
+      <input type="button" value="Abrir una ventana" onclick="AbrirVentana();">
+    </form>
+    <a class="action" href="../../paginaContenido.html">Volver al menu principal</a>
+  </body>
+</html>

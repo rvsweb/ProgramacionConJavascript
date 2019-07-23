@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Objetos window</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../sources/css/cssObjetoWindow.css" type="text/css">
+    <link rel="icon" type="image/png" href="../../sources/assets/img/ico/iconos/60x60bb.jpg" sizes="32x32">
+    <link href="../sources/css/cssPrincipal.css" type="text/css" rel="stylesheet">
+    <script>
+      window.defaultStatus = "Objeto window - este mensaje aparece en la barra de estado";
+
+      function myFunctionName() {
+        var myWindow = window.open("", "MsgWindow", "width=300,height=100");
+        myWindow.document.write("<b>This window´s name is " + myWindow.name + "</b>");
+      }
+
+      function myFunctionLocaltion() {
+        (window.frames[0].window.location = "http://localhost:8383/Modulos/index.html");
+        console.log("Cuantos iframe hay : " + window.frames.length);
+        myFunctionName();
+      }
+
+      function myFunctionSelf() {
+        if (window.top != window.self) {
+          document.getElementById("demo").innerHTML = "This window is not the topmost window! Am I in a frame?";
+        } else {
+          document.getElementById("demo").innerHTML = "This window is the topmost window!";
+        }
+      }
+
+    </script>
+  </head>
+  <body>
+    <p>Objeto Window</p>
+    <p>Atributo defaultStatus - No soportado por los navegadores excepto a priori de Opera 15</p>
+    <iframe id="cssIframe" 
+            src="http://localhost:8383/Modulos/Modulo%202%20-%20Sintaxis%20Del%20Lenguaje%20JavaScript/M1.4%20-%20Objetos%20del%20Navegador/T1.4%20-%20Pag13%20-%20Window.html">
+    </iframe><br />
+    <button onclick="myFunctionLocaltion()">Lanzar Evento</button>
+    <button onclick="myFunctionSelf()">Prueba self</button>
+    <p id="demo"></p>
+    <a class="action" href="../../paginaContenido.html">Volver al menu principal</a>
+  </body>
+</html>

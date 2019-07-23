@@ -1,0 +1,127 @@
+<!--Created on 11-jun-2019, 20:34:38-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Funciones principales JQuery con Ajax</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link href="../../sources/css/cssPrincipal3.css" type="text/css" rel="stylesheet">
+    <style>
+
+      ul > li{
+        position: relative;
+        right: 200px;
+        padding: 10px;
+        display: block;
+        width: 150px !important;
+        border-radius: 6px;
+        background-color: #ccffff;
+        border: 2px solid #ff3333;
+      }
+ 
+      input{
+        background: #99ff99;
+        border-radius: 12px;
+        display: block;
+        height: 50px;
+        font-family: Roboto, sans-serif , monospace;
+        font-weight: bold;
+        margin: 30px;
+        width: 180px;
+      }
+
+      #boton1 ,#boton2{
+        background: #ccffff;
+      }
+
+      div{
+        background-color: #ff9999;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        align-items: center;
+        display: flex;
+        background: #cc99ff;
+        border-radius: 12px;
+        margin: 10px;
+        justify-content: center;
+        text-align: center;
+      }
+
+      section{
+        display: inline-table;
+        position: static;
+        font-family: 'Roboto', Verdana, sans-serif;
+        padding: 12px;
+        margin: 20px;
+        border-radius: 12px;
+        background-color: #ffff99;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <section id="sec1">
+      <h2>Funciones principales JQuery con Ajax - each()</h2>
+    </section>
+
+    <input id="boton1" type="button" value="Lanzar evento">
+
+    <ul id="div1">
+      <li>elemento A</li>
+      <li>elemento B</li>
+      <li>elemento C</li>
+      <li>elemento D</li>
+      <li>elemento E</li>
+    </ul>
+
+    <footer style="
+            position: fixed;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(189, 195, 199);
+            color: #000;
+            text-align: center;">
+
+      <aside style="height: 55px;">
+        <img alt="Licencia de Creative Commons" src="https://licensebuttons.net/l/by/4.0/80x15.png" />
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        </a>Este obra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+        <span style="
+              margin-top: 5px;
+              font-size: 20px;
+              font-family: 'Lobster', cursive;
+              "><br>Powered by &Ropf;VS</span>
+      </aside>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+
+      var anio = new Date();
+      var f = anio.getHours() + ":" + (new Date().getMinutes() + ":" + new Date().getSeconds());
+      var a = [1.1, true, "3", f, null];
+
+      $('#boton1').click(function () {
+        $("li").each(function (index) {
+          var x = $(this).text();
+          $(this).text(x + " " + a[index]);
+        });
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,3 @@
+ Soy un archivo de prueba para el nodejs
+ Todo lo que se lea con el modulo stream lo hará como texto plano,
+ no lo interpreta como .js o imagen

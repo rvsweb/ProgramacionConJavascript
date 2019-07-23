@@ -1,0 +1,76 @@
+<!--Created on 02-jul-2019, 14:07:46-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<!--directiva-->
+<html lang="es">
+  <head>
+    <title>titulo</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="shortcut icon" href="https://goo.gl/cais23">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+
+      table{
+        margin: 20px;
+        padding: 20px;
+        border-radius: 7px;
+        background-color: #99ff99;
+      }
+
+      thead > tr{
+        background-color: #ffff99;
+      }
+
+      td{
+        margin: 10px;
+        padding: 10px;
+        border-radius: 7px;
+        border: 1px solid black;
+      }
+
+      tr{
+        background-color: #ff9999;
+      }
+
+    </style>
+  </head>
+  <body ng-app="myApp">
+
+    <table ng-controller="myCtrl">
+      <thead>
+        <tr>
+          <td>Nombre</td>
+          <td>Edad</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="x in registros">
+          <td>{{x.nombre}}</td>
+          <td>{{x.edad}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      var app = angular.module("myApp", []);
+      app.controller('myCtrl', function ($scope) {
+        $scope.registros = [
+          {"nombre": "Fer", "edad": 12},
+          {"nombre": "Victor", "edad": 13},
+          {"nombre": "Eva", "edad": 14},
+          {"nombre": "Susana", "edad": 15},
+          {"nombre": "Alejo", "edad": 16},
+          {"nombre": "Jesus", "edad": 17}
+        ];
+      });
+    </script>
+
+  </body>
+</html>

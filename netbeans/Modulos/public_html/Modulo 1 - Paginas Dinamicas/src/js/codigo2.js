@@ -1,1 +1,0 @@
-alert("Script se lanza desde el archivo externo 2");

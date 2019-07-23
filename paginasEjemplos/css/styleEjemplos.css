@@ -2,13 +2,7 @@
     ESTILOS GENERALES 
     Created on : 17-jun-2019, 14:07:43
     Author     : RVS
-    Archivo    : stylePagina
 */
-
-*{
-  border: 1px solid red;
-}
-
 
 @font-face{
   font-family: "Telefonica Light";
@@ -28,13 +22,11 @@ strong {
   font-weight: 600;
 }
 
-
 /*** Titulos Centrales de cada seccion ***/
 h2{
   margin-top: 30px;
   font-size: 38px;
   font-weight: 300;
-  font-family: 'Telefonica Light' , sans-serif;
   color: #555;
   line-height: 50px;
   text-align: center; 

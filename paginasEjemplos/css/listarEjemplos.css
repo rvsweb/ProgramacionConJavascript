@@ -104,6 +104,7 @@ ul#menu-desplegable6:after
 ul.header-nav{
   padding: 10px;
   font-size: 15px;
+  list-style-type: none;
 }
 
 
@@ -145,6 +146,15 @@ a.contenido:hover {
 a.contenido:focus{
   font-weight: bolder;
   color: red;
+}
+
+p.subtitulos{
+  margin: 0px;
+  color: #10bbca;
+  font-weight: bolder;
+  font-size: 20px;
+  border: 1px solid #10bbca;
+  border-radius: 12px;
 }
 
 object.ventana{
